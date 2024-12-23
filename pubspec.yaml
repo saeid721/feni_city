@@ -1,0 +1,49 @@
+name: feni_city
+description: "This app is built with the vision of making Feni's resources and attractions easily accessible to everyone. It's a digital step towards enhancing connectivity, promoting tourism, and simplifying urban living."
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.3 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  dio: ^5.7.0
+  get: ^4.6.6
+  intl: ^0.20.1
+  image: ^4.5.2
+  get_it: ^8.0.3
+  shimmer: ^3.0.0
+  video_player: ^2.9.2
+  url_launcher: ^6.3.1
+  image_picker: ^1.1.2
+  carousel_slider: ^5.0.0
+  connectivity_plus: ^6.1.1
+  shared_preferences: ^2.3.4
+  permission_handler: ^11.3.1
+  flutter_image_compress: ^2.3.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^5.0.0
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
