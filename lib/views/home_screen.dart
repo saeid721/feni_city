@@ -58,6 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
     'assets/images/01.jpg',
     'assets/images/02.jpg',
     'assets/images/03.jpg',
+    'assets/images/04.jpg',
   ];
 
   @override
@@ -76,7 +77,7 @@ class _HomeScreenState extends State<HomeScreen> {
         children: [
           // Carousel Slider
           Padding(
-            padding: const EdgeInsets.all(10.0),
+            padding: const EdgeInsets.only(top: 5, left: 5, right: 5),
             child: ClipRRect(
               borderRadius: const BorderRadius.all(Radius.circular(10.0)),
               child: CarouselSlider(
@@ -87,7 +88,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       borderRadius: const BorderRadius.all(Radius.circular(10.0)),
                       child: Image.asset(
                         item,
-                        fit: BoxFit.cover,
+                        fit: BoxFit.fill,
                         width: MediaQuery.of(context).size.width,
                       ),
                     ),
