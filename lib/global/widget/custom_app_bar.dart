@@ -46,7 +46,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               GestureDetector(
                 onTap: onSearchTap,
                 child: const Icon(
-                  Icons.search,
+                  Icons.notifications_active,
                   color: ColorRes.white,
                   size: 22,
                 ),
