@@ -26,7 +26,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         children: [
           GlobalImageLoader(
             imagePath: Images.appLogo,
-            width: 40,
+            width: 60,
             fit: BoxFit.fill,
             imageFor: ImageFor.asset,
           ),
@@ -34,8 +34,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             child: GlobalText(
               str: title,
               color: ColorRes.white,
-              fontSize: 16,
-              fontWeight: FontWeight.w500,
+              fontSize: 18,
+              fontWeight: FontWeight.w700,
               textAlign: TextAlign.center,
               fontFamily: 'Rubik',
               maxLines: 2,
