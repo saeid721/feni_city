@@ -29,26 +29,26 @@ class _HomeScreenState extends State<HomeScreen> {
     GlobalMenuModel(img: Images.roomRentInc, text: 'বাসা ভাড়া'),
     GlobalMenuModel(img: Images.shoppingCenterInc, text: 'শপিং'),
     GlobalMenuModel(img: Images.fireStationInc, text: 'ফায়ার সার্ভিস'),
-    GlobalMenuModel(img: Images.courierServicesInc, text: 'University'),
-    GlobalMenuModel(img: Images.policeInc, text: 'University'),
-    GlobalMenuModel(img: Images.websiteInc, text: 'University'),
-    GlobalMenuModel(img: Images.lightInc, text: 'University'),
-    GlobalMenuModel(img: Images.diagnosticInc, text: 'University'),
-    GlobalMenuModel(img: Images.bloodInc, text: 'University'),
-    GlobalMenuModel(img: Images.hotelInc, text: 'University'),
-    GlobalMenuModel(img: Images.carInc, text: 'University'),
-    GlobalMenuModel(img: Images.mistriInc, text: 'University'),
-    GlobalMenuModel(img: Images.customerCareInc, text: 'University'),
-    GlobalMenuModel(img: Images.jobInc, text: 'University'),
-    GlobalMenuModel(img: Images.entrepreneurInc, text: 'University'),
-    GlobalMenuModel(img: Images.teacherInc, text: 'University'),
-    GlobalMenuModel(img: Images.makeupInc, text: 'University'),
-    GlobalMenuModel(img: Images.restaurantInc, text: 'University'),
-    GlobalMenuModel(img: Images.flatLandInc, text: 'University'),
-    GlobalMenuModel(img: Images.videoInc, text: 'University'),
-    GlobalMenuModel(img: Images.newspaperInc, text: 'University'),
-    GlobalMenuModel(img: Images.collageInc, text: 'University'),
-    GlobalMenuModel(img: Images.nurseryInc, text: 'University'),
+    GlobalMenuModel(img: Images.courierServicesInc, text: 'কুরিয়ার সার্ভিস'),
+    GlobalMenuModel(img: Images.policeInc, text: 'থানা-পুলিশ'),
+    GlobalMenuModel(img: Images.websiteInc, text: 'ওয়েবসাইট'),
+    GlobalMenuModel(img: Images.lightInc, text: 'বিদ্যুৎ অফিস'),
+    GlobalMenuModel(img: Images.diagnosticInc, text: 'ডায়াগনস্টিক'),
+    GlobalMenuModel(img: Images.bloodInc, text: 'রক্ত'),
+    GlobalMenuModel(img: Images.hotelInc, text: 'হোটেল'),
+    GlobalMenuModel(img: Images.carInc, text: 'গাড়ি ভাড়া'),
+    GlobalMenuModel(img: Images.mistriInc, text: 'মিস্ত্রি'),
+    GlobalMenuModel(img: Images.customerCareInc, text: 'জরুরী সেবা'),
+    GlobalMenuModel(img: Images.jobInc, text: 'চাকরি'),
+    GlobalMenuModel(img: Images.entrepreneurInc, text: 'উদ্যোক্তা'),
+    GlobalMenuModel(img: Images.teacherInc, text: 'শিক্ষক'),
+    GlobalMenuModel(img: Images.makeupInc, text: 'পার্লার'),
+    GlobalMenuModel(img: Images.restaurantInc, text: 'রেস্টুরেন্ট'),
+    GlobalMenuModel(img: Images.flatLandInc, text: 'ফ্ল্যাট ও জমি'),
+    GlobalMenuModel(img: Images.videoInc, text: 'ভিডিও'),
+    GlobalMenuModel(img: Images.newspaperInc, text: 'আজকের ফেনী'),
+    GlobalMenuModel(img: Images.collageInc, text: 'শিক্ষা প্রতিষ্ঠান'),
+    GlobalMenuModel(img: Images.nurseryInc, text: 'নার্সারি'),
   ];
 
   int currentIndex = 0;
@@ -127,102 +127,104 @@ class _HomeScreenState extends State<HomeScreen> {
           const SizedBox(height: 5),
 
 
-          SingleChildScrollView(
-            child: GridView.builder(
-                itemCount: menuItem.length,
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 4,
-                    mainAxisSpacing: 15,
-                    crossAxisSpacing: 15,
-                    mainAxisExtent: 145
-                ),
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                itemBuilder: (ctx, index){
-                  return GestureDetector(
-                      onTap: (){
-                        switch(index){
-                          case 0:
-                            Get.to(()=> const DoctorScreen());
-                            break;
-                          case 1:
-                            Get.to(()=> const HospitalScreen());
-                            break;
-                          case 2:
-                            Get.to(()=> const DoctorScreen());
-                            break;
-                          case 3:
-                            Get.to(()=> const BusWebViewScreen());
-                            break;
-                          case 4:
-                            Get.to(()=> const TrainWebViewScreen());
-                            break;
-                          case 5:
-                            Get.to(()=> const DoctorScreen());
-                            break;
-                          case 6:
-                            Get.to(()=> const DoctorScreen());
-                            break;
-                          case 7:
-                            Get.to(()=> const DoctorScreen());
-                            break;
-                          case 8:
-                            Get.to(()=> const DoctorScreen());
-                            break;
-                          case 9:
-                            Get.to(()=> const DoctorScreen());
-                            break;
-                          case 10:
-                            Get.to(()=> const DoctorScreen());
-                            break;
-                          case 11:
-                            Get.to(()=> const DoctorScreen());
-                            break;
-                          case 12:
-                            Get.to(()=> const DoctorScreen());
-                            break;
-                          case 13:
-                            Get.to(()=> const DoctorScreen());
-                            break;
-                          case 14:
-                            Get.to(()=> const HospitalScreen());
-                            break;
-                          case 15:
-                            Get.to(()=> const HospitalScreen());
-                            break;
-                          case 16:
-                            Get.to(()=> const HospitalScreen());
-                            break;
-                          case 17:
-                            Get.to(()=> const HospitalScreen());
-                            break;
-                          case 18:
-                            Get.to(()=> const HospitalScreen());
-                            break;
-                          case 19:
-                            Get.to(()=> const HospitalScreen());
-                            break;
-                          case 20:
-                            Get.to(()=> const HospitalScreen());
-                            break;
-                          case 21:
-                            Get.to(()=> const HospitalScreen());
-                            break;
-                          case 22:
-                            Get.to(()=> const HospitalScreen());
-                            break;
-                        }
-                      },
-                      child: HomeMenuWidget(
-                          height: 40,
-                          width: 40,
-                          maxLines: 2,
-                          imagePath: menuItem[index].img,
-                          text: menuItem[index].text
-                      )
-                  );
-                }
+          Expanded(
+            child: SingleChildScrollView(
+              child: GridView.builder(
+                  itemCount: menuItem.length,
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 4,
+                      mainAxisSpacing: 8,
+                      crossAxisSpacing: 8,
+                      mainAxisExtent: 90,
+                  ),
+                  padding: const EdgeInsets.symmetric(horizontal: 15),
+                  itemBuilder: (ctx, index){
+                    return GestureDetector(
+                        onTap: (){
+                          switch(index){
+                            case 0:
+                              Get.to(()=> const DoctorScreen());
+                              break;
+                            case 1:
+                              Get.to(()=> const HospitalScreen());
+                              break;
+                            case 2:
+                              Get.to(()=> const DoctorScreen());
+                              break;
+                            case 3:
+                              Get.to(()=> const BusWebViewScreen());
+                              break;
+                            case 4:
+                              Get.to(()=> const TrainWebViewScreen());
+                              break;
+                            case 5:
+                              Get.to(()=> const DoctorScreen());
+                              break;
+                            case 6:
+                              Get.to(()=> const DoctorScreen());
+                              break;
+                            case 7:
+                              Get.to(()=> const DoctorScreen());
+                              break;
+                            case 8:
+                              Get.to(()=> const DoctorScreen());
+                              break;
+                            case 9:
+                              Get.to(()=> const DoctorScreen());
+                              break;
+                            case 10:
+                              Get.to(()=> const DoctorScreen());
+                              break;
+                            case 11:
+                              Get.to(()=> const DoctorScreen());
+                              break;
+                            case 12:
+                              Get.to(()=> const DoctorScreen());
+                              break;
+                            case 13:
+                              Get.to(()=> const DoctorScreen());
+                              break;
+                            case 14:
+                              Get.to(()=> const HospitalScreen());
+                              break;
+                            case 15:
+                              Get.to(()=> const HospitalScreen());
+                              break;
+                            case 16:
+                              Get.to(()=> const HospitalScreen());
+                              break;
+                            case 17:
+                              Get.to(()=> const HospitalScreen());
+                              break;
+                            case 18:
+                              Get.to(()=> const HospitalScreen());
+                              break;
+                            case 19:
+                              Get.to(()=> const HospitalScreen());
+                              break;
+                            case 20:
+                              Get.to(()=> const HospitalScreen());
+                              break;
+                            case 21:
+                              Get.to(()=> const HospitalScreen());
+                              break;
+                            case 22:
+                              Get.to(()=> const HospitalScreen());
+                              break;
+                          }
+                        },
+                        child: HomeMenuWidget(
+                            height: 40,
+                            width: 40,
+                            maxLines: 1,
+                            imagePath: menuItem[index].img,
+                            text: menuItem[index].text
+                        )
+                    );
+                  }
+              ),
             ),
           ),
         ],

@@ -26,6 +26,7 @@ class HomeMenuWidget extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 4),
       decoration: BoxDecoration(
         color: ColorRes.white,
+        borderRadius: BorderRadius.circular(10),
         boxShadow: [
           BoxShadow(
             color: ColorRes.grey.withOpacity(0.3),
@@ -47,8 +48,8 @@ class HomeMenuWidget extends StatelessWidget {
           GlobalText(
             str: text,
             color: ColorRes.black,
-            fontSize: 16,
-            fontWeight: FontWeight.w600,
+            fontSize: 12,
+            fontWeight: FontWeight.w400,
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.center,
             maxLines: maxLines ?? 2,
