@@ -7,7 +7,8 @@ class Images {
   static const String scanner = 'assets/main_src/icons/scanner.png';
   static const String eye1 = 'assets/main_src/icons/eye1.png';
   static const String eye2 = 'assets/main_src/icons/eye2.png';
-
+  static const String backImg = 'assets/icons/back_img.png';
+  static const String warningIc = 'assets/icons/warning.png';
 
   //::::::::::::::::::::::::: Splash Img
 

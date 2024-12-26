@@ -4,7 +4,7 @@ import '../constants/enum.dart';
 
 class GlobalImageLoader extends StatelessWidget {
   const GlobalImageLoader({
-    Key? key,
+    super.key,
     required this.imagePath,
     this.imageFor = ImageFor.asset,
     this.height,
@@ -12,7 +12,7 @@ class GlobalImageLoader extends StatelessWidget {
     this.fit,
     this.color,
     this.errorBuilder
-  }) : super(key: key);
+  });
   final String imagePath;
   final double? height;
   final double? width;
@@ -31,7 +31,7 @@ class GlobalImageLoader extends StatelessWidget {
         fit: fit,
         color: color,
         errorBuilder: errorBuilder ?? (context, exception, stackTrace) =>
-            Center(child: Image.asset("assets/images/placeholder_image.png", height: height, width: width, fit: BoxFit.fill))
+            Center(child: Image.asset("assets/images/placeholder.png", height: height, width: width, fit: BoxFit.fill))
       );
     } else {
       return Image.asset(
@@ -41,7 +41,7 @@ class GlobalImageLoader extends StatelessWidget {
         fit: fit,
         color: color,
         errorBuilder: errorBuilder ?? (context, exception, stackTrace) =>
-            Center(child: Image.asset("assets/images/placeholder_image.png", height: height, width: width, fit: BoxFit.fill))
+            Center(child: Image.asset("assets/images/placeholder.png", height: height, width: width, fit: BoxFit.fill))
       );
     }
   }

@@ -1,66 +1,113 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import '../../global/constants/colors_resources.dart';
 import '../../global/constants/images.dart';
 import '../../global/widget/global_image_loader.dart';
 import '../../global/widget/global_sizedbox.dart';
 import '../../global/widget/global_text.dart';
-import '../constants/enum.dart';
 
-class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  final String title;
-  final Widget? leading;
-  final VoidCallback? onSearchTap;
-
-  const CustomAppBar({
+class GlobalAuthAppBar extends StatelessWidget {
+  const GlobalAuthAppBar({
     super.key,
     required this.title,
-    this.leading,
-    this.onSearchTap,
+    this.titleColor,
+    this.onTap
   });
+  final String title;
+  final Color? titleColor;
+  final Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
-    return AppBar(
-      backgroundColor: ColorRes.primaryColor,
-      automaticallyImplyLeading: false,
-      leading: leading,
-      title: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      child: Column(
         children: [
-          // GlobalImageLoader(
-          //   imagePath: Images.appLogo,
-          //   width: 60,
-          //   fit: BoxFit.fill,
-          //   imageFor: ImageFor.asset,
-          // ),
-          Expanded(
-            child: GlobalText(
-              str: title,
-              color: ColorRes.white,
-              fontSize: 32,
-              fontWeight: FontWeight.w700,
-              textAlign: TextAlign.center,
-              fontFamily: 'Potta',
-            ),
-          ),
-          Row(
+          const SizedBox(height: 10),
+          Stack(
             children: [
-              GestureDetector(
-                onTap: onSearchTap,
-                child: const Icon(
-                  Icons.notifications_active,
-                  color: ColorRes.white,
-                  size: 22,
+              SizedBox(height: 80, width: size(context).width),
+              Positioned(
+                left: 10,
+                bottom: 0,
+                child: GestureDetector(
+                  onTap: onTap,
+                  child: SizedBox(
+                    height: 80,
+                    child: Center(
+                      child: GlobalImageLoader(
+                        imagePath: Images.backImg,
+                        height: 22,
+                        width: 15,
+                        fit: BoxFit.fitHeight,
+                        color: titleColor ?? ColorRes.white,
+                      ),
+                    ),
+                  ),
                 ),
               ),
-              sizedBoxW(15),
+              SizedBox(
+                height: 80,
+                child: Center(
+                  child: GlobalText(
+                    str: title,
+                    color: titleColor ?? ColorRes.white,
+                    fontSize: 24,
+                    fontWeight: FontWeight.w700,
+                    textAlign: TextAlign.center,
+                    fontFamily: 'Potta',
+                  ),
+                ),
+              ),
             ],
           ),
+          const SizedBox(height: 10),
         ],
       ),
     );
   }
+}
+
+
+class GlobalAppBar extends StatelessWidget {
+  const GlobalAppBar({
+    super.key,
+    required this.title,
+    this.isBackIc = true,
+    this.backColor,
+    this.leading,
+    this.actions,
+    required this.notiOnTap
+  });
+  final String title;
+  final Color? backColor;
+  final bool? isBackIc;
+  final Widget? leading;
+  final Function() notiOnTap;
+  final List<Widget>? actions;
 
   @override
-  Size get preferredSize => const Size.fromHeight(60);
+  Widget build(BuildContext context) {
+    return AppBar(
+        backgroundColor: backColor ?? ColorRes.primaryColor,
+        automaticallyImplyLeading: false,
+        leading: leading ?? (isBackIc == true ? IconButton(
+          splashRadius: 0.1,
+          icon: const Icon(Icons.arrow_back, color: ColorRes.white),
+          onPressed: (){
+            Get.back();
+          },
+        ) : const SizedBox.shrink()),
+        centerTitle: true,
+        title: GlobalText(
+          str: title,
+          color: ColorRes.white,
+          fontSize: 22,
+          fontWeight: FontWeight.w700,
+          textAlign: TextAlign.center,
+          fontFamily: 'Potta',
+        ),
+        actions: actions
+    );
+  }
 }

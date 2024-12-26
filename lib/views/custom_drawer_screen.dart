@@ -39,7 +39,7 @@ class _CustomDrawerScreenState extends State<CustomDrawerScreen> {
         child: GlobalContainer(
           height: Get.height,
           width: Get.width,
-          color: Colors.white,
+          color: ColorRes.primaryColor,
           child: Column(
             children: [
               Container(
@@ -57,7 +57,7 @@ class _CustomDrawerScreenState extends State<CustomDrawerScreen> {
                   // ),
                   GlobalText(
                     str: "Feni City",
-                    color: ColorRes.white,
+                    color: ColorRes.grey,
                     fontSize: 44,
                     fontWeight: FontWeight.w700,
                     textAlign: TextAlign.center,
@@ -83,10 +83,10 @@ class _CustomDrawerScreenState extends State<CustomDrawerScreen> {
                                 Get.to(()=> const DoctorScreen());
                                 break;
                               case 1:
-                                Get.to(()=> const HospitalScreen());
+                                Get.to(()=> const DoctorScreen());
                                 break;
                               case 2:
-                                Get.to(()=> const BusWebViewScreen());
+                                Get.to(()=> const DoctorScreen());
                                 break;
                             }
 
