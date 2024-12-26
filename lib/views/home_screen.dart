@@ -9,9 +9,13 @@ import '../global/widget/custom_app_bar.dart';
 import '../global/widget/global_container.dart';
 import '../global/widget/home_menu_widget.dart';
 import 'app_exit_dialog.dart';
+import 'blood_screen/blood_web_view_screen.dart';
 import 'bus_screen/bus_web_view_screen.dart';
 import 'custom_drawer_screen.dart';
+import 'diagnostic_centre_screen/diagnostic_web_view_screen.dart';
 import 'doctor_screen/doctor_screen.dart';
+import 'doctor_screen/doctor_web_view_screen.dart';
+import 'hospital_screen/hospital_web_view_screen.dart';
 import 'train_screen/train_web_view_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -179,16 +183,16 @@ class _HomeScreenState extends State<HomeScreen> {
                           onTap: (){
                             switch(index){
                               case 0:
-                                Get.to(()=> const DoctorScreen());
+                                Get.to(()=> const DoctorWebViewScreen());
                                 break;
                               case 1:
-                                Get.to(()=> const DoctorScreen());
+                                Get.to(()=> const HospitalWebViewScreen());
                                 break;
                               case 2:
-                                Get.to(()=> const DoctorScreen());
+                                Get.to(()=> const DiagnosticWebViewScreen());
                                 break;
                               case 3:
-                                Get.to(()=> const DoctorScreen());
+                                Get.to(()=> const BloodWebViewScreen());
                                 break;
                               case 4:
                                 Get.to(()=> const BusWebViewScreen());
