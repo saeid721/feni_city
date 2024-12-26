@@ -9,8 +9,10 @@ import '../global/widget/custom_app_bar.dart';
 import '../global/widget/global_container.dart';
 import '../global/widget/home_menu_widget.dart';
 import 'app_exit_dialog.dart';
+import 'bus_screen/bus_web_view_screen.dart';
 import 'custom_drawer_screen.dart';
 import 'doctor_screen/doctor_screen.dart';
+import 'train_screen/train_web_view_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -189,10 +191,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Get.to(()=> const DoctorScreen());
                                 break;
                               case 4:
-                                Get.to(()=> const DoctorScreen());
+                                Get.to(()=> const BusWebViewScreen());
                                 break;
                               case 5:
-                                Get.to(()=> const DoctorScreen());
+                                Get.to(()=> const TrainWebViewScreen());
                                 break;
                               case 6:
                                 Get.to(()=> const DoctorScreen());
