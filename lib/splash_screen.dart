@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'global/constants/colors_resources.dart';
 import 'global/constants/enum.dart';
 import 'global/widget/global_image_loader.dart';
+import 'global/widget/global_sizedbox.dart';
 import 'global/widget/global_text.dart';
 import 'views/home_screen.dart';
 
@@ -25,25 +26,33 @@ class SplashScreen extends StatelessWidget {
         decoration: const BoxDecoration(
             color: ColorRes.backgroundColor
         ),
-        child: const Center(
+        child: Center(
           child: Column(
             spacing: 10,
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              GlobalImageLoader(
-                imagePath: 'assets/images/FeniCitylogo.png',
-                //imagePath: Images.appLogo,
-                width: 180,
-                imageFor: ImageFor.asset,
-              ),
+              // GlobalImageLoader(
+              //   imagePath: 'assets/images/FeniCitylogo.png',
+              //   //imagePath: Images.appLogo,
+              //   width: 180,
+              //   imageFor: ImageFor.asset,
+              // ),
               GlobalText(
                 str: 'Feni City',
                 color: ColorRes.primaryColor,
-                fontSize: 18,
-                fontWeight: FontWeight.w600,
+                fontSize: 50,
+                fontWeight: FontWeight.w700,
                 textAlign: TextAlign.center,
-                fontFamily: 'Rubik',
+                fontFamily: 'Potta',
+              ),
+              GlobalText(
+                str: 'ফেনী সিটি',
+                color: ColorRes.primaryColor,
+                fontSize: 50,
+                fontWeight: FontWeight.w700,
+                textAlign: TextAlign.center,
+                fontFamily: 'Potta',
               ),
             ],
           ),

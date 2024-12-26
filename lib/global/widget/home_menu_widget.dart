@@ -27,6 +27,10 @@ class HomeMenuWidget extends StatelessWidget {
       decoration: BoxDecoration(
         color: ColorRes.white,
         borderRadius: BorderRadius.circular(10),
+        border: Border.all(
+          color: ColorRes.grey.withOpacity(0.1), // Border color
+          width: 1.0,         // Border width
+        ),
         boxShadow: [
           BoxShadow(
             color: ColorRes.grey.withOpacity(0.3),

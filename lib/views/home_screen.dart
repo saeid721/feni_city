@@ -8,6 +8,7 @@ import '../global/widget/custom_app_bar.dart';
 import '../global/widget/global_container.dart';
 import '../global/widget/home_menu_widget.dart';
 import 'bus_screen/bus_web_view_screen.dart';
+import 'custom_drawer_screen.dart';
 import 'doctor_screen/doctor_screen.dart';
 import 'hospital_screen/hospital_screen.dart';
 import 'train_screen/train_web_view_screen.dart';
@@ -20,35 +21,37 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  final GlobalKey<ScaffoldState> drawerKey = GlobalKey<ScaffoldState>();
+
   List<GlobalMenuModel> menuItem = [
     GlobalMenuModel(img: Images.doctorInc, text: 'ডাক্তার'),
     GlobalMenuModel(img: Images.hospitalInc, text: 'হাসপাতাল'),
-    GlobalMenuModel(img: Images.busInc, text: 'বাসের সময়সূচী'),
-    GlobalMenuModel(img: Images.trainInc, text: 'ট্রেনের সময়সূচী'),
-    GlobalMenuModel(img: Images.touristPlacesInc, text: 'দর্শনীয় স্থান'),
-    GlobalMenuModel(img: Images.roomRentInc, text: 'বাসা ভাড়া'),
-    GlobalMenuModel(img: Images.shoppingCenterInc, text: 'শপিং'),
-    GlobalMenuModel(img: Images.fireStationInc, text: 'ফায়ার সার্ভিস'),
-    GlobalMenuModel(img: Images.courierServicesInc, text: 'কুরিয়ার সার্ভিস'),
-    GlobalMenuModel(img: Images.policeInc, text: 'থানা-পুলিশ'),
-    GlobalMenuModel(img: Images.websiteInc, text: 'ওয়েবসাইট'),
-    GlobalMenuModel(img: Images.lightInc, text: 'বিদ্যুৎ অফিস'),
     GlobalMenuModel(img: Images.diagnosticInc, text: 'ডায়াগনস্টিক'),
     GlobalMenuModel(img: Images.bloodInc, text: 'রক্ত'),
-    GlobalMenuModel(img: Images.hotelInc, text: 'হোটেল'),
+    GlobalMenuModel(img: Images.busInc, text: 'বাসের সময়সূচী'),
+    GlobalMenuModel(img: Images.trainInc, text: 'ট্রেনের সময়সূচী'),
     GlobalMenuModel(img: Images.carInc, text: 'গাড়ি ভাড়া'),
-    GlobalMenuModel(img: Images.mistriInc, text: 'মিস্ত্রি'),
     GlobalMenuModel(img: Images.customerCareInc, text: 'জরুরী সেবা'),
-    GlobalMenuModel(img: Images.jobInc, text: 'চাকরি'),
+    GlobalMenuModel(img: Images.fireStationInc, text: 'ফায়ার সার্ভিস'),
+    GlobalMenuModel(img: Images.courierServicesInc, text: 'কুরিয়ার সার্ভিস'),
+    GlobalMenuModel(img: Images.lightInc, text: 'বিদ্যুৎ অফিস'),
+    GlobalMenuModel(img: Images.policeInc, text: 'থানা-পুলিশ'),
+    GlobalMenuModel(img: Images.shoppingCenterInc, text: 'শপিং'),
+    GlobalMenuModel(img: Images.roomRentInc, text: 'বাসা ভাড়া'),
+    GlobalMenuModel(img: Images.hotelInc, text: 'হোটেল'),
+    GlobalMenuModel(img: Images.restaurantInc, text: 'রেস্টুরেন্ট'),
+    GlobalMenuModel(img: Images.mistriInc, text: 'মিস্ত্রি'),
     GlobalMenuModel(img: Images.entrepreneurInc, text: 'উদ্যোক্তা'),
     GlobalMenuModel(img: Images.teacherInc, text: 'শিক্ষক'),
-    GlobalMenuModel(img: Images.makeupInc, text: 'পার্লার'),
-    GlobalMenuModel(img: Images.restaurantInc, text: 'রেস্টুরেন্ট'),
-    GlobalMenuModel(img: Images.flatLandInc, text: 'ফ্ল্যাট ও জমি'),
-    GlobalMenuModel(img: Images.videoInc, text: 'ভিডিও'),
-    GlobalMenuModel(img: Images.newspaperInc, text: 'আজকের ফেনী'),
     GlobalMenuModel(img: Images.collageInc, text: 'শিক্ষা প্রতিষ্ঠান'),
+    GlobalMenuModel(img: Images.makeupInc, text: 'পার্লার'),
+    GlobalMenuModel(img: Images.jobInc, text: 'চাকরি'),
+    GlobalMenuModel(img: Images.newspaperInc, text: 'নিউজ'),
+    GlobalMenuModel(img: Images.websiteInc, text: 'ওয়েবসাইট'),
+    GlobalMenuModel(img: Images.touristPlacesInc, text: 'দর্শনীয় স্থান'),
+    GlobalMenuModel(img: Images.flatLandInc, text: 'ফ্ল্যাট ও জমি'),
     GlobalMenuModel(img: Images.nurseryInc, text: 'নার্সারি'),
+    GlobalMenuModel(img: Images.videoInc, text: 'ভিডিও'),
   ];
 
   int currentIndex = 0;
@@ -68,10 +71,20 @@ class _HomeScreenState extends State<HomeScreen> {
       resizeToAvoidBottomInset: false,
       appBar: CustomAppBar(
         title: 'Feni City',
+        leading: GestureDetector(
+          onTap: (){
+            drawerKey.currentState!.isDrawerOpen
+                ? drawerKey.currentState!.closeDrawer()
+                : drawerKey.currentState!.openDrawer();
+          },
+            child: Icon(Icons.menu, color: ColorRes.white,)
+        ),
         onSearchTap: () {
           // Handle search action
         },
       ),
+      key: drawerKey,
+      drawer: const CustomDrawerScreen(),
       body: Column(
         spacing: 5,
         children: [
@@ -113,7 +126,7 @@ class _HomeScreenState extends State<HomeScreen> {
             children: sliderImage.asMap().entries.map((entry) {
               return AnimatedContainer(
                 duration: const Duration(milliseconds: 300),
-                height: 7,
+                height: 3,
                 width: currentIndex == entry.key ? 15 : 7,
                 margin: const EdgeInsets.symmetric(horizontal: 3),
                 decoration: BoxDecoration(
@@ -138,7 +151,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       crossAxisCount: 4,
                       mainAxisSpacing: 8,
                       crossAxisSpacing: 8,
-                      mainAxisExtent: 90,
+                      mainAxisExtent: 85,
                   ),
                   padding: const EdgeInsets.symmetric(horizontal: 15),
                   itemBuilder: (ctx, index){

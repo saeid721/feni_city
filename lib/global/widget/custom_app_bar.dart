@@ -8,11 +8,13 @@ import '../constants/enum.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String title;
+  final Widget? leading;
   final VoidCallback? onSearchTap;
 
   const CustomAppBar({
     super.key,
     required this.title,
+    this.leading,
     this.onSearchTap,
   });
 
@@ -21,24 +23,24 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       backgroundColor: ColorRes.primaryColor,
       automaticallyImplyLeading: false,
+      leading: leading,
       title: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          GlobalImageLoader(
-            imagePath: Images.appLogo,
-            width: 60,
-            fit: BoxFit.fill,
-            imageFor: ImageFor.asset,
-          ),
+          // GlobalImageLoader(
+          //   imagePath: Images.appLogo,
+          //   width: 60,
+          //   fit: BoxFit.fill,
+          //   imageFor: ImageFor.asset,
+          // ),
           Expanded(
             child: GlobalText(
               str: title,
               color: ColorRes.white,
-              fontSize: 18,
+              fontSize: 32,
               fontWeight: FontWeight.w700,
               textAlign: TextAlign.center,
-              fontFamily: 'Rubik',
-              maxLines: 2,
+              fontFamily: 'Potta',
             ),
           ),
           Row(
