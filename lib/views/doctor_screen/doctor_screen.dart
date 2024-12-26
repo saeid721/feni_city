@@ -66,7 +66,7 @@ class _DoctorScreenState extends State<DoctorScreen> {
               child: CarouselSlider(
                 items: sliderImage.map((item) {
                   return GlobalContainer(
-                    borderCornerRadius: const BorderRadius.all(Radius.circular(10.0)),
+                    borderRadiusCircular: 10,
                     child: ClipRRect(
                       borderRadius: const BorderRadius.all(Radius.circular(10.0)),
                       child: Image.asset(
