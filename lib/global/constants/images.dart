@@ -44,6 +44,13 @@ class Images {
   static const String collageInc = 'assets/icons/collage.png';
   static const String nurseryInc = 'assets/icons/nursery.png';
 
+  static const String fenirshomoy = 'assets/images/newspaper/fenirshomoy.jpg';
+  static const String doinikfeni = 'assets/images/newspaper/doinikfeni.png';
+  static const String doinikamarfeni = 'assets/images/newspaper/doinikamarfeni.png';
+  static const String ajeyobangla = 'assets/images/newspaper/ajeyobangla.png';
+  static const String dailyprovatalo = 'assets/images/newspaper/dailyprovatalo.png';
+  static const String nayapaigam = 'assets/images/newspaper/nayapaigam.png';
+
   static const String homeInc = 'assets/icons/home.png';
   static const String contactInc = 'assets/icons/contact.png';
   static const String notificationInc = 'assets/icons/notification.png';

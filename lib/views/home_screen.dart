@@ -16,6 +16,7 @@ import 'diagnostic_centre_screen/diagnostic_web_view_screen.dart';
 import 'doctor_screen/doctor_screen.dart';
 import 'doctor_screen/doctor_web_view_screen.dart';
 import 'hospital_screen/hospital_web_view_screen.dart';
+import 'news_creeen/news_screen.dart';
 import 'train_screen/train_web_view_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -249,7 +250,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Get.to(()=> const DoctorScreen());
                                 break;
                               case 22:
-                                Get.to(()=> const DoctorScreen());
+                                Get.to(()=> const NewsScreen());
                                 break;
                             }
                           },
