@@ -27,7 +27,7 @@ class _InstituteScreenState extends State<InstituteScreen> with SingleTickerProv
   void initState() {
     super.initState();
 
-    _tabController = TabController(length: 3, vsync: this);
+    _tabController = TabController(length: 5, vsync: this);
   }
 
   @override

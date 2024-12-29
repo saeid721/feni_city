@@ -34,11 +34,11 @@ class _HighSchoolScreenState extends State<HighSchoolScreen> {
                 physics: NeverScrollableScrollPhysics(),
                 itemBuilder: (ctx, index) {
                   return InstituteDetailsWidget(
-                    instituteName: "Adarsha High School",
-                    thana: "ছাগলনাইয়া",
-                    phone: "+88 01819834148",
-                    address: "Nairaj Pur, Feni",
-                    imagePath: 'assets/images/01.jpg',
+                    instituteName: "ফেনী সরকারি পাইলট উচ্চ বিদ্যালয়",
+                    thana: "সদর",
+                    phone: "+88 01700 00 00 00",
+                    address: "ফেনী সদর, ফেনী",
+                    imagePath: 'assets/images/institute/FeniGovtPilotHighSchool.png',
                     call: "কল",
                     sms: "এস.এম.এস",
                     map: "ম্যাপ",

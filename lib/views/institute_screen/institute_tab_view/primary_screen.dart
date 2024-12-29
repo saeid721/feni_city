@@ -36,9 +36,9 @@ class _PrimaryScreenState extends State<PrimaryScreen> {
                   return InstituteDetailsWidget(
                     instituteName: "আজমিরী বেগম রেজিঃ বেঃ প্রাঃ বিদ্যালয়",
                     thana: "ছাগলনাইয়া",
-                    phone: "+88 01719340940",
+                    phone: "+88 01700 00 00 00",
                     address: "ছাগলনাইয়া, ফেনী",
-                    imagePath: 'assets/images/01.jpg',
+                    imagePath: 'assets/images/institute/primarylogo.png',
                     call: "কল",
                     sms: "এস.এম.এস",
                     map: "ম্যাপ",

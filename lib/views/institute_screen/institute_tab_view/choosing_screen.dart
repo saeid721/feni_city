@@ -34,11 +34,11 @@ class _ChoosingScreenState extends State<ChoosingScreen> {
                 physics: NeverScrollableScrollPhysics(),
                 itemBuilder: (ctx, index) {
                   return InstituteDetailsWidget(
-                    instituteName: "আজমিরী বেগম রেজিঃ বেঃ প্রাঃ বিদ্যালয়",
-                    thana: "ছাগলনাইয়া",
-                    phone: "+88 01719340940",
-                    address: "ছাগলনাইয়া, ফেনী",
-                    imagePath: 'assets/images/01.jpg',
+                    instituteName: "এক্সপার্ট কোচিং সেন্টার",
+                    thana: "সদর",
+                    phone: "+88 01700 00 00 00",
+                    address: "সদর, ফেনী",
+                    imagePath: 'assets/images/institute/Expertcoachingcenterfeni.jpg',
                     call: "কল",
                     sms: "এস.এম.এস",
                     map: "ম্যাপ",

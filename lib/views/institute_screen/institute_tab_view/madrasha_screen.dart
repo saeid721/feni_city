@@ -34,15 +34,17 @@ class _MadrashaScreenState extends State<MadrashaScreen> {
                 physics: NeverScrollableScrollPhysics(),
                 itemBuilder: (ctx, index) {
                   return InstituteDetailsWidget(
-                    instituteName: "আজমিরী বেগম রেজিঃ বেঃ প্রাঃ বিদ্যালয়",
-                    thana: "ছাগলনাইয়া",
-                    phone: "+88 01719340940",
-                    address: "ছাগলনাইয়া, ফেনী",
-                    imagePath: 'assets/images/01.jpg',
+                    instituteName: "আল জামিয়াতুল ফালাহিয়া কামিল মাদ্রাসা",
+                    thana: "সদর",
+                    phone: "+88 01700 00 00 00",
+                    address: "ফেনী সদর, ফেনী",
+                    imagePath: 'assets/images/institute/AlJameatulFalahiaKamilMadrasah.jpg',
                     call: "কল",
                     sms: "এস.এম.এস",
                     map: "ম্যাপ",
-                    onTap: () {},
+                    onTap: () {
+
+                    },
                   );
                 },
               ),

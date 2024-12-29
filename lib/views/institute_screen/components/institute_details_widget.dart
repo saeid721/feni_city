@@ -41,20 +41,34 @@ class InstituteDetailsWidget extends StatelessWidget {
     await launchUrl(smsUri);
   }
 
-  Future<void> _sendEmail(String email) async {
-    final Uri emailUri = Uri(
-      scheme: 'mailto',
-      path: email,
-    );
-    await launchUrl(emailUri);
+  Future<void> _openGoogleMap(BuildContext context, String instituteName, String address) async {
+    final query = Uri.encodeComponent("$instituteName, $address");
+    final url = "https://www.google.com/maps/search/?api=1&query=$query";
+
+    if (await canLaunchUrl(Uri.parse(url))) {
+      await launchUrl(
+        Uri.parse(url),
+        mode: LaunchMode.inAppWebView,
+        webViewConfiguration: const WebViewConfiguration(
+          enableJavaScript: true,
+        ),
+      );
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Could not open the map.'),
+        ),
+      );
+    }
   }
+
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
       child: GlobalContainer(
-        padding: const EdgeInsets.only(left: 15, right: 15, top: 15, bottom: 15),
+        padding: const EdgeInsets.only(left: 15, right: 5, top: 15, bottom: 15),
         margin: const EdgeInsets.only(bottom: 15, top: 5, right: 5),
         borderRadiusCircular: 10,
         borderColor: ColorRes.borderColor,
@@ -150,11 +164,10 @@ class InstituteDetailsWidget extends StatelessWidget {
                   child: SizedBox(
                     child: GlobalImageLoader(
                       imagePath: imagePath,
-                      height: 90,
-                      width: 90,
-                      imageFor: ImageFor.network,
+                      width: 80,
+                      imageFor: ImageFor.asset,
                       fit: BoxFit.fill,
-                    )
+                    ),
                   ),
                 ),
               ],
@@ -167,7 +180,8 @@ class InstituteDetailsWidget extends StatelessWidget {
                 GestureDetector(
                   onTap: () => _makePhoneCall(phone),
                   child: Container(
-                    padding: const EdgeInsets.only(left: 10, right: 10, top: 2, bottom: 2),
+                    padding: const EdgeInsets.only(
+                        left: 10, right: 10, top: 2, bottom: 2),
                     decoration: BoxDecoration(
                       border: Border.all(
                         color: ColorRes.primaryColor,
@@ -199,7 +213,8 @@ class InstituteDetailsWidget extends StatelessWidget {
                 GestureDetector(
                   onTap: () => _sendSMS(phone),
                   child: Container(
-                    padding: const EdgeInsets.only(left: 10, right: 10, top: 2, bottom: 2),
+                    padding: const EdgeInsets.only(
+                        left: 10, right: 10, top: 2, bottom: 2),
                     decoration: BoxDecoration(
                       border: Border.all(
                         color: ColorRes.primaryColor,
@@ -231,9 +246,10 @@ class InstituteDetailsWidget extends StatelessWidget {
                 ),
                 sizedBoxW(10),
                 GestureDetector(
-                  onTap: () => _sendEmail(address),
+                  onTap: () => _openGoogleMap(context, instituteName, address),
                   child: Container(
-                    padding: const EdgeInsets.only(left: 10, right: 10, top: 2, bottom: 2),
+                    padding: const EdgeInsets.only(
+                        left: 10, right: 10, top: 2, bottom: 2),
                     decoration: BoxDecoration(
                       border: Border.all(
                         color: ColorRes.primaryColor,

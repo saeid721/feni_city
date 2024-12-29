@@ -42,6 +42,7 @@ flutter:
     - assets/icons/
     - assets/images/
     - assets/images/newspaper/
+    - assets/images/institute/
 
   fonts:
      - family: Potta
