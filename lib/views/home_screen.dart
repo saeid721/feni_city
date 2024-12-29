@@ -16,6 +16,7 @@ import 'diagnostic_centre_screen/diagnostic_web_view_screen.dart';
 import 'doctor_screen/doctor_screen.dart';
 import 'doctor_screen/doctor_web_view_screen.dart';
 import 'hospital_screen/hospital_web_view_screen.dart';
+import 'institute_screen/institute_screen.dart';
 import 'news_creeen/news_screen.dart';
 import 'train_screen/train_web_view_screen.dart';
 
@@ -241,7 +242,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Get.to(()=> const DoctorScreen());
                                 break;
                               case 19:
-                                Get.to(()=> const DoctorScreen());
+                                Get.to(()=> InstituteScreen(instituteId:""));
                                 break;
                               case 20:
                                 Get.to(()=> const DoctorScreen());
