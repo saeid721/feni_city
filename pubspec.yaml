@@ -44,6 +44,7 @@ flutter:
     - assets/images/newspaper/
     - assets/images/institute/
     - assets/images/bidyut/
+    - assets/images/joruri_seba/
 
   fonts:
      - family: Potta

@@ -25,7 +25,7 @@ class _JoruriSebaScreenState extends State<JoruriSebaScreen> {
         appBar: PreferredSize(
           preferredSize: const Size.fromHeight(56),
           child: GlobalAppBar(
-            title: 'জরুরী সেবা',
+            title: 'জরুরী সেবার হটলাইন নাম্বার সমূহ',
             notiOnTap: () {},
           ),
         ),
@@ -41,7 +41,7 @@ class _JoruriSebaScreenState extends State<JoruriSebaScreen> {
                     instituteName: "জাতীয় জরুরী সেবা",
                     phone: "999",
                     address: "বাংলাদেশ",
-                    imagePath: 'assets/images/bidyut/fenipallibidyut.jpeg',
+                    imagePath: 'assets/images/joruri_seba/JoruriSeba.png',
                     call: "কল",
                     sms: "এস.এম.এস",
                     onTap: () {
