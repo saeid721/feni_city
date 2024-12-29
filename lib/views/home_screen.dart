@@ -9,6 +9,7 @@ import '../global/widget/custom_app_bar.dart';
 import '../global/widget/global_container.dart';
 import '../global/widget/home_menu_widget.dart';
 import 'app_exit_dialog.dart';
+import 'biddut_office_screen/bidyut_office_screen.dart';
 import 'blood_screen/blood_web_view_screen.dart';
 import 'bus_screen/bus_web_view_screen.dart';
 import 'custom_drawer_screen.dart';
@@ -17,6 +18,7 @@ import 'doctor_screen/doctor_screen.dart';
 import 'doctor_screen/doctor_web_view_screen.dart';
 import 'hospital_screen/hospital_web_view_screen.dart';
 import 'institute_screen/institute_screen.dart';
+import 'joruri_seba_screen/joruri_seba_screen.dart';
 import 'news_creeen/news_screen.dart';
 import 'train_screen/train_web_view_screen.dart';
 
@@ -206,7 +208,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Get.to(()=> const DoctorScreen());
                                 break;
                               case 7:
-                                Get.to(()=> const DoctorScreen());
+                                Get.to(()=> const JoruriSebaScreen());
                                 break;
                               case 8:
                                 Get.to(()=> const DoctorScreen());
@@ -215,7 +217,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Get.to(()=> const DoctorScreen());
                                 break;
                               case 10:
-                                Get.to(()=> const DoctorScreen());
+                                Get.to(()=> const BidyutOfficeScreen());
                                 break;
                               case 11:
                                 Get.to(()=> const DoctorScreen());
