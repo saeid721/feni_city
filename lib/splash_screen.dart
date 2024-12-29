@@ -32,20 +32,20 @@ class SplashScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // GlobalImageLoader(
-              //   imagePath: 'assets/images/FeniCitylogo.png',
-              //   //imagePath: Images.appLogo,
-              //   width: 180,
-              //   imageFor: ImageFor.asset,
-              // ),
-              GlobalText(
-                str: 'Feni City',
-                color: ColorRes.primaryColor,
-                fontSize: 50,
-                fontWeight: FontWeight.w700,
-                textAlign: TextAlign.center,
-                fontFamily: 'Potta',
+              GlobalImageLoader(
+                imagePath: 'assets/images/feniCity.png',
+                //imagePath: Images.appLogo,
+                width: 200,
+                imageFor: ImageFor.asset,
               ),
+              // GlobalText(
+              //   str: 'Feni City',
+              //   color: ColorRes.primaryColor,
+              //   fontSize: 50,
+              //   fontWeight: FontWeight.w700,
+              //   textAlign: TextAlign.center,
+              //   fontFamily: 'Potta',
+              // ),
               // GlobalText(
               //   str: 'ফেনী সিটি',
               //   color: ColorRes.primaryColor,

@@ -41,27 +41,37 @@ class InstituteDetailsWidget extends StatelessWidget {
     await launchUrl(smsUri);
   }
 
-  Future<void> _openGoogleMap(BuildContext context, String instituteName, String address) async {
+  Future<void> _openGoogleMap(
+      BuildContext context, String instituteName, String address) async {
     final query = Uri.encodeComponent("$instituteName, $address");
     final url = "https://www.google.com/maps/search/?api=1&query=$query";
 
-    if (await canLaunchUrl(Uri.parse(url))) {
-      await launchUrl(
-        Uri.parse(url),
-        mode: LaunchMode.inAppWebView,
-        webViewConfiguration: const WebViewConfiguration(
-          enableJavaScript: true,
-        ),
-      );
-    } else {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text('Could not open the map.'),
-        ),
-      );
+    try {
+      final uri = Uri.parse(url);
+
+      if (await canLaunchUrl(uri)) {
+        await launchUrl(
+          uri,
+          mode: LaunchMode.inAppWebView,
+          webViewConfiguration: const WebViewConfiguration(
+            enableJavaScript: true,
+          ),
+        );
+      } else {
+        _showSnackBar(context, 'Unable to open map in web view.');
+      }
+    } catch (e) {
+      _showSnackBar(context, 'An error occurred: $e');
     }
   }
 
+  void _showSnackBar(BuildContext context, String message) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(message),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -246,7 +256,7 @@ class InstituteDetailsWidget extends StatelessWidget {
                 ),
                 sizedBoxW(10),
                 GestureDetector(
-                  onTap: () => _openGoogleMap(context, instituteName, address),
+                  onTap: () => _openGoogleMap(context, instituteName, address ),
                   child: Container(
                     padding: const EdgeInsets.only(
                         left: 10, right: 10, top: 2, bottom: 2),
