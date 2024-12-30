@@ -38,7 +38,7 @@ class _FireServicesScreenState extends State<FireServicesScreen> {
                 physics: NeverScrollableScrollPhysics(),
                 itemBuilder: (ctx, index) {
                   return FireServicesWidget(
-                    instituteName: "সুন্দরবন কুরিয়ার সার্ভিস",
+                    instituteName: "ফায়ার সার্ভিস ও সিভিল ডিফেন্স",
                     thana: "সদর",
                     phone: "+88 01700 00 00 00",
                     address: "সদর, ফেনী",
