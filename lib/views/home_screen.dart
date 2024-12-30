@@ -244,7 +244,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Get.to(()=> const DoctorScreen());
                                 break;
                               case 17:
-                                Get.to(()=> const NewsScreen());
+                                Get.to(()=> const DoctorScreen());
                                 break;
                               case 18:
                                 Get.to(()=> const DoctorScreen());
@@ -256,9 +256,24 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Get.to(()=> const DoctorScreen());
                                 break;
                               case 21:
-                                Get.to(()=> const GardenScreen());
+                                Get.to(()=> const DoctorScreen());
                                 break;
                               case 22:
+                                Get.to(()=> const NewsScreen());
+                                break;
+                              case 23:
+                                Get.to(()=> const DoctorScreen());
+                                break;
+                              case 24:
+                                Get.to(()=> const DoctorScreen());
+                                break;
+                              case 25:
+                                Get.to(()=> const DoctorScreen());
+                                break;
+                              case 26:
+                                Get.to(()=> const GardenScreen());
+                                break;
+                              case 27:
                                 Get.to(()=> const VideosScreen());
                                 break;
                             }
