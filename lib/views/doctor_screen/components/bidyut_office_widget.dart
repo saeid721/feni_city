@@ -7,29 +7,23 @@ import '../../../global/widget/global_container.dart';
 import '../../../global/widget/global_image_loader.dart';
 import '../../../global/widget/global_sizedbox.dart';
 
-class DoctorDetailsWidget extends StatelessWidget {
-  final String name;
-  final String degree;
-  final String designation;
-  final String address;
-  final String chamber;
+class BidyutOfficeWidget extends StatelessWidget {
+  final String instituteName;
   final String phone;
-  final String details;
+  final String thana;
+  final String address;
   final String imagePath;
   final String call;
   final String sms;
   final String map;
 
   final Function() onTap;
-  const DoctorDetailsWidget({
+  const BidyutOfficeWidget({
     super.key,
-    required this.name,
-    required this.degree,
-    required this.designation,
-    required this.address,
-    required this.chamber,
+    required this.instituteName,
     required this.phone,
-    required this.details,
+    required this.thana,
+    required this.address,
     required this.imagePath,
     required this.call,
     required this.sms,
@@ -47,10 +41,9 @@ class DoctorDetailsWidget extends StatelessWidget {
     await launchUrl(smsUri);
   }
 
-
   Future<void> _openGoogleMap(
-      BuildContext context, String chamber) async {
-    final query = Uri.encodeComponent("$chamber");
+      BuildContext context, String instituteName, String address) async {
+    final query = Uri.encodeComponent("$instituteName, $address");
     final url = "https://www.google.com/maps/search/?api=1&query=$query";
 
     try {
@@ -100,107 +93,21 @@ class DoctorDetailsWidget extends StatelessWidget {
                   child: Column(
                     children: [
                       Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          const Icon(
-                            Icons.person_pin_outlined,
-                            size: 18,
-                            color: ColorRes.primaryColor,
-                          ),
-                          sizedBoxW(5),
-                          Flexible(
-                            child: GlobalText(
-                              str: name,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w600,
-                              color: ColorRes.black,
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          const Icon(
-                            Icons.cast_for_education,
-                            size: 18,
-                            color: ColorRes.primaryColor,
-                          ),
-                          sizedBoxW(5),
-                          Flexible(
-                            child: GlobalText(
-                              str: degree,
-                              fontSize: 12,
-                              fontWeight: FontWeight.w500,
-                              color: ColorRes.black,
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const Icon(
-                            Icons.home_repair_service,
+                            Icons.location_city,
                             size: 18,
                             color: ColorRes.primaryColor,
                           ),
                           sizedBoxW(5),
-                          Flexible(
-                            child: GlobalText(
-                              str: designation,
-                              fontSize: 12,
-                              fontWeight: FontWeight.w400,
-                              color: ColorRes.textColor,
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Icon(
-                            Icons.location_on_outlined,
-                            size: 18,
-                            color: ColorRes.primaryColor,
-                          ),
-                          sizedBoxW(5),
-                          Flexible(
-                            child: GlobalText(
-                              str: address,
-                              fontSize: 12,
-                              fontWeight: FontWeight.w400,
-                              color: ColorRes.textColor,
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Icon(
-                            Icons.add_location_outlined,
-                            size: 18,
-                            color: ColorRes.primaryColor,
-                          ),
-                          sizedBoxW(5),
-                          Flexible(
-                            child: GlobalText(
-                              str: chamber,
-                              fontSize: 12,
-                              fontWeight: FontWeight.w400,
-                              color: ColorRes.textColor,
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                            ),
+                          GlobalText(
+                            str: instituteName,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600,
+                            color: ColorRes.textColor,
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
                           ),
                         ],
                       ),
@@ -215,9 +122,46 @@ class DoctorDetailsWidget extends StatelessWidget {
                           sizedBoxW(5),
                           GlobalText(
                             str: phone,
-                            fontSize: 12,
+                            fontSize: 14,
                             fontWeight: FontWeight.w400,
                             color: ColorRes.textColor,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ],
+                      ),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          const Icon(
+                            Icons.local_police_outlined,
+                            size: 18,
+                            color: ColorRes.primaryColor,
+                          ),
+                          sizedBoxW(5),
+                          GlobalText(
+                            str: thana,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400,
+                            color: ColorRes.black,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ],
+                      ),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Icon(
+                            Icons.location_on_outlined,
+                            size: 18,
+                            color: ColorRes.primaryColor,
+                          ),
+                          sizedBoxW(5),
+                          GlobalText(
+                            str: address,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400,
+                            color: ColorRes.textColor,
+                            maxLines: 2,
                             overflow: TextOverflow.ellipsis,
                           ),
                         ],
@@ -238,28 +182,6 @@ class DoctorDetailsWidget extends StatelessWidget {
                 ),
               ],
             ),
-
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                const Icon(
-                  Icons.details,
-                  size: 18,
-                  color: ColorRes.primaryColor,
-                ),
-                sizedBoxW(5),
-                Flexible(
-                  child: GlobalText(
-                    str: details,
-                    fontSize: 12,
-                    fontWeight: FontWeight.w400,
-                    color: ColorRes.black,
-                    maxLines: 4,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                ),
-              ],
-            ),
             const Divider(),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -268,7 +190,8 @@ class DoctorDetailsWidget extends StatelessWidget {
                 GestureDetector(
                   onTap: () => _makePhoneCall(phone),
                   child: Container(
-                    padding: const EdgeInsets.only(left: 10, right: 10, top: 2, bottom: 2),
+                    padding: const EdgeInsets.only(
+                        left: 10, right: 10, top: 2, bottom: 2),
                     decoration: BoxDecoration(
                       border: Border.all(
                         color: ColorRes.primaryColor,
@@ -300,7 +223,8 @@ class DoctorDetailsWidget extends StatelessWidget {
                 GestureDetector(
                   onTap: () => _sendSMS(phone),
                   child: Container(
-                    padding: const EdgeInsets.only(left: 10, right: 10, top: 2, bottom: 2),
+                    padding: const EdgeInsets.only(
+                        left: 10, right: 10, top: 2, bottom: 2),
                     decoration: BoxDecoration(
                       border: Border.all(
                         color: ColorRes.primaryColor,
@@ -332,9 +256,10 @@ class DoctorDetailsWidget extends StatelessWidget {
                 ),
                 sizedBoxW(10),
                 GestureDetector(
-                  onTap: () => _openGoogleMap(context, chamber ),
+                  onTap: () => _openGoogleMap(context, instituteName, address ),
                   child: Container(
-                    padding: const EdgeInsets.only(left: 10, right: 10, top: 2, bottom: 2),
+                    padding: const EdgeInsets.only(
+                        left: 10, right: 10, top: 2, bottom: 2),
                     decoration: BoxDecoration(
                       border: Border.all(
                         color: ColorRes.primaryColor,
@@ -356,7 +281,6 @@ class DoctorDetailsWidget extends StatelessWidget {
                           str: map,
                           fontSize: 14,
                           fontWeight: FontWeight.w400,
-                          maxLines: 2,
                           color: ColorRes.primaryColor,
                           overflow: TextOverflow.ellipsis,
                         ),

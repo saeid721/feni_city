@@ -187,7 +187,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           onTap: (){
                             switch(index){
                               case 0:
-                                Get.to(()=> const DoctorWebViewScreen());
+                                Get.to(()=> const DoctorScreen());
                                 break;
                               case 1:
                                 Get.to(()=> const HospitalWebViewScreen());

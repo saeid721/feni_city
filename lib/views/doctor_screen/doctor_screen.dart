@@ -7,6 +7,7 @@ import '../../global/model.dart';
 import '../../global/widget/custom_app_bar.dart';
 import '../../global/widget/global_container.dart';
 import '../../global/widget/home_menu_widget.dart';
+import 'monorog_screen.dart';
 
 class DoctorScreen extends StatefulWidget {
   const DoctorScreen({super.key});
@@ -19,7 +20,7 @@ class _DoctorScreenState extends State<DoctorScreen> {
   final GlobalKey<ScaffoldState> drawerKey = GlobalKey<ScaffoldState>();
 
   List<GlobalMenuModel> menuItem = [
-    GlobalMenuModel(img: Images.doctorInc, text: 'ডাক্তার'),
+    GlobalMenuModel(img: Images.doctorInc, text: 'মনোরোগ বিশেষজ্ঞ'),
     GlobalMenuModel(img: Images.hospitalInc, text: 'হাসপাতাল'),
     GlobalMenuModel(img: Images.diagnosticInc, text: 'ডায়াগনস্টিক'),
     GlobalMenuModel(img: Images.bloodInc, text: 'রক্ত'),
@@ -119,7 +120,7 @@ class _DoctorScreenState extends State<DoctorScreen> {
                   crossAxisCount: 4,
                   mainAxisSpacing: 8,
                   crossAxisSpacing: 8,
-                  mainAxisExtent: 85,
+                  mainAxisExtent: 100,
                 ),
                 padding: const EdgeInsets.symmetric(horizontal: 15),
                 itemBuilder: (ctx, index) {
@@ -127,7 +128,7 @@ class _DoctorScreenState extends State<DoctorScreen> {
                     onTap: () {
                       switch (index) {
                         case 0:
-                          Get.to(() => const DoctorScreen());
+                          Get.to(() => const MonorogScreen());
                           break;
                         case 1:
                           Get.to(() => const DoctorScreen());
@@ -197,7 +198,7 @@ class _DoctorScreenState extends State<DoctorScreen> {
                           break;
                       }
                     },
-                    child: HomeMenuWidget(height: 40, width: 40, maxLines: 1, imagePath: menuItem[index].img, text: menuItem[index].text),
+                    child: HomeMenuWidget(height: 40, width: 40, maxLines: 2, imagePath: menuItem[index].img, text: menuItem[index].text),
                   );
                 }),
           ),
