@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import '../../../../../global/constants/colors_resources.dart';
 import '../../../../../global/widget/global_container.dart';
 import '../../global/widget/custom_app_bar.dart';
-import 'institute_tab_view/pickup_screen.dart';
-import 'institute_tab_view/bus_screen.dart';
-import 'institute_tab_view/car_screen.dart';
-import 'institute_tab_view/track_screen.dart';
-import 'institute_tab_view/ambulance_screen.dart';
+import 'rant_car_tab_view/ambulance_screen.dart';
+import 'rant_car_tab_view/bus_screen.dart';
+import 'rant_car_tab_view/car_screen.dart';
+import 'rant_car_tab_view/pickup_screen.dart';
+import 'rant_car_tab_view/track_screen.dart';
 
 class RantCarScreen extends StatefulWidget {
   final String typeId;

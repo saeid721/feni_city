@@ -17,6 +17,7 @@ import 'custom_drawer_screen.dart';
 import 'diagnostic_centre_screen/diagnostic_centre_screen.dart';
 import 'doctor_screen/doctor_screen.dart';
 import 'fire_services_screen/fire_services_screen.dart';
+import 'garden_screen/garden_screen.dart';
 import 'hospital_screen/hospital_screen.dart';
 import 'hotel_screen/hotel_screen.dart';
 import 'institute_screen/institute_screen.dart';
@@ -25,6 +26,7 @@ import 'news_creeen/news_screen.dart';
 import 'rant_car_screen/rant_car_screen.dart';
 import 'thana_polish_screen/thana_polish_screen.dart';
 import 'train_screen/train_web_view_screen.dart';
+import 'video_screen/videos_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -242,7 +244,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Get.to(()=> const DoctorScreen());
                                 break;
                               case 17:
-                                Get.to(()=> const DoctorScreen());
+                                Get.to(()=> const NewsScreen());
                                 break;
                               case 18:
                                 Get.to(()=> const DoctorScreen());
@@ -254,10 +256,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Get.to(()=> const DoctorScreen());
                                 break;
                               case 21:
-                                Get.to(()=> const DoctorScreen());
+                                Get.to(()=> const GardenScreen());
                                 break;
                               case 22:
-                                Get.to(()=> const NewsScreen());
+                                Get.to(()=> const VideosScreen());
                                 break;
                             }
                           },
