@@ -13,13 +13,13 @@ import 'biddut_office_screen/bidyut_office_screen.dart';
 import 'blood_screen/blood_web_view_screen.dart';
 import 'bus_screen/bus_web_view_screen.dart';
 import 'custom_drawer_screen.dart';
-import 'diagnostic_centre_screen/diagnostic_web_view_screen.dart';
+import 'diagnostic_centre_screen/diagnostic_centre_screen.dart';
 import 'doctor_screen/doctor_screen.dart';
-import 'doctor_screen/doctor_web_view_screen.dart';
-import 'hospital_screen/hospital_web_view_screen.dart';
+import 'hospital_screen/hospital_screen.dart';
 import 'institute_screen/institute_screen.dart';
 import 'joruri_seba_screen/joruri_seba_screen.dart';
 import 'news_creeen/news_screen.dart';
+import 'thana_polish_screen/thana_polish_screen.dart';
 import 'train_screen/train_web_view_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -190,10 +190,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Get.to(()=> const DoctorScreen());
                                 break;
                               case 1:
-                                Get.to(()=> const HospitalWebViewScreen());
+                                Get.to(()=> const HospitalScreen(instituteId:""));
                                 break;
                               case 2:
-                                Get.to(()=> const DiagnosticWebViewScreen());
+                                Get.to(()=> const DiagnosticCenterScreen());
                                 break;
                               case 3:
                                 Get.to(()=> const BloodWebViewScreen());
@@ -220,7 +220,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Get.to(()=> const BidyutOfficeScreen());
                                 break;
                               case 11:
-                                Get.to(()=> const DoctorScreen());
+                                Get.to(()=> const ThanaPolishScreen());
                                 break;
                               case 12:
                                 Get.to(()=> const DoctorScreen());

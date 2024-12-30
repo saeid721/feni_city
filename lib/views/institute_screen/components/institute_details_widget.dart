@@ -41,37 +41,19 @@ class InstituteDetailsWidget extends StatelessWidget {
     await launchUrl(smsUri);
   }
 
-  Future<void> _openGoogleMap(
-      BuildContext context, String instituteName, String address) async {
+  Future<void> _openGoogleMap(BuildContext context, String instituteName, String address) async {
     final query = Uri.encodeComponent("$instituteName, $address");
-    final url = "https://www.google.com/maps/search/?api=1&query=$query";
+    final geoUri = Uri.parse("https://www.google.com/maps/search/?api=1&query=$query");
 
-    try {
-      final uri = Uri.parse(url);
-
-      if (await canLaunchUrl(uri)) {
-        await launchUrl(
-          uri,
-          mode: LaunchMode.inAppWebView,
-          webViewConfiguration: const WebViewConfiguration(
-            enableJavaScript: true,
-          ),
-        );
-      } else {
-        _showSnackBar(context, 'Unable to open map in web view.');
-      }
-    } catch (e) {
-      _showSnackBar(context, 'An error occurred: $e');
+    if (await canLaunchUrl(geoUri)) {
+      await launchUrl(geoUri, mode: LaunchMode.externalApplication);
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Unable to open Google Maps app.')),
+      );
     }
   }
 
-  void _showSnackBar(BuildContext context, String message) {
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text(message),
-      ),
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -156,13 +138,15 @@ class InstituteDetailsWidget extends StatelessWidget {
                             color: ColorRes.primaryColor,
                           ),
                           sizedBoxW(5),
-                          GlobalText(
-                            str: address,
-                            fontSize: 14,
-                            fontWeight: FontWeight.w400,
-                            color: ColorRes.textColor,
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
+                          Flexible(
+                            child: GlobalText(
+                              str: address,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                              color: ColorRes.textColor,
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                            ),
                           ),
                         ],
                       ),
