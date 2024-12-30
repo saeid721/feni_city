@@ -132,10 +132,10 @@ class _RantCarScreenState extends State<RantCarScreen> with SingleTickerProvider
                           BusScreen(
                             instituteId: widget.typeId,
                           ),
-                          MadrashaScreen(
+                          TrackScreen(
                             instituteId: widget.typeId,
                           ),
-                          ChoosingScreen(
+                          PickupScreen(
                             instituteId: widget.typeId,
                           ),
                         ],

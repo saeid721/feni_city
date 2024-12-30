@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import '../components/rant_car_widget.dart';
 
-class ChoosingScreen extends StatefulWidget {
+class PickupScreen extends StatefulWidget {
   final String instituteId;
-  const ChoosingScreen({
+  const PickupScreen({
     super.key,
     required this.instituteId,
   });
 
   @override
-  State<ChoosingScreen> createState() => _ChoosingScreenState();
+  State<PickupScreen> createState() => _PickupScreenState();
 }
 
-class _ChoosingScreenState extends State<ChoosingScreen> {
+class _PickupScreenState extends State<PickupScreen> {
 
   @override
   void initState() {
@@ -34,7 +34,7 @@ class _ChoosingScreenState extends State<ChoosingScreen> {
                 physics: NeverScrollableScrollPhysics(),
                 itemBuilder: (ctx, index) {
                   return InstituteDetailsWidget(
-                    instituteName: "এক্সপার্ট কোচিং সেন্টার",
+                    instituteName: "পিকআপ",
                     thana: "সদর",
                     phone: "+88 01700 00 00 00",
                     address: "সদর, ফেনী",

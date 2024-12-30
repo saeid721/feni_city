@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import '../components/rant_car_widget.dart';
 
-class MadrashaScreen extends StatefulWidget {
+class TrackScreen extends StatefulWidget {
   final String instituteId;
-  const MadrashaScreen({
+  const TrackScreen({
     super.key,
     required this.instituteId,
   });
 
   @override
-  State<MadrashaScreen> createState() => _MadrashaScreenState();
+  State<TrackScreen> createState() => _TrackScreenState();
 }
 
-class _MadrashaScreenState extends State<MadrashaScreen> {
+class _TrackScreenState extends State<TrackScreen> {
 
   @override
   void initState() {
@@ -34,10 +34,10 @@ class _MadrashaScreenState extends State<MadrashaScreen> {
                 physics: NeverScrollableScrollPhysics(),
                 itemBuilder: (ctx, index) {
                   return InstituteDetailsWidget(
-                    instituteName: "আল জামিয়াতুল ফালাহিয়া কামিল মাদ্রাসা",
+                    instituteName: "ট্র্যাক",
                     thana: "সদর",
                     phone: "+88 01700 00 00 00",
-                    address: "ফেনী সদর, ফেনী",
+                    address: "সদর, ফেনী",
                     imagePath: 'assets/images/institute/AlJameatulFalahiaKamilMadrasah.jpg',
                     call: "কল",
                     sms: "এস.এম.এস",
