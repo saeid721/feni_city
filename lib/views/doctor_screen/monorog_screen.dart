@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../../global/widget/custom_app_bar.dart';
-import 'components/bidyut_office_widget.dart';
 import 'components/doctor_details_widget.dart';
 
 class MonorogScreen extends StatefulWidget {

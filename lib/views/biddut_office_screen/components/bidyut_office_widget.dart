@@ -41,36 +41,17 @@ class BidyutOfficeWidget extends StatelessWidget {
     await launchUrl(smsUri);
   }
 
-  Future<void> _openGoogleMap(
-      BuildContext context, String instituteName, String address) async {
+  Future<void> _openGoogleMap(BuildContext context, String instituteName, String address) async {
     final query = Uri.encodeComponent("$instituteName, $address");
-    final url = "https://www.google.com/maps/search/?api=1&query=$query";
+    final geoUri = Uri.parse("https://www.google.com/maps/search/?api=1&query=$query");
 
-    try {
-      final uri = Uri.parse(url);
-
-      if (await canLaunchUrl(uri)) {
-        await launchUrl(
-          uri,
-          mode: LaunchMode.inAppWebView,
-          webViewConfiguration: const WebViewConfiguration(
-            enableJavaScript: true,
-          ),
-        );
-      } else {
-        _showSnackBar(context, 'Unable to open map in web view.');
-      }
-    } catch (e) {
-      _showSnackBar(context, 'An error occurred: $e');
+    if (await canLaunchUrl(geoUri)) {
+      await launchUrl(geoUri, mode: LaunchMode.externalApplication);
+    } else {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Unable to open Google Maps app.')),
+      );
     }
-  }
-
-  void _showSnackBar(BuildContext context, String message) {
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text(message),
-      ),
-    );
   }
 
   @override
@@ -82,7 +63,7 @@ class BidyutOfficeWidget extends StatelessWidget {
         margin: const EdgeInsets.only(bottom: 15, top: 5, right: 5),
         borderRadiusCircular: 10,
         borderColor: ColorRes.borderColor,
-        elevation: 2,
+        elevation: 1,
         child: Column(
           children: [
             Row(

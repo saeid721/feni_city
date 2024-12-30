@@ -89,7 +89,7 @@ class DoctorDetailsWidget extends StatelessWidget {
         margin: const EdgeInsets.only(bottom: 15, top: 5, right: 5),
         borderRadiusCircular: 10,
         borderColor: ColorRes.borderColor,
-        elevation: 2,
+        elevation: 1,
         child: Column(
           children: [
             Row(
