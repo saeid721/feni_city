@@ -17,6 +17,7 @@ import 'custom_drawer_screen.dart';
 import 'diagnostic_centre_screen/diagnostic_centre_screen.dart';
 import 'doctor_screen/doctor_screen.dart';
 import 'fire_services_screen/fire_services_screen.dart';
+import 'flat_land_screen/flat_land_screen.dart';
 import 'garden_screen/garden_screen.dart';
 import 'hospital_screen/hospital_screen.dart';
 import 'hotel_screen/hotel_screen.dart';
@@ -268,7 +269,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Get.to(()=> const DoctorScreen());
                                 break;
                               case 25:
-                                Get.to(()=> const DoctorScreen());
+                                Get.to(()=> const FlatLandScreen());
                                 break;
                               case 26:
                                 Get.to(()=> const GardenScreen());
