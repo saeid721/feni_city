@@ -7,9 +7,7 @@ import '../../../../../global/widget/global_container.dart';
 import '../../../../../global/widget/global_image_loader.dart';
 import '../../../../../global/widget/global_text.dart';
 import '../global/constants/colors_resources.dart';
-import 'bus_screen/bus_web_view_screen.dart';
-import 'doctor_screen/doctor_screen.dart';
-import 'hospital_screen/hospital_screen.dart';
+import 'home_screen.dart';
 
 class CustomDrawerScreen extends StatefulWidget {
   const CustomDrawerScreen({super.key});
@@ -22,15 +20,13 @@ class _CustomDrawerScreenState extends State<CustomDrawerScreen> {
 
   int isClick = 0;
   List<GlobalMenuModel> menuItem = [
-    GlobalMenuModel(img: Images.doctorInc, text: 'ডাক্তার'),
-    GlobalMenuModel(img: Images.hospitalInc, text: 'হাসপাতাল'),
-    GlobalMenuModel(img: Images.busInc, text: 'বাসের সময়সূচী'),
-    GlobalMenuModel(img: Images.trainInc, text: 'ট্রেনের সময়সূচী'),
-    GlobalMenuModel(img: Images.touristPlacesInc, text: 'দর্শনীয় স্থান'),
-    GlobalMenuModel(img: Images.roomRentInc, text: 'বাসা ভাড়া'),
-    GlobalMenuModel(img: Images.shoppingCenterInc, text: 'শপিং'),
-    GlobalMenuModel(img: Images.fireStationInc, text: 'ফায়ার সার্ভিস'),
-    GlobalMenuModel(img: Images.courierServicesInc, text: 'কুরিয়ার সার্ভিস'),
+    GlobalMenuModel(img: Images.homeInc, text: 'হোম'),
+    GlobalMenuModel(img: Images.contactInc, text: 'যোগাযোগ'),
+    GlobalMenuModel(img: Images.homeInc, text: 'প্রোফাইল'),
+    GlobalMenuModel(img: Images.notificationInc, text: 'নোটিফিকেশন'),
+    GlobalMenuModel(img: Images.homeInc, text: 'শেয়ার করুন'),
+    GlobalMenuModel(img: Images.homeInc, text: 'রেটিং দিন'),
+    GlobalMenuModel(img: Images.homeInc, text: 'গোপনীয়তা নীতি'),
   ];
 
   @override
@@ -80,13 +76,25 @@ class _CustomDrawerScreenState extends State<CustomDrawerScreen> {
                             log('Index: $index');
                             switch(index){
                               case 0:
-                                Get.to(()=> const DoctorScreen());
+                                Get.to(()=> const HomeScreen());
                                 break;
                               case 1:
-                                Get.to(()=> const DoctorScreen());
+                                Get.to(()=> const HomeScreen());
                                 break;
                               case 2:
-                                Get.to(()=> const DoctorScreen());
+                                Get.to(()=> const HomeScreen());
+                                break;
+                              case 3:
+                                Get.to(()=> const HomeScreen());
+                                break;
+                              case 4:
+                                Get.to(()=> const HomeScreen());
+                                break;
+                              case 5:
+                                Get.to(()=> const HomeScreen());
+                                break;
+                              case 6:
+                                Get.to(()=> const HomeScreen());
                                 break;
                             }
 
