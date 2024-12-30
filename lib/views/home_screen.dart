@@ -12,9 +12,11 @@ import 'app_exit_dialog.dart';
 import 'biddut_office_screen/bidyut_office_screen.dart';
 import 'blood_screen/blood_web_view_screen.dart';
 import 'bus_screen/bus_web_view_screen.dart';
+import 'courier_services_screen/courier_services_screen.dart';
 import 'custom_drawer_screen.dart';
 import 'diagnostic_centre_screen/diagnostic_centre_screen.dart';
 import 'doctor_screen/doctor_screen.dart';
+import 'fire_services_screen/fire_services_screen.dart';
 import 'hospital_screen/hospital_screen.dart';
 import 'institute_screen/institute_screen.dart';
 import 'joruri_seba_screen/joruri_seba_screen.dart';
@@ -211,10 +213,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Get.to(()=> const JoruriSebaScreen());
                                 break;
                               case 8:
-                                Get.to(()=> const DoctorScreen());
+                                Get.to(()=> const FireServicesScreen());
                                 break;
                               case 9:
-                                Get.to(()=> const DoctorScreen());
+                                Get.to(()=> const CourierServicesScreen());
                                 break;
                               case 10:
                                 Get.to(()=> const BidyutOfficeScreen());

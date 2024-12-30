@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import '../../global/widget/custom_app_bar.dart';
-import 'components/thana_polish_widget.dart';
+import 'components/courier_services_widget.dart';
 
-class ThanaPolishScreen extends StatefulWidget {
-  const ThanaPolishScreen({super.key});
+class CourierServicesScreen extends StatefulWidget {
+  const CourierServicesScreen({super.key});
 
   @override
-  State<ThanaPolishScreen> createState() => _ThanaPolishScreenState();
+  State<CourierServicesScreen> createState() => _CourierServicesScreenState();
 }
 
-class _ThanaPolishScreenState extends State<ThanaPolishScreen> {
+class _CourierServicesScreenState extends State<CourierServicesScreen> {
 
   @override
   void initState() {
@@ -25,7 +25,7 @@ class _ThanaPolishScreenState extends State<ThanaPolishScreen> {
         appBar: PreferredSize(
           preferredSize: const Size.fromHeight(56),
           child: GlobalAppBar(
-            title: 'থানা-পুলিশ',
+            title: 'কুরিয়ার সার্ভিস',
             notiOnTap: () {},
           ),
         ),
@@ -37,12 +37,12 @@ class _ThanaPolishScreenState extends State<ThanaPolishScreen> {
                 shrinkWrap: true,
                 physics: NeverScrollableScrollPhysics(),
                 itemBuilder: (ctx, index) {
-                  return ThanaPolishWidget(
-                    instituteName: "ফেনী মডেল পুলিশ স্টেশন",
+                  return CourierServicesWidget(
+                    instituteName: "সুন্দরবন কুরিয়ার সার্ভিস",
                     thana: "সদর",
                     phone: "+88 01700 00 00 00",
                     address: "সদর, ফেনী",
-                    imagePath: 'assets/images/ThanaPolish/ThanaPolish.jpg',
+                    imagePath: 'assets/images/courier_service/sundarbanCourierService.jpg',
                     call: "কল",
                     sms: "এস.এম.এস",
                     map: "ম্যাপ",

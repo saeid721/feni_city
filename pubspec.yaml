@@ -47,6 +47,8 @@ flutter:
     - assets/images/joruri_seba/
     - assets/images/doctors/
     - assets/images/ThanaPolish/
+    - assets/images/courier_service/
+    - assets/images/fire_service/
 
   fonts:
      - family: Potta
