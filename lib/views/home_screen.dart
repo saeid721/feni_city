@@ -21,6 +21,7 @@ import 'hospital_screen/hospital_screen.dart';
 import 'institute_screen/institute_screen.dart';
 import 'joruri_seba_screen/joruri_seba_screen.dart';
 import 'news_creeen/news_screen.dart';
+import 'rant_car_screen/rant_car_screen.dart';
 import 'thana_polish_screen/thana_polish_screen.dart';
 import 'train_screen/train_web_view_screen.dart';
 
@@ -207,7 +208,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Get.to(()=> const TrainWebViewScreen());
                                 break;
                               case 6:
-                                Get.to(()=> const DoctorScreen());
+                                Get.to(()=> const RantCarScreen(typeId:""));
                                 break;
                               case 7:
                                 Get.to(()=> const JoruriSebaScreen());
