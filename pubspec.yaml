@@ -55,6 +55,7 @@ flutter:
     - assets/images/rane_car/bus/
     - assets/images/rane_car/pickup/
     - assets/images/rane_car/track/
+    - assets/images/garden/
 
   fonts:
      - family: Potta

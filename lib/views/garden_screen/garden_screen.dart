@@ -25,7 +25,7 @@ class _GardenScreenState extends State<GardenScreen> {
         appBar: PreferredSize(
           preferredSize: const Size.fromHeight(56),
           child: GlobalAppBar(
-            title: 'হোটেল',
+            title: 'নার্সারী',
             notiOnTap: () {},
           ),
         ),
@@ -38,11 +38,11 @@ class _GardenScreenState extends State<GardenScreen> {
                 physics: NeverScrollableScrollPhysics(),
                 itemBuilder: (ctx, index) {
                   return GardenWidget(
-                    hotelName: "হোটেল নাইট হোল্ড (আবাসিক)",
-                    thana: "মহিপাল",
-                    phone: "+88 01715448838",
-                    address: "হোটেল নাইট হোল্ড (আবাসিক), মহিপাল, ফেনী।",
-                    imagePath: 'assets/images/bidyut/fenipallibidyut.jpeg',
+                    hotelName: "আরজু নার্সারী বৃক্ষ বাজার",
+                    thana: "সদর",
+                    phone: "+88 01834317277",
+                    address: "সদর, ফেনী।",
+                    imagePath: 'assets/images/garden/garden.jpg',
                     call: "কল",
                     sms: "এস.এম.এস",
                     map: "ম্যাপ",
