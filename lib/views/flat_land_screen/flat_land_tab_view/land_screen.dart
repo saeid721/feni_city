@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../components/flat_land_widget.dart';
-import '../components/hospital_widget.dart';
-import '../flat_land_details_screen.dart';
+import 'flat_details_screen.dart';
 
 class LandScreen extends StatefulWidget {
   final String instituteId;
@@ -40,8 +39,8 @@ class _LandScreenState extends State<LandScreen> {
                     title: 'প্রতাপপুর জমিদার বাড়ি',
                     phone: "+8801820141797",
                     area: "3 room",
-                    amount: "8,000tk",
-                    imagePath: 'assets/images/flat_land/flat.jpg',
+                    amount: "28,00,000tk",
+                    imagePath: 'assets/images/flat_land/land.jpg',
                     address: 'প্রতাপপুর, দাগনভূঞা, ফেনী',
                     call: "কল",
                     sms: "এস.এম.এস",

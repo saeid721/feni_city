@@ -12,7 +12,17 @@ class FlatLandDetailsWidget extends StatefulWidget {
   final String imagePath;
   final String title;
   final String phone;
-  final String area;
+  final String size;
+  final String bedroom;
+  final String bathroom;
+  final String belconi;
+  final String kitchen;
+  final String completionStatus;
+  final String furnishedStatus;
+  final String apartmentComplex;
+  final String landShareApartments;
+  final String facing;
+  final String floor;
   final String amount;
   final String address;
   final String details;
@@ -21,7 +31,17 @@ class FlatLandDetailsWidget extends StatefulWidget {
     required this.imagePath,
     required this.title,
     required this.phone,
-    required this.area,
+    required this.size,
+    required this.bedroom,
+    required this.bathroom,
+    required this.belconi,
+    required this.kitchen,
+    required this.completionStatus,
+    required this.furnishedStatus,
+    required this.apartmentComplex,
+    required this.landShareApartments,
+    required this.facing,
+    required this.floor,
     required this.amount,
     required this.address,
     required this.details,
@@ -73,141 +93,557 @@ class _FlatLandDetailsWidgetState extends State<FlatLandDetailsWidget> {
           Column(
             children: [
               Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  GlobalContainer(
-                    padding: const EdgeInsets.all(6),
-                    color: ColorRes.primaryColor.withOpacity(.20),
-                    borderRadiusCircular: 10,
-                    borderColor: ColorRes.primaryColor,
-                    child: const Icon(
-                      Icons.location_city,
-                      size: 24,
-                      color: ColorRes.primaryColor,
+                  Expanded(
+                    flex: 1,
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        GlobalContainer(
+                          padding: const EdgeInsets.all(6),
+                          color: ColorRes.primaryColor.withOpacity(.20),
+                          borderRadiusCircular: 10,
+                          borderColor: ColorRes.primaryColor,
+                          child: const Icon(
+                            Icons.location_city,
+                            size: 24,
+                            color: ColorRes.primaryColor,
+                          ),
+                        ),
+                        sizedBoxW(5),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            GlobalText(
+                              str: "ব্যাক্তি/প্রতিস্ষ্ঠানের নাম",
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                              color: ColorRes.textColor,
+                            ),
+                            GlobalText(
+                              str: widget.title,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                              color: ColorRes.textColor,
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
                   ),
-                  sizedBoxW(5),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      GlobalText(
-                        str: "ব্যাক্তি/প্রতিস্ষ্ঠানের নামঃ",
-                        fontSize: 14,
-                        fontWeight: FontWeight.w600,
-                        color: ColorRes.textColor,
-                      ),
-                      GlobalText(
-                        str: widget.title,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w400,
-                        color: ColorRes.textColor,
-                      ),
-                    ],
+                  Expanded(
+                    flex: 1,
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        GlobalContainer(
+                          padding: const EdgeInsets.all(6),
+                          color: ColorRes.primaryColor.withOpacity(.20),
+                          borderRadiusCircular: 10,
+                          borderColor: ColorRes.primaryColor,
+                          child: const Icon(
+                            Icons.attach_money_outlined,
+                            size: 24,
+                            color: ColorRes.primaryColor,
+                          ),
+                        ),
+                        sizedBoxW(5),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            GlobalText(
+                              str: "সম্ভাব্য মূল্য",
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                              color: ColorRes.textColor,
+                            ),
+                            GlobalText(
+                              str: widget.amount,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                              color: ColorRes.textColor,
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
               Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  GlobalContainer(
-                    padding: const EdgeInsets.all(6),
-                    color: ColorRes.primaryColor.withOpacity(.20),
-                    borderRadiusCircular: 10,
-                    borderColor: ColorRes.primaryColor,
-                    child: const Icon(
-                      Icons.phone,
-                      size: 24,
-                      color: ColorRes.primaryColor,
+                  Expanded(
+                    flex: 1,
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        GlobalContainer(
+                          padding: const EdgeInsets.all(6),
+                          color: ColorRes.primaryColor.withOpacity(.20),
+                          borderRadiusCircular: 10,
+                          borderColor: ColorRes.primaryColor,
+                          child: const Icon(
+                            Icons.phone,
+                            size: 24,
+                            color: ColorRes.primaryColor,
+                          ),
+                        ),
+                        sizedBoxW(5),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            GlobalText(
+                              str: "মোবাইল",
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                              color: ColorRes.textColor,
+                            ),
+                            GlobalText(
+                              str: widget.phone,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                              color: ColorRes.textColor,
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
                   ),
-                  sizedBoxW(5),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      GlobalText(
-                        str: "মোবাইলঃ",
-                        fontSize: 14,
-                        fontWeight: FontWeight.w600,
-                        color: ColorRes.textColor,
-                      ),
-                      GlobalText(
-                        str: widget.phone,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w400,
-                        color: ColorRes.textColor,
-                      ),
-                    ],
+                  Expanded(
+                    flex: 1,
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        GlobalContainer(
+                          padding: const EdgeInsets.all(6),
+                          color: ColorRes.primaryColor.withOpacity(.20),
+                          borderRadiusCircular: 10,
+                          borderColor: ColorRes.primaryColor,
+                          child: const Icon(
+                            Icons.crop_landscape,
+                            size: 24,
+                            color: ColorRes.primaryColor,
+                          ),
+                        ),
+                        sizedBoxW(5),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            GlobalText(
+                              str: "সাইজ",
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                              color: ColorRes.textColor,
+                            ),
+                            GlobalText(
+                              str: widget.size,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                              color: ColorRes.textColor,
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+
+              Row(
+                children: [
+                  Expanded(
+                    flex: 1,
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        GlobalContainer(
+                          padding: const EdgeInsets.all(6),
+                          color: ColorRes.primaryColor.withOpacity(.20),
+                          borderRadiusCircular: 10,
+                          borderColor: ColorRes.primaryColor,
+                          child: const Icon(
+                            Icons.bedroom_child_outlined,
+                            size: 24,
+                            color: ColorRes.primaryColor,
+                          ),
+                        ),
+                        sizedBoxW(5),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            GlobalText(
+                              str: "বেডরুম",
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                              color: ColorRes.textColor,
+                            ),
+                            GlobalText(
+                              str: widget.bedroom,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                              color: ColorRes.textColor,
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        GlobalContainer(
+                          padding: const EdgeInsets.all(6),
+                          color: ColorRes.primaryColor.withOpacity(.20),
+                          borderRadiusCircular: 10,
+                          borderColor: ColorRes.primaryColor,
+                          child: const Icon(
+                            Icons.bathroom_outlined,
+                            size: 24,
+                            color: ColorRes.primaryColor,
+                          ),
+                        ),
+                        sizedBoxW(5),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            GlobalText(
+                              str: "বাথরুম",
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                              color: ColorRes.textColor,
+                            ),
+                            GlobalText(
+                              str: widget.bathroom,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                              color: ColorRes.textColor,
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
               Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  GlobalContainer(
-                    padding: const EdgeInsets.all(6),
-                    color: ColorRes.primaryColor.withOpacity(.20),
-                    borderRadiusCircular: 10,
-                    borderColor: ColorRes.primaryColor,
-                    child: const Icon(
-                      Icons.landscape,
-                      size: 24,
-                      color: ColorRes.primaryColor,
+                  Expanded(
+                    flex: 1,
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        GlobalContainer(
+                          padding: const EdgeInsets.all(6),
+                          color: ColorRes.primaryColor.withOpacity(.20),
+                          borderRadiusCircular: 10,
+                          borderColor: ColorRes.primaryColor,
+                          child: const Icon(
+                            Icons.checkroom_outlined,
+                            size: 24,
+                            color: ColorRes.primaryColor,
+                          ),
+                        ),
+                        sizedBoxW(5),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            GlobalText(
+                              str: "বেলকুনি",
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                              color: ColorRes.textColor,
+                            ),
+                            GlobalText(
+                              str: widget.belconi,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                              color: ColorRes.textColor,
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
                   ),
-                  sizedBoxW(5),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      GlobalText(
-                        str: "ফ্ল্যাট/জমির আয়তনঃ",
-                        fontSize: 14,
-                        fontWeight: FontWeight.w600,
-                        color: ColorRes.textColor,
-                      ),
-                      GlobalText(
-                        str: widget.area,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w400,
-                        color: ColorRes.textColor,
-                      ),
-                    ],
+                  Expanded(
+                    flex: 1,
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        GlobalContainer(
+                          padding: const EdgeInsets.all(6),
+                          color: ColorRes.primaryColor.withOpacity(.20),
+                          borderRadiusCircular: 10,
+                          borderColor: ColorRes.primaryColor,
+                          child: const Icon(
+                            Icons.kitchen,
+                            size: 24,
+                            color: ColorRes.primaryColor,
+                          ),
+                        ),
+                        sizedBoxW(5),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            GlobalText(
+                              str: "কিচেন রুম",
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                              color: ColorRes.textColor,
+                            ),
+                            GlobalText(
+                              str: widget.kitchen,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                              color: ColorRes.textColor,
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
               Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  GlobalContainer(
-                    padding: const EdgeInsets.all(6),
-                    color: ColorRes.primaryColor.withOpacity(.20),
-                    borderRadiusCircular: 10,
-                    borderColor: ColorRes.primaryColor,
-                    child: const Icon(
-                      Icons.attach_money_outlined,
-                      size: 24,
-                      color: ColorRes.primaryColor,
+                  Expanded(
+                    flex: 1,
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        GlobalContainer(
+                          padding: const EdgeInsets.all(6),
+                          color: ColorRes.primaryColor.withOpacity(.20),
+                          borderRadiusCircular: 10,
+                          borderColor: ColorRes.primaryColor,
+                          child: const Icon(
+                            Icons.apartment,
+                            size: 24,
+                            color: ColorRes.primaryColor,
+                          ),
+                        ),
+                        sizedBoxW(5),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            GlobalText(
+                              str: "কম্প্লেশন স্টেটাস",
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                              color: ColorRes.textColor,
+                            ),
+                            GlobalText(
+                              str: widget.completionStatus,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                              color: ColorRes.textColor,
+                            ),
+                          ],
+                        ),
+                      ],
                     ),
                   ),
-                  sizedBoxW(5),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      GlobalText(
-                        str: "সম্ভাব্য মূল্যঃ",
-                        fontSize: 14,
-                        fontWeight: FontWeight.w600,
-                        color: ColorRes.textColor,
-                      ),
-                      GlobalText(
-                        str: widget.amount,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w400,
-                        color: ColorRes.textColor,
-                      ),
-                    ],
+                  Expanded(
+                    flex: 1,
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        GlobalContainer(
+                          padding: const EdgeInsets.all(6),
+                          color: ColorRes.primaryColor.withOpacity(.20),
+                          borderRadiusCircular: 10,
+                          borderColor: ColorRes.primaryColor,
+                          child: const Icon(
+                            Icons.apartment,
+                            size: 24,
+                            color: ColorRes.primaryColor,
+                          ),
+                        ),
+                        sizedBoxW(5),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            GlobalText(
+                              str: "ফার্নিশড স্টেটাস",
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                              color: ColorRes.textColor,
+                            ),
+                            GlobalText(
+                              str: widget.furnishedStatus,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                              color: ColorRes.textColor,
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
+              Row(
+                children: [
+                  Expanded(
+                    flex: 1,
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        GlobalContainer(
+                          padding: const EdgeInsets.all(6),
+                          color: ColorRes.primaryColor.withOpacity(.20),
+                          borderRadiusCircular: 10,
+                          borderColor: ColorRes.primaryColor,
+                          child: const Icon(
+                            Icons.apartment,
+                            size: 24,
+                            color: ColorRes.primaryColor,
+                          ),
+                        ),
+                        sizedBoxW(5),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            GlobalText(
+                              str: "এপার্টমেন্ট কমপ্লেক্স",
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                              color: ColorRes.textColor,
+                            ),
+                            GlobalText(
+                              str: widget.apartmentComplex,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                              color: ColorRes.textColor,
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        GlobalContainer(
+                          padding: const EdgeInsets.all(6),
+                          color: ColorRes.primaryColor.withOpacity(.20),
+                          borderRadiusCircular: 10,
+                          borderColor: ColorRes.primaryColor,
+                          child: const Icon(
+                            Icons.landscape_outlined,
+                            size: 24,
+                            color: ColorRes.primaryColor,
+                          ),
+                        ),
+                        sizedBoxW(5),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            GlobalText(
+                              str: "ল্যান্ড শেয়ার",
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                              color: ColorRes.textColor,
+                            ),
+                            GlobalText(
+                              str: widget.landShareApartments,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                              color: ColorRes.textColor,
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  Expanded(
+                    flex: 1,
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        GlobalContainer(
+                          padding: const EdgeInsets.all(6),
+                          color: ColorRes.primaryColor.withOpacity(.20),
+                          borderRadiusCircular: 10,
+                          borderColor: ColorRes.primaryColor,
+                          child: const Icon(
+                            Icons.apartment,
+                            size: 24,
+                            color: ColorRes.primaryColor,
+                          ),
+                        ),
+                        sizedBoxW(5),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            GlobalText(
+                              str: "ফ্লোর",
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                              color: ColorRes.textColor,
+                            ),
+                            GlobalText(
+                              str: widget.floor,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                              color: ColorRes.textColor,
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  Expanded(
+                    flex: 1,
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        GlobalContainer(
+                          padding: const EdgeInsets.all(6),
+                          color: ColorRes.primaryColor.withOpacity(.20),
+                          borderRadiusCircular: 10,
+                          borderColor: ColorRes.primaryColor,
+                          child: const Icon(
+                            Icons.landscape_outlined,
+                            size: 24,
+                            color: ColorRes.primaryColor,
+                          ),
+                        ),
+                        sizedBoxW(5),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            GlobalText(
+                              str: "অবস্থান",
+                              fontSize: 14,
+                              fontWeight: FontWeight.w600,
+                              color: ColorRes.textColor,
+                            ),
+                            GlobalText(
+                              str: widget.facing,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                              color: ColorRes.textColor,
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+          sizedBoxH(1),
+          Column(
+            children: [
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start ,
                 children: [

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../components/flat_land_widget.dart';
-import '../components/hospital_widget.dart';
-import '../flat_land_details_screen.dart';
+import 'flat_details_screen.dart';
 
 class FlatScreen extends StatefulWidget {
   final String instituteId;
@@ -37,12 +36,12 @@ class _FlatScreenState extends State<FlatScreen> {
                 physics: const NeverScrollableScrollPhysics(),
                 itemBuilder: (ctx, index) {
                   return FlatLandWidget(
-                    title: 'প্রতাপপুর জমিদার বাড়ি',
+                    title: 'মিয়াজি বাড়ি',
                     phone: "+8801820141797",
-                    area: "3 room",
-                    amount: "8,000tk",
+                    area: "2800 sft",
+                    amount: "28,00,000tk",
                     imagePath: 'assets/images/flat_land/flat.jpg',
-                    address: 'প্রতাপপুর, দাগনভূঞা, ফেনী',
+                    address: 'রামপুর গার্লস হাই স্কুলের পাশে, মিয়াজি বাড়ি সড়ক, ফেনী',
                     call: "কল",
                     sms: "এস.এম.এস",
                     map: "ম্যাপ",
