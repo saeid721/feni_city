@@ -30,29 +30,32 @@ class _GardenScreenState extends State<GardenScreen> {
           ),
         ),
         body: SingleChildScrollView(
-          child: Column(
-            children: [
-              ListView.builder(
-                itemCount: 7,
-                shrinkWrap: true,
-                physics: NeverScrollableScrollPhysics(),
-                itemBuilder: (ctx, index) {
-                  return GardenWidget(
-                    hotelName: "আরজু নার্সারী বৃক্ষ বাজার",
-                    thana: "সদর",
-                    phone: "+88 01834317277",
-                    address: "সদর, ফেনী।",
-                    imagePath: 'assets/images/garden/garden.jpg',
-                    call: "কল",
-                    sms: "এস.এম.এস",
-                    map: "ম্যাপ",
-                    onTap: () {
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              children: [
+                ListView.builder(
+                  itemCount: 7,
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                  itemBuilder: (ctx, index) {
+                    return GardenWidget(
+                      hotelName: "আরজু নার্সারী বৃক্ষ বাজার",
+                      thana: "সদর",
+                      phone: "+88 01834317277",
+                      address: "সদর, ফেনী।",
+                      imagePath: 'assets/images/garden/garden.jpg',
+                      call: "কল",
+                      sms: "এস.এম.এস",
+                      map: "ম্যাপ",
+                      onTap: () {
 
-                    },
-                  );
-                },
-              ),
-            ],
+                      },
+                    );
+                  },
+                ),
+              ],
+            ),
           ),
         ),
       );

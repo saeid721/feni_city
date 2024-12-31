@@ -30,32 +30,35 @@ class _MonorogScreenState extends State<MonorogScreen> {
           ),
         ),
         body: SingleChildScrollView(
-          child: Column(
-            children: [
-              ListView.builder(
-                itemCount: 7,
-                shrinkWrap: true,
-                physics: NeverScrollableScrollPhysics(),
-                itemBuilder: (ctx, index) {
-                  return DoctorDetailsWidget(
-                    name: "Dr. Himadri Mahajon",
-                    degree: "MBBS, BCS (Health), MD (Psychiatry),",
-                    designation: "Assistant Professor of Psychiatry",
-                    address: "Chittagong Medical College & Hospital, Chittagong",
-                    chamber: "ফেনী সদর, ফেনী",
-                    phone: "+88 01700 00 00 00",
-                    details: "Depression and drug addiction specialists ",
-                    imagePath: 'assets/images/doctors/HimadriMahajon.png',
-                    call: "কল",
-                    sms: "এস.এম.এস",
-                    map: "ম্যাপ",
-                    onTap: () {
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              children: [
+                ListView.builder(
+                  itemCount: 7,
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                  itemBuilder: (ctx, index) {
+                    return DoctorDetailsWidget(
+                      name: "Dr. Himadri Mahajon",
+                      degree: "MBBS, BCS (Health), MD (Psychiatry),",
+                      designation: "Assistant Professor of Psychiatry",
+                      address: "Chittagong Medical College & Hospital, Chittagong",
+                      chamber: "ফেনী সদর, ফেনী",
+                      phone: "+88 01700 00 00 00",
+                      details: "Depression and drug addiction specialists ",
+                      imagePath: 'assets/images/doctors/HimadriMahajon.png',
+                      call: "কল",
+                      sms: "এস.এম.এস",
+                      map: "ম্যাপ",
+                      onTap: () {
 
-                    },
-                  );
-                },
-              ),
-            ],
+                      },
+                    );
+                  },
+                ),
+              ],
+            ),
           ),
         ),
       );

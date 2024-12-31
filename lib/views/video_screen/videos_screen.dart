@@ -29,11 +29,11 @@ class _VideosScreenState extends State<VideosScreen> {
         ),
       ),
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(13.0),
-              child: ListView.builder(
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            children: [
+              ListView.builder(
                 itemCount: 7,
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
@@ -45,8 +45,8 @@ class _VideosScreenState extends State<VideosScreen> {
                   );
                 },
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

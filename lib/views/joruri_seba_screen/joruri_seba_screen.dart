@@ -30,27 +30,30 @@ class _JoruriSebaScreenState extends State<JoruriSebaScreen> {
           ),
         ),
         body: SingleChildScrollView(
-          child: Column(
-            children: [
-              ListView.builder(
-                itemCount: 7,
-                shrinkWrap: true,
-                physics: NeverScrollableScrollPhysics(),
-                itemBuilder: (ctx, index) {
-                  return JoruriSebaWidget(
-                    instituteName: "জাতীয় জরুরী সেবা",
-                    phone: "999",
-                    address: "বাংলাদেশ",
-                    imagePath: 'assets/images/joruri_seba/JoruriSeba.png',
-                    call: "কল",
-                    sms: "এস.এম.এস",
-                    onTap: () {
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              children: [
+                ListView.builder(
+                  itemCount: 7,
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                  itemBuilder: (ctx, index) {
+                    return JoruriSebaWidget(
+                      instituteName: "জাতীয় জরুরী সেবা",
+                      phone: "999",
+                      address: "বাংলাদেশ",
+                      imagePath: 'assets/images/joruri_seba/JoruriSeba.png',
+                      call: "কল",
+                      sms: "এস.এম.এস",
+                      onTap: () {
 
-                    },
-                  );
-                },
-              ),
-            ],
+                      },
+                    );
+                  },
+                ),
+              ],
+            ),
           ),
         ),
       );

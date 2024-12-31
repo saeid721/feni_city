@@ -30,29 +30,32 @@ class _HotelScreenState extends State<HotelScreen> {
           ),
         ),
         body: SingleChildScrollView(
-          child: Column(
-            children: [
-              ListView.builder(
-                itemCount: 7,
-                shrinkWrap: true,
-                physics: NeverScrollableScrollPhysics(),
-                itemBuilder: (ctx, index) {
-                  return HotelWidget(
-                    hotelName: "হোটেল নাইট হোল্ড (আবাসিক)",
-                    thana: "মহিপাল",
-                    phone: "+88 01715448838",
-                    address: "হোটেল নাইট হোল্ড (আবাসিক), মহিপাল, ফেনী।",
-                    imagePath: 'assets/images/bidyut/fenipallibidyut.jpeg',
-                    call: "কল",
-                    sms: "এস.এম.এস",
-                    map: "ম্যাপ",
-                    onTap: () {
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              children: [
+                ListView.builder(
+                  itemCount: 7,
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                  itemBuilder: (ctx, index) {
+                    return HotelWidget(
+                      hotelName: "হোটেল নাইট হোল্ড (আবাসিক)",
+                      thana: "মহিপাল",
+                      phone: "+88 01715448838",
+                      address: "হোটেল নাইট হোল্ড (আবাসিক), মহিপাল, ফেনী।",
+                      imagePath: 'assets/images/bidyut/fenipallibidyut.jpeg',
+                      call: "কল",
+                      sms: "এস.এম.এস",
+                      map: "ম্যাপ",
+                      onTap: () {
 
-                    },
-                  );
-                },
-              ),
-            ],
+                      },
+                    );
+                  },
+                ),
+              ],
+            ),
           ),
         ),
       );

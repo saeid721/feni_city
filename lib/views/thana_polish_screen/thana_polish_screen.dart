@@ -30,29 +30,32 @@ class _ThanaPolishScreenState extends State<ThanaPolishScreen> {
           ),
         ),
         body: SingleChildScrollView(
-          child: Column(
-            children: [
-              ListView.builder(
-                itemCount: 7,
-                shrinkWrap: true,
-                physics: NeverScrollableScrollPhysics(),
-                itemBuilder: (ctx, index) {
-                  return ThanaPolishWidget(
-                    instituteName: "ফেনী মডেল পুলিশ স্টেশন",
-                    thana: "সদর",
-                    phone: "+88 01700 00 00 00",
-                    address: "সদর, ফেনী",
-                    imagePath: 'assets/images/ThanaPolish/ThanaPolish.jpg',
-                    call: "কল",
-                    sms: "এস.এম.এস",
-                    map: "ম্যাপ",
-                    onTap: () {
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              children: [
+                ListView.builder(
+                  itemCount: 7,
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                  itemBuilder: (ctx, index) {
+                    return ThanaPolishWidget(
+                      instituteName: "ফেনী মডেল পুলিশ স্টেশন",
+                      thana: "সদর",
+                      phone: "+88 01700 00 00 00",
+                      address: "সদর, ফেনী",
+                      imagePath: 'assets/images/ThanaPolish/ThanaPolish.jpg',
+                      call: "কল",
+                      sms: "এস.এম.এস",
+                      map: "ম্যাপ",
+                      onTap: () {
 
-                    },
-                  );
-                },
-              ),
-            ],
+                      },
+                    );
+                  },
+                ),
+              ],
+            ),
           ),
         ),
       );

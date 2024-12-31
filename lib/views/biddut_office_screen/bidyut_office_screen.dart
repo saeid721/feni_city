@@ -30,29 +30,32 @@ class _BidyutOfficeScreenState extends State<BidyutOfficeScreen> {
           ),
         ),
         body: SingleChildScrollView(
-          child: Column(
-            children: [
-              ListView.builder(
-                itemCount: 7,
-                shrinkWrap: true,
-                physics: NeverScrollableScrollPhysics(),
-                itemBuilder: (ctx, index) {
-                  return BidyutOfficeWidget(
-                    instituteName: "ফেনী পল্লী বিদ্যুৎ সমিতি",
-                    thana: "সদর",
-                    phone: "+88 01700 00 00 00",
-                    address: "ফেনী সদর, ফেনী",
-                    imagePath: 'assets/images/bidyut/fenipallibidyut.jpeg',
-                    call: "কল",
-                    sms: "এস.এম.এস",
-                    map: "ম্যাপ",
-                    onTap: () {
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              children: [
+                ListView.builder(
+                  itemCount: 7,
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                  itemBuilder: (ctx, index) {
+                    return BidyutOfficeWidget(
+                      instituteName: "ফেনী পল্লী বিদ্যুৎ সমিতি",
+                      thana: "সদর",
+                      phone: "+88 01700 00 00 00",
+                      address: "ফেনী সদর, ফেনী",
+                      imagePath: 'assets/images/bidyut/fenipallibidyut.jpeg',
+                      call: "কল",
+                      sms: "এস.এম.এস",
+                      map: "ম্যাপ",
+                      onTap: () {
 
-                    },
-                  );
-                },
-              ),
-            ],
+                      },
+                    );
+                  },
+                ),
+              ],
+            ),
           ),
         ),
       );

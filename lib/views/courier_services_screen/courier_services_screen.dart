@@ -30,29 +30,32 @@ class _CourierServicesScreenState extends State<CourierServicesScreen> {
           ),
         ),
         body: SingleChildScrollView(
-          child: Column(
-            children: [
-              ListView.builder(
-                itemCount: 7,
-                shrinkWrap: true,
-                physics: NeverScrollableScrollPhysics(),
-                itemBuilder: (ctx, index) {
-                  return CourierServicesWidget(
-                    instituteName: "সুন্দরবন কুরিয়ার সার্ভিস",
-                    thana: "সদর",
-                    phone: "+88 01700 00 00 00",
-                    address: "সদর, ফেনী",
-                    imagePath: 'assets/images/courier_service/sundarbanCourierService.jpg',
-                    call: "কল",
-                    sms: "এস.এম.এস",
-                    map: "ম্যাপ",
-                    onTap: () {
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              children: [
+                ListView.builder(
+                  itemCount: 7,
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                  itemBuilder: (ctx, index) {
+                    return CourierServicesWidget(
+                      instituteName: "সুন্দরবন কুরিয়ার সার্ভিস",
+                      thana: "সদর",
+                      phone: "+88 01700 00 00 00",
+                      address: "সদর, ফেনী",
+                      imagePath: 'assets/images/courier_service/sundarbanCourierService.jpg',
+                      call: "কল",
+                      sms: "এস.এম.এস",
+                      map: "ম্যাপ",
+                      onTap: () {
 
-                    },
-                  );
-                },
-              ),
-            ],
+                      },
+                    );
+                  },
+                ),
+              ],
+            ),
           ),
         ),
       );

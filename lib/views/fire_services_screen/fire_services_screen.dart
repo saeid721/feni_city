@@ -30,29 +30,32 @@ class _FireServicesScreenState extends State<FireServicesScreen> {
           ),
         ),
         body: SingleChildScrollView(
-          child: Column(
-            children: [
-              ListView.builder(
-                itemCount: 7,
-                shrinkWrap: true,
-                physics: NeverScrollableScrollPhysics(),
-                itemBuilder: (ctx, index) {
-                  return FireServicesWidget(
-                    instituteName: "ফায়ার সার্ভিস ও সিভিল ডিফেন্স",
-                    thana: "সদর",
-                    phone: "+88 01700 00 00 00",
-                    address: "সদর, ফেনী",
-                    imagePath: 'assets/images/fire_service/fireService.png',
-                    call: "কল",
-                    sms: "এস.এম.এস",
-                    map: "ম্যাপ",
-                    onTap: () {
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              children: [
+                ListView.builder(
+                  itemCount: 7,
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                  itemBuilder: (ctx, index) {
+                    return FireServicesWidget(
+                      instituteName: "ফায়ার সার্ভিস ও সিভিল ডিফেন্স",
+                      thana: "সদর",
+                      phone: "+88 01700 00 00 00",
+                      address: "সদর, ফেনী",
+                      imagePath: 'assets/images/fire_service/fireService.png',
+                      call: "কল",
+                      sms: "এস.এম.এস",
+                      map: "ম্যাপ",
+                      onTap: () {
 
-                    },
-                  );
-                },
-              ),
-            ],
+                      },
+                    );
+                  },
+                ),
+              ],
+            ),
           ),
         ),
       );
