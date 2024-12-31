@@ -57,6 +57,7 @@ flutter:
     - assets/images/rane_car/pickup/
     - assets/images/rane_car/track/
     - assets/images/tourist/
+    - assets/images/flat_land/
     - assets/images/garden/
 
   fonts:

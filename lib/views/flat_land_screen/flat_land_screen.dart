@@ -43,7 +43,7 @@ class _FlatLandScreenState extends State<FlatLandScreen> {
                 itemBuilder: (ctx, index) {
                   return FlatLandWidget(
                     title: 'প্রতাপপুর জমিদার বাড়ি',
-                    imagePath: 'assets/images/tourist/torust.jpg',
+                    imagePath: 'assets/images/flat_land/flat.jpg',
                     address: 'প্রতাপপুর, দাগনভূঞা, ফেনী',
                     map: "ম্যাপ",
                     onTap: () {
