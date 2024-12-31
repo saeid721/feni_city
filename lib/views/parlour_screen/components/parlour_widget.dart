@@ -150,7 +150,10 @@ class ParlourWidget extends StatelessWidget {
               ),
             ),
             sizedBoxH(10),
-            const Divider(),
+            Padding(
+              padding: const EdgeInsets.only(left: 8.0, right: 8),
+              child: const Divider(),
+            ),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
