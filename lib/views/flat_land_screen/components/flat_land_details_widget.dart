@@ -12,13 +12,13 @@ class FlatLandDetailsWidget extends StatefulWidget {
   final String imagePath;
   final String title;
   final String text;
-  final String date;
+  final String address;
   const FlatLandDetailsWidget({
     super.key,
     required this.imagePath,
     required this.title,
     required this.text,
-    required this.date,
+    required this.address,
   });
 
   @override
@@ -29,11 +29,11 @@ class _FlatLandDetailsWidgetState extends State<FlatLandDetailsWidget> {
   bool _showShareOptions = false;
 
   final List<Map<String, String>> _socialMedia = [
-    {'icon': 'assets/app_src/icon/social_ic/facebook.png', 'platform': 'Facebook'},
-    {'icon': 'assets/app_src/icon/social_ic/twitter.png', 'platform': 'Twitter'},
-    {'icon': 'assets/app_src/icon/social_ic/instagram.png', 'platform': 'Instagram'},
-    {'icon': 'assets/app_src/icon/social_ic/linkedin.png', 'platform': 'LinkedIn'},
-    {'icon': 'assets/app_src/icon/social_ic/whatsapp.png', 'platform': 'WhatsApp'},
+    {'icon': 'assets/icons/social_ic/facebook.png', 'platform': 'Facebook'},
+    {'icon': 'assets/icons/social_ic/twitter.png', 'platform': 'Twitter'},
+    {'icon': 'assets/icons/social_ic/instagram.png', 'platform': 'Instagram'},
+    {'icon': 'assets/icons/social_ic/linkedin.png', 'platform': 'LinkedIn'},
+    {'icon': 'assets/icons/social_ic/whatsapp.png', 'platform': 'WhatsApp'},
   ];
 
   void _shareToSocialMedia(String platform) {
@@ -50,6 +50,18 @@ class _FlatLandDetailsWidgetState extends State<FlatLandDetailsWidget> {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          SizedBox(
+            width: Get.width,
+            height: 190,
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: GlobalImageLoader(
+                imagePath: widget.imagePath,
+                fit: BoxFit.cover,
+                imageFor: ImageFor.asset,
+              ),
+            ),
+          ),
           Padding(
             padding: const EdgeInsets.only(top: 5, left: 10, right: 10),
             child: GlobalText(
@@ -60,15 +72,6 @@ class _FlatLandDetailsWidgetState extends State<FlatLandDetailsWidget> {
               color: ColorRes.primaryColor,
               textAlign: TextAlign.center,
               overflow: TextOverflow.ellipsis,
-            ),
-          ),
-          SizedBox(
-            width: Get.width,
-            height: 190,
-            child: GlobalImageLoader(
-              imagePath: widget.imagePath,
-              fit: BoxFit.cover,
-              imageFor: ImageFor.network,
             ),
           ),
           sizedBoxH(10),

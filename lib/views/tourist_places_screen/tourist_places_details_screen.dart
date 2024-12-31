@@ -32,15 +32,18 @@ class _TouristPlacesDetailsScreenState extends State<TouristPlacesDetailsScreen>
         ),
       ),
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            FlatLandDetailsWidget(
-              title: 'প্রতাপপুর জমিদার বাড়ি',
-              imagePath: 'assets/images/01.jpg',
-              text: "প্রতাপপুর জমিদার বাড়ি (Pratappur Zamindar Bari) চট্টগ্রাম বিভাগের ফেনী জেলার অন্তর্গত দাগনভূঞা উপজেলার এক ঐতিহাসিক জমিদার বাড়ি। প্রায় ১৮৫০ কিংবা ১৮৬০ সালে এই জমিদার বাড়িটি নির্মিত হয়। স্থানীয়দের কাছে এটি প্রতাপপুর বড় বাড়ি হিসেবেও পরিচিত। এই এলাকার আশেপাশে যত জমিদার ছিল সবার শীর্ষে ছিল এই জমিদার।",
-              date: '15/12/2024',
-            ),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            children: [
+              TouristPlacesDetailsWidget(
+                title: 'প্রতাপপুর জমিদার বাড়ি',
+                imagePath: 'assets/images/tourist/torust.jpg',
+                text: "প্রতাপপুর জমিদার বাড়ি (Pratappur Zamindar Bari) চট্টগ্রাম বিভাগের ফেনী জেলার অন্তর্গত দাগনভূঞা উপজেলার এক ঐতিহাসিক জমিদার বাড়ি। প্রায় ১৮৫০ কিংবা ১৮৬০ সালে এই জমিদার বাড়িটি নির্মিত হয়। স্থানীয়দের কাছে এটি প্রতাপপুর বড় বাড়ি হিসেবেও পরিচিত। এই এলাকার আশেপাশে যত জমিদার ছিল সবার শীর্ষে ছিল এই জমিদার।",
+                address: 'প্রতাপপুর, দাগনভূঞা, ফেনী',
+              ),
+            ],
+          ),
         ),
       ),
     );

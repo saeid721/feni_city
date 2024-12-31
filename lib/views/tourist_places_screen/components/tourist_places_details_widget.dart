@@ -8,32 +8,32 @@ import '../../../../../global/widget/global_image_loader.dart';
 import '../../../../../global/widget/global_text.dart';
 import '../../../global/widget/global_sizedbox.dart';
 
-class FlatLandDetailsWidget extends StatefulWidget {
+class TouristPlacesDetailsWidget extends StatefulWidget {
   final String imagePath;
   final String title;
   final String text;
-  final String date;
-  const FlatLandDetailsWidget({
+  final String address;
+  const TouristPlacesDetailsWidget({
     super.key,
     required this.imagePath,
     required this.title,
     required this.text,
-    required this.date,
+    required this.address,
   });
 
   @override
-  State<FlatLandDetailsWidget> createState() => _FlatLandDetailsWidgetState();
+  State<TouristPlacesDetailsWidget> createState() => _TouristPlacesDetailsWidgetState();
 }
 
-class _FlatLandDetailsWidgetState extends State<FlatLandDetailsWidget> {
+class _TouristPlacesDetailsWidgetState extends State<TouristPlacesDetailsWidget> {
   bool _showShareOptions = false;
 
   final List<Map<String, String>> _socialMedia = [
-    {'icon': 'assets/app_src/icon/social_ic/facebook.png', 'platform': 'Facebook'},
-    {'icon': 'assets/app_src/icon/social_ic/twitter.png', 'platform': 'Twitter'},
-    {'icon': 'assets/app_src/icon/social_ic/instagram.png', 'platform': 'Instagram'},
-    {'icon': 'assets/app_src/icon/social_ic/linkedin.png', 'platform': 'LinkedIn'},
-    {'icon': 'assets/app_src/icon/social_ic/whatsapp.png', 'platform': 'WhatsApp'},
+    {'icon': 'assets/icons/social_ic/facebook.png', 'platform': 'Facebook'},
+    {'icon': 'assets/icons/social_ic/twitter.png', 'platform': 'Twitter'},
+    {'icon': 'assets/icons/social_ic/instagram.png', 'platform': 'Instagram'},
+    {'icon': 'assets/icons/social_ic/linkedin.png', 'platform': 'LinkedIn'},
+    {'icon': 'assets/icons/social_ic/whatsapp.png', 'platform': 'WhatsApp'},
   ];
 
   void _shareToSocialMedia(String platform) {
@@ -65,10 +65,13 @@ class _FlatLandDetailsWidgetState extends State<FlatLandDetailsWidget> {
           SizedBox(
             width: Get.width,
             height: 190,
-            child: GlobalImageLoader(
-              imagePath: widget.imagePath,
-              fit: BoxFit.cover,
-              imageFor: ImageFor.network,
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: GlobalImageLoader(
+                imagePath: widget.imagePath,
+                fit: BoxFit.cover,
+                imageFor: ImageFor.asset,
+              ),
             ),
           ),
           sizedBoxH(10),

@@ -26,27 +26,30 @@ class _BusScreenState extends State<BusScreen> {
         backgroundColor: Colors.white,
         resizeToAvoidBottomInset: false,
         body: SingleChildScrollView(
-          child: Column(
-            children: [
-              ListView.builder(
-                itemCount: 7,
-                shrinkWrap: true,
-                physics: NeverScrollableScrollPhysics(),
-                itemBuilder: (ctx, index) {
-                  return InstituteDetailsWidget(
-                    instituteName: "বাস",
-                    thana: "সদর",
-                    phone: "+88 01700 00 00 00",
-                    address: "সদর, ফেনী",
-                    imagePath: 'assets/images/rane_car/bus/bus.jpg',
-                    call: "কল",
-                    sms: "এস.এম.এস",
-                    map: "ম্যাপ",
-                    onTap: () {},
-                  );
-                },
-              ),
-            ],
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              children: [
+                ListView.builder(
+                  itemCount: 7,
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                  itemBuilder: (ctx, index) {
+                    return InstituteDetailsWidget(
+                      instituteName: "বাস",
+                      thana: "সদর",
+                      phone: "+88 01700 00 00 00",
+                      address: "সদর, ফেনী",
+                      imagePath: 'assets/images/rane_car/bus/bus.jpg',
+                      call: "কল",
+                      sms: "এস.এম.এস",
+                      map: "ম্যাপ",
+                      onTap: () {},
+                    );
+                  },
+                ),
+              ],
+            ),
           ),
         ),
       );

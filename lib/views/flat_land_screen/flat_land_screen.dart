@@ -32,24 +32,28 @@ class _FlatLandScreenState extends State<FlatLandScreen> {
         ),
       ),
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            ListView.builder(
-              itemCount: 5,
-              shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
-              itemBuilder: (ctx, index) {
-                return FlatLandWidget(
-                  title: 'Where does it come from?',
-                  imagePath: 'assets/images/01.jpg',
-                  date: '15/12/2024',
-                  onTap: () {
-                    Get.to(() => FlatLandDetailsScreen(id: 1));
-                  },
-                );
-              },
-            ),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            children: [
+              ListView.builder(
+                itemCount: 5,
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                itemBuilder: (ctx, index) {
+                  return FlatLandWidget(
+                    title: 'প্রতাপপুর জমিদার বাড়ি',
+                    imagePath: 'assets/images/tourist/torust.jpg',
+                    address: 'প্রতাপপুর, দাগনভূঞা, ফেনী',
+                    map: "ম্যাপ",
+                    onTap: () {
+                      Get.to(() => FlatLandDetailsScreen(id: 1));
+                    },
+                  );
+                },
+              ),
+            ],
+          ),
         ),
       ),
     );

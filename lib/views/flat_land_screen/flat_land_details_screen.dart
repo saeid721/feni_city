@@ -32,15 +32,18 @@ class _FlatLandDetailsScreenState extends State<FlatLandDetailsScreen> {
         ),
       ),
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            FlatLandDetailsWidget(
-              title: 'Where does it come from?',
-              imagePath: 'assets/images/01.jpg',
-              text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-              date: '15/12/2024',
-            ),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+            children: [
+              FlatLandDetailsWidget(
+                title: 'প্রতাপপুর জমিদার বাড়ি',
+                imagePath: 'assets/images/01.jpg',
+                text: "প্রতাপপুর জমিদার বাড়ি (Pratappur Zamindar Bari) চট্টগ্রাম বিভাগের ফেনী জেলার অন্তর্গত দাগনভূঞা উপজেলার এক ঐতিহাসিক জমিদার বাড়ি। প্রায় ১৮৫০ কিংবা ১৮৬০ সালে এই জমিদার বাড়িটি নির্মিত হয়। স্থানীয়দের কাছে এটি প্রতাপপুর বড় বাড়ি হিসেবেও পরিচিত। এই এলাকার আশেপাশে যত জমিদার ছিল সবার শীর্ষে ছিল এই জমিদার।",
+                address: 'প্রতাপপুর, দাগনভূঞা, ফেনী',
+              ),
+            ],
+          ),
         ),
       ),
     );
