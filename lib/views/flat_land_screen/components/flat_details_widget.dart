@@ -8,7 +8,7 @@ import '../../../../../global/widget/global_image_loader.dart';
 import '../../../../../global/widget/global_text.dart';
 import '../../../global/widget/global_sizedbox.dart';
 
-class FlatLandDetailsWidget extends StatefulWidget {
+class FlatDetailsWidget extends StatefulWidget {
   final String imagePath;
   final String title;
   final String phone;
@@ -26,7 +26,7 @@ class FlatLandDetailsWidget extends StatefulWidget {
   final String amount;
   final String address;
   final String details;
-  const FlatLandDetailsWidget({
+  const FlatDetailsWidget({
     super.key,
     required this.imagePath,
     required this.title,
@@ -48,10 +48,10 @@ class FlatLandDetailsWidget extends StatefulWidget {
   });
 
   @override
-  State<FlatLandDetailsWidget> createState() => _FlatLandDetailsWidgetState();
+  State<FlatDetailsWidget> createState() => _FlatDetailsWidgetState();
 }
 
-class _FlatLandDetailsWidgetState extends State<FlatLandDetailsWidget> {
+class _FlatDetailsWidgetState extends State<FlatDetailsWidget> {
   bool _showShareOptions = false;
 
   final List<Map<String, String>> _socialMedia = [
@@ -64,9 +64,7 @@ class _FlatLandDetailsWidgetState extends State<FlatLandDetailsWidget> {
 
   void _shareToSocialMedia(String platform) {
     String shareContent = 'Check out this event: ${widget.title}';
-    // Share content using share_plus package
     Share.share(shareContent, subject: 'Event Sharing');
-    // Optionally, you can use platform-specific sharing links or actions here.
   }
 
   @override

@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import '../../../global/widget/custom_app_bar.dart';
-import '../components/flat_land_details_widget.dart';
+import '../components/flat_details_widget.dart';
 
-class FlatLandDetailsScreen extends StatefulWidget {
+class FlatDetailsScreen extends StatefulWidget {
   final int? id;
-  const FlatLandDetailsScreen({
+  const FlatDetailsScreen({
     super.key,
     required this.id,
   });
 
   @override
-  State<FlatLandDetailsScreen> createState() => _FlatLandDetailsScreenState();
+  State<FlatDetailsScreen> createState() => _FlatDetailsScreenState();
 }
 
-class _FlatLandDetailsScreenState extends State<FlatLandDetailsScreen> {
+class _FlatDetailsScreenState extends State<FlatDetailsScreen> {
   @override
   void initState() {
     super.initState();
@@ -36,7 +36,7 @@ class _FlatLandDetailsScreenState extends State<FlatLandDetailsScreen> {
           padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
-              FlatLandDetailsWidget(
+              FlatDetailsWidget(
                 title: 'মিয়াজি বাড়ি',
                 phone: "+88 01868668722",
                 size: "800 SFT",

@@ -12,7 +12,7 @@ class FlatLandWidget extends StatelessWidget {
   final String imagePath;
   final String title;
   final String phone;
-  final String area;
+  final String size;
   final String amount;
   final String address;
   final String call;
@@ -24,7 +24,7 @@ class FlatLandWidget extends StatelessWidget {
     required this.imagePath,
     required this.title,
     required this.phone,
-    required this.area,
+    required this.size,
     required this.amount,
     required this.address,
     required this.call,
@@ -154,7 +154,7 @@ class FlatLandWidget extends StatelessWidget {
                                 sizedBoxW(5),
                                 Flexible(
                                   child: GlobalText(
-                                    str: area,
+                                    str: size,
                                     fontSize: 14,
                                     fontWeight: FontWeight.w400,
                                     color: ColorRes.textColor,

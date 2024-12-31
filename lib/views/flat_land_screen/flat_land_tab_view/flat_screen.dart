@@ -38,7 +38,7 @@ class _FlatScreenState extends State<FlatScreen> {
                   return FlatLandWidget(
                     title: 'মিয়াজি বাড়ি',
                     phone: "+8801820141797",
-                    area: "2800 sft",
+                    size: "800 sft",
                     amount: "28,00,000tk",
                     imagePath: 'assets/images/flat_land/flat.jpg',
                     address: 'রামপুর গার্লস হাই স্কুলের পাশে, মিয়াজি বাড়ি সড়ক, ফেনী',
@@ -46,7 +46,7 @@ class _FlatScreenState extends State<FlatScreen> {
                     sms: "এস.এম.এস",
                     map: "ম্যাপ",
                     onTap: () {
-                      Get.to(() => FlatLandDetailsScreen(id: 1));
+                      Get.to(() => FlatDetailsScreen(id: 1));
                     },
                   );
                 },

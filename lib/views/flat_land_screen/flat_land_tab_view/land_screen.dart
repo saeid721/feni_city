@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../components/flat_land_widget.dart';
 import 'flat_details_screen.dart';
+import 'land_details_screen.dart';
 
 class LandScreen extends StatefulWidget {
   final String instituteId;
@@ -36,17 +37,17 @@ class _LandScreenState extends State<LandScreen> {
                 physics: const NeverScrollableScrollPhysics(),
                 itemBuilder: (ctx, index) {
                   return FlatLandWidget(
-                    title: 'প্রতাপপুর জমিদার বাড়ি',
+                    title: 'মিয়াজি বাড়ি',
                     phone: "+8801820141797",
-                    area: "3 room",
+                    size: "৩ শতক",
                     amount: "28,00,000tk",
                     imagePath: 'assets/images/flat_land/land.jpg',
-                    address: 'প্রতাপপুর, দাগনভূঞা, ফেনী',
+                    address: 'রামপুর গার্লস হাই স্কুলের পাশে, মিয়াজি বাড়ি সড়ক, ফেনী',
                     call: "কল",
                     sms: "এস.এম.এস",
                     map: "ম্যাপ",
                     onTap: () {
-                      Get.to(() => FlatLandDetailsScreen(id: 1));
+                      Get.to(() => LandDetailsScreen(id: 1));
                     },
                   );
                 },
