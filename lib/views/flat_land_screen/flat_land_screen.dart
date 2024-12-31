@@ -1,22 +1,30 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import '../../../../../global/constants/colors_resources.dart';
+import '../../../../../global/widget/global_container.dart';
 import '../../global/widget/custom_app_bar.dart';
-import 'components/flat_land_widget.dart';
-import 'flat_land_details_screen.dart';
+import 'flat_land_tab_view/land_screen.dart';
+import 'flat_land_tab_view/flat_screen.dart';
 
 class FlatLandScreen extends StatefulWidget {
-  const FlatLandScreen({super.key});
+  final String instituteId;
+  const FlatLandScreen({
+    super.key,
+    required this.instituteId,
+  });
 
   @override
   State<FlatLandScreen> createState() => _FlatLandScreenState();
 }
 
-class _FlatLandScreenState extends State<FlatLandScreen> {
+class _FlatLandScreenState extends State<FlatLandScreen> with SingleTickerProviderStateMixin {
   final GlobalKey<ScaffoldState> drawerKey = GlobalKey<ScaffoldState>();
+  late TabController _tabController;
 
   @override
   void initState() {
     super.initState();
+
+    _tabController = TabController(length: 2, vsync: this);
   }
 
   @override
@@ -31,31 +39,74 @@ class _FlatLandScreenState extends State<FlatLandScreen> {
           notiOnTap: () {},
         ),
       ),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            children: [
-              ListView.builder(
-                itemCount: 5,
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-                itemBuilder: (ctx, index) {
-                  return FlatLandWidget(
-                    title: 'প্রতাপপুর জমিদার বাড়ি',
-                    imagePath: 'assets/images/flat_land/flat.jpg',
-                    address: 'প্রতাপপুর, দাগনভূঞা, ফেনী',
-                    map: "ম্যাপ",
-                    onTap: () {
-                      Get.to(() => FlatLandDetailsScreen(id: 1));
-                    },
-                  );
-                },
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
+            body: Column(
+              children: [
+                GlobalContainer(
+                  height: 35,
+                  padding: const EdgeInsets.only(bottom: 5),
+                  color: ColorRes.primaryColor,
+                  child: Center(
+                    child: TabBar(
+                      controller: _tabController,
+                      labelColor: ColorRes.primaryColor,
+                      unselectedLabelColor: ColorRes.white,
+                      unselectedLabelStyle: const TextStyle(
+                        fontWeight: FontWeight.normal,
+                      ),
+                      labelStyle: const TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      indicator: const BoxDecoration(
+                        color: ColorRes.white,
+                      ),
+                      indicatorSize: TabBarIndicatorSize.label,
+                      labelPadding: EdgeInsets.zero,
+                      tabs: [
+                        Tab(
+                          child: Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                            decoration: BoxDecoration(
+                              border: Border.all(color: ColorRes.white, width: 1),
+                            ),
+                            child: const Center(child: Text('ফ্ল্যাট')),
+                          ),
+                        ),
+                        Tab(
+                          child: Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                            decoration: BoxDecoration(
+                              border: Border.all(color: ColorRes.white, width: 1),
+                            ),
+                            child: const Center(child: Text('জমি')),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: GlobalContainer(
+                      width: MediaQuery.of(context).size.width,
+                      child: TabBarView(
+                        controller: _tabController,
+                        children: [
+                          FlatScreen(
+                            instituteId: widget.instituteId,
+                          ),
+                          LandScreen(
+                            instituteId: widget.instituteId,
+                          ),
+
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          );
+      }
   }
-}

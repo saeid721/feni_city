@@ -11,14 +11,20 @@ import '../../../global/widget/global_sizedbox.dart';
 class FlatLandDetailsWidget extends StatefulWidget {
   final String imagePath;
   final String title;
-  final String text;
+  final String phone;
+  final String area;
+  final String amount;
   final String address;
+  final String details;
   const FlatLandDetailsWidget({
     super.key,
     required this.imagePath,
     required this.title,
-    required this.text,
+    required this.phone,
+    required this.area,
+    required this.amount,
     required this.address,
+    required this.details,
   });
 
   @override
@@ -62,25 +68,187 @@ class _FlatLandDetailsWidgetState extends State<FlatLandDetailsWidget> {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(top: 5, left: 10, right: 10),
-            child: GlobalText(
-              str: widget.title,
-              fontSize: 16,
-              fontWeight: FontWeight.w600,
-              maxLines: 3,
-              color: ColorRes.primaryColor,
-              textAlign: TextAlign.center,
-              overflow: TextOverflow.ellipsis,
-            ),
-          ),
-          sizedBoxH(10),
-          GlobalText(
-            str: widget.text,
-            fontSize: 14,
-            fontWeight: FontWeight.w400,
-            color: ColorRes.textColor,
-            textAlign: TextAlign.justify,
+
+          sizedBoxH(5),
+          Column(
+            children: [
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  GlobalContainer(
+                    padding: const EdgeInsets.all(6),
+                    color: ColorRes.primaryColor.withOpacity(.20),
+                    borderRadiusCircular: 10,
+                    borderColor: ColorRes.primaryColor,
+                    child: const Icon(
+                      Icons.location_city,
+                      size: 24,
+                      color: ColorRes.primaryColor,
+                    ),
+                  ),
+                  sizedBoxW(5),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      GlobalText(
+                        str: "ব্যাক্তি/প্রতিস্ষ্ঠানের নামঃ",
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                        color: ColorRes.textColor,
+                      ),
+                      GlobalText(
+                        str: widget.title,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                        color: ColorRes.textColor,
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  GlobalContainer(
+                    padding: const EdgeInsets.all(6),
+                    color: ColorRes.primaryColor.withOpacity(.20),
+                    borderRadiusCircular: 10,
+                    borderColor: ColorRes.primaryColor,
+                    child: const Icon(
+                      Icons.phone,
+                      size: 24,
+                      color: ColorRes.primaryColor,
+                    ),
+                  ),
+                  sizedBoxW(5),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      GlobalText(
+                        str: "মোবাইলঃ",
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                        color: ColorRes.textColor,
+                      ),
+                      GlobalText(
+                        str: widget.phone,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                        color: ColorRes.textColor,
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  GlobalContainer(
+                    padding: const EdgeInsets.all(6),
+                    color: ColorRes.primaryColor.withOpacity(.20),
+                    borderRadiusCircular: 10,
+                    borderColor: ColorRes.primaryColor,
+                    child: const Icon(
+                      Icons.landscape,
+                      size: 24,
+                      color: ColorRes.primaryColor,
+                    ),
+                  ),
+                  sizedBoxW(5),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      GlobalText(
+                        str: "ফ্ল্যাট/জমির আয়তনঃ",
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                        color: ColorRes.textColor,
+                      ),
+                      GlobalText(
+                        str: widget.area,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                        color: ColorRes.textColor,
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  GlobalContainer(
+                    padding: const EdgeInsets.all(6),
+                    color: ColorRes.primaryColor.withOpacity(.20),
+                    borderRadiusCircular: 10,
+                    borderColor: ColorRes.primaryColor,
+                    child: const Icon(
+                      Icons.attach_money_outlined,
+                      size: 24,
+                      color: ColorRes.primaryColor,
+                    ),
+                  ),
+                  sizedBoxW(5),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      GlobalText(
+                        str: "সম্ভাব্য মূল্যঃ",
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                        color: ColorRes.textColor,
+                      ),
+                      GlobalText(
+                        str: widget.amount,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                        color: ColorRes.textColor,
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.start ,
+                children: [
+                  GlobalContainer(
+                    padding: const EdgeInsets.all(6),
+                    color: ColorRes.primaryColor.withOpacity(.20),
+                    borderRadiusCircular: 10,
+                    borderColor: ColorRes.primaryColor,
+                    child: const Icon(
+                      Icons.description_outlined,
+                      size: 24,
+                      color: ColorRes.primaryColor,
+                    ),
+                  ),
+                  sizedBoxW(5),
+                  Expanded(
+                    child: SizedBox(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          GlobalText(
+                            str: "বিস্তারিতঃ",
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600,
+                            color: ColorRes.textColor,
+                          ),
+                          GlobalText(
+                            str: widget.details,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400,
+                            color: ColorRes.textColor,
+                            textAlign: TextAlign.justify,
+                          ),
+
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ],
           ),
           sizedBoxH(10),
           Row(

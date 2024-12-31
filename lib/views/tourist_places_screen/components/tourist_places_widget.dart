@@ -56,15 +56,13 @@ class TouristPlacesWidget extends StatelessWidget {
               children: [
                 Padding(
                   padding: const EdgeInsets.only(top: 5, left: 10, right: 10),
-                  child: Flexible(
-                    child: GlobalText(
-                      str: title,
-                      fontSize: 14,
-                      fontWeight: FontWeight.w500,
-                      maxLines: 2,
-                      color: ColorRes.primaryColor,
-                      overflow: TextOverflow.ellipsis,
-                    ),
+                  child: GlobalText(
+                    str: title,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w500,
+                    maxLines: 2,
+                    color: ColorRes.primaryColor,
+                    overflow: TextOverflow.ellipsis,
                   ),
                 ),
                 GestureDetector(

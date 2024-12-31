@@ -270,7 +270,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Get.to(()=> const TouristPlacesScreen());
                                 break;
                               case 25:
-                                Get.to(()=> const FlatLandScreen());
+                                Get.to(()=> const FlatLandScreen(instituteId:""));
                                 break;
                               case 26:
                                 Get.to(()=> const GardenScreen());
