@@ -23,8 +23,8 @@ class SplashScreen extends StatelessWidget {
       body: Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height,
-        decoration: const BoxDecoration(
-            color: ColorRes.backgroundColor
+        decoration: BoxDecoration(
+            color: ColorRes.primaryColor.withOpacity(.20),
         ),
         child: Center(
           child: Column(
