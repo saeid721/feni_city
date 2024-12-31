@@ -34,11 +34,11 @@ class _AmbulanceScreenState extends State<AmbulanceScreen> {
                 physics: NeverScrollableScrollPhysics(),
                 itemBuilder: (ctx, index) {
                   return InstituteDetailsWidget(
-                    instituteName: "অ্যাম্বুলেন্স",
+                    instituteName: "Feni Ambulance Service",
                     thana: "সদর",
-                    phone: "+88 01700 00 00 00",
+                    phone: "+8801820141797",
                     address: "সদর, ফেনী",
-                    imagePath: 'assets/images/institute/primarylogo.png',
+                    imagePath: 'assets/images/rane_car/ambulance/ambulance.jpg',
                     call: "কল",
                     sms: "এস.এম.এস",
                     map: "ম্যাপ",

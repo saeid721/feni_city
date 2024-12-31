@@ -50,6 +50,11 @@ flutter:
     - assets/images/ThanaPolish/
     - assets/images/courier_service/
     - assets/images/fire_service/
+    - assets/images/rane_car/ambulance/
+    - assets/images/rane_car/car/
+    - assets/images/rane_car/bus/
+    - assets/images/rane_car/pickup/
+    - assets/images/rane_car/track/
 
   fonts:
      - family: Potta

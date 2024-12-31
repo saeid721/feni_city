@@ -38,7 +38,7 @@ class _PickupScreenState extends State<PickupScreen> {
                     thana: "সদর",
                     phone: "+88 01700 00 00 00",
                     address: "সদর, ফেনী",
-                    imagePath: 'assets/images/institute/Expertcoachingcenterfeni.jpg',
+                    imagePath: 'assets/images/rane_car/pickup/pickup.jpg',
                     call: "কল",
                     sms: "এস.এম.এস",
                     map: "ম্যাপ",

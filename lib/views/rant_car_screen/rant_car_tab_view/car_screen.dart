@@ -34,11 +34,11 @@ class _CarScreenState extends State<CarScreen> {
                 physics: NeverScrollableScrollPhysics(),
                 itemBuilder: (ctx, index) {
                   return InstituteDetailsWidget(
-                    instituteName: "কার",
+                    instituteName: "Feni Rent A Car",
                     thana: "সদর",
-                    phone: "+88 01700 00 00 00",
+                    phone: "+88 01552362138",
                     address: "সদর, ফেনী",
-                    imagePath: 'assets/images/institute/FeniGovtPilotHighSchool.png',
+                    imagePath: 'assets/images/rane_car/car/car.jpg',
                     call: "কল",
                     sms: "এস.এম.এস",
                     map: "ম্যাপ",
