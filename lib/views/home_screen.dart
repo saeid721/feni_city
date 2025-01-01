@@ -9,6 +9,7 @@ import '../global/widget/custom_app_bar.dart';
 import '../global/widget/global_container.dart';
 import '../global/widget/home_menu_widget.dart';
 import 'app_exit_dialog.dart';
+import 'basa_vara_screen/basa_vara_screen.dart';
 import 'biddut_office_screen/bidyut_office_screen.dart';
 import 'blood_screen/blood_web_view_screen.dart';
 import 'bus_screen/bus_web_view_screen.dart';
@@ -236,7 +237,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Get.to(()=> const DoctorScreen());
                                 break;
                               case 13:
-                                Get.to(()=> const DoctorScreen());
+                                Get.to(()=> const BasaVaraScreen());
                                 break;
                               case 14:
                                 Get.to(()=> const HotelScreen());

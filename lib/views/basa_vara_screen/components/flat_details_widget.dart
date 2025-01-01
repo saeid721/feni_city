@@ -17,11 +17,7 @@ class FlatDetailsWidget extends StatefulWidget {
   final String bathroom;
   final String belconi;
   final String kitchen;
-  final String completionStatus;
-  final String furnishedStatus;
-  final String apartmentComplex;
-  final String landShareApartments;
-  final String facing;
+  final String date;
   final String floor;
   final String amount;
   final String address;
@@ -36,11 +32,7 @@ class FlatDetailsWidget extends StatefulWidget {
     required this.bathroom,
     required this.belconi,
     required this.kitchen,
-    required this.completionStatus,
-    required this.furnishedStatus,
-    required this.apartmentComplex,
-    required this.landShareApartments,
-    required this.facing,
+    required this.date,
     required this.floor,
     required this.amount,
     required this.address,
@@ -150,7 +142,7 @@ class _FlatDetailsWidgetState extends State<FlatDetailsWidget> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             GlobalText(
-                              str: "সম্ভাব্য মূল্য",
+                              str: "ভাড়া",
                               fontSize: 14,
                               fontWeight: FontWeight.w600,
                               color: ColorRes.textColor,
@@ -426,162 +418,6 @@ class _FlatDetailsWidgetState extends State<FlatDetailsWidget> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             GlobalText(
-                              str: "কম্প্লেশন স্টেটাস",
-                              fontSize: 14,
-                              fontWeight: FontWeight.w600,
-                              color: ColorRes.textColor,
-                            ),
-                            GlobalText(
-                              str: widget.completionStatus,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w400,
-                              color: ColorRes.textColor,
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                  Expanded(
-                    flex: 1,
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        GlobalContainer(
-                          padding: const EdgeInsets.all(6),
-                          color: ColorRes.primaryColor.withAlpha((0.20 * 255).toInt()),
-                          borderRadiusCircular: 10,
-                          borderColor: ColorRes.primaryColor,
-                          child: const Icon(
-                            Icons.apartment,
-                            size: 24,
-                            color: ColorRes.primaryColor,
-                          ),
-                        ),
-                        sizedBoxW(5),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            GlobalText(
-                              str: "ফার্নিশড স্টেটাস",
-                              fontSize: 14,
-                              fontWeight: FontWeight.w600,
-                              color: ColorRes.textColor,
-                            ),
-                            GlobalText(
-                              str: widget.furnishedStatus,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w400,
-                              color: ColorRes.textColor,
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-              Row(
-                children: [
-                  Expanded(
-                    flex: 1,
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        GlobalContainer(
-                          padding: const EdgeInsets.all(6),
-                          color: ColorRes.primaryColor.withAlpha((0.20 * 255).toInt()),
-                          borderRadiusCircular: 10,
-                          borderColor: ColorRes.primaryColor,
-                          child: const Icon(
-                            Icons.apartment,
-                            size: 24,
-                            color: ColorRes.primaryColor,
-                          ),
-                        ),
-                        sizedBoxW(5),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            GlobalText(
-                              str: "এপার্টমেন্ট কমপ্লেক্স",
-                              fontSize: 14,
-                              fontWeight: FontWeight.w600,
-                              color: ColorRes.textColor,
-                            ),
-                            GlobalText(
-                              str: widget.apartmentComplex,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w400,
-                              color: ColorRes.textColor,
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                  Expanded(
-                    flex: 1,
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        GlobalContainer(
-                          padding: const EdgeInsets.all(6),
-                          color: ColorRes.primaryColor.withAlpha((0.20 * 255).toInt()),
-                          borderRadiusCircular: 10,
-                          borderColor: ColorRes.primaryColor,
-                          child: const Icon(
-                            Icons.landscape_outlined,
-                            size: 24,
-                            color: ColorRes.primaryColor,
-                          ),
-                        ),
-                        sizedBoxW(5),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            GlobalText(
-                              str: "ল্যান্ড শেয়ার",
-                              fontSize: 14,
-                              fontWeight: FontWeight.w600,
-                              color: ColorRes.textColor,
-                            ),
-                            GlobalText(
-                              str: widget.landShareApartments,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w400,
-                              color: ColorRes.textColor,
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-              Row(
-                children: [
-                  Expanded(
-                    flex: 1,
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        GlobalContainer(
-                          padding: const EdgeInsets.all(6),
-                          color: ColorRes.primaryColor.withAlpha((0.20 * 255).toInt()),
-                          borderRadiusCircular: 10,
-                          borderColor: ColorRes.primaryColor,
-                          child: const Icon(
-                            Icons.apartment,
-                            size: 24,
-                            color: ColorRes.primaryColor,
-                          ),
-                        ),
-                        sizedBoxW(5),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            GlobalText(
                               str: "ফ্লোর",
                               fontSize: 14,
                               fontWeight: FontWeight.w600,
@@ -609,7 +445,7 @@ class _FlatDetailsWidgetState extends State<FlatDetailsWidget> {
                           borderRadiusCircular: 10,
                           borderColor: ColorRes.primaryColor,
                           child: const Icon(
-                            Icons.landscape_outlined,
+                            Icons.date_range,
                             size: 24,
                             color: ColorRes.primaryColor,
                           ),
@@ -619,13 +455,13 @@ class _FlatDetailsWidgetState extends State<FlatDetailsWidget> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             GlobalText(
-                              str: "অবস্থান",
+                              str: "ভাড়া হবে",
                               fontSize: 14,
                               fontWeight: FontWeight.w600,
                               color: ColorRes.textColor,
                             ),
                             GlobalText(
-                              str: widget.facing,
+                              str: widget.date,
                               fontSize: 14,
                               fontWeight: FontWeight.w400,
                               color: ColorRes.textColor,
