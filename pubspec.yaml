@@ -43,6 +43,7 @@ flutter:
     - assets/icons/
     - assets/icons/social_ic/
     - assets/images/
+    - assets/images/restaurants/
     - assets/images/newspaper/
     - assets/images/institute/
     - assets/images/parlour/

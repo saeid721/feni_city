@@ -26,6 +26,7 @@ import 'joruri_seba_screen/joruri_seba_screen.dart';
 import 'news_creeen/news_screen.dart';
 import 'parlour_screen/parlour_screen.dart';
 import 'rant_car_screen/rant_car_screen.dart';
+import 'restaurants_screen/restaurants_screen.dart';
 import 'thana_polish_screen/thana_polish_screen.dart';
 import 'tourist_places_screen/tourist_places_screen.dart';
 import 'train_screen/train_web_view_screen.dart';
@@ -241,7 +242,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Get.to(()=> const HotelScreen());
                                 break;
                               case 15:
-                                Get.to(()=> const DoctorScreen());
+                                Get.to(()=> const RestaurantsScreen());
                                 break;
                               case 16:
                                 Get.to(()=> const DoctorScreen());
