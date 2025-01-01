@@ -51,7 +51,7 @@ class VideosWidget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Icon(
-                    Icons.calendar_month_rounded,
+                    Icons.info_outline,
                     size: 18,
                     color: ColorRes.grey,
                   ),
@@ -61,7 +61,7 @@ class VideosWidget extends StatelessWidget {
                       str: title,
                       fontSize: 14,
                       fontWeight: FontWeight.w600,
-                      maxLines: 3,
+                      maxLines: 2,
                       color: ColorRes.primaryColor,
                       overflow: TextOverflow.ellipsis,
                     ),
@@ -82,7 +82,7 @@ class VideosWidget extends StatelessWidget {
                     // Play icon overlay
                     Icon(
                       Icons.play_circle_outline,
-                      color: Colors.white.withOpacity(0.7),
+                      color: Colors.white.withAlpha((0.70 * 255).toInt()),
                       size: 70,
                     ),
                   ],

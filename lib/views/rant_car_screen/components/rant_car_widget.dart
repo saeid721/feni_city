@@ -42,18 +42,19 @@ class InstituteDetailsWidget extends StatelessWidget {
   }
 
   Future<void> _openGoogleMap(BuildContext context, String instituteName, String address) async {
-    final query = Uri.encodeComponent("$instituteName, $address");
+    final query = Uri.encodeComponent(" $instituteName, $address");
     final geoUri = Uri.parse("https://www.google.com/maps/search/?api=1&query=$query");
 
     if (await canLaunchUrl(geoUri)) {
       await launchUrl(geoUri, mode: LaunchMode.externalApplication);
     } else {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Unable to open Google Maps app.')),
-      );
+      if (context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Unable to open Google Maps app.')),
+        );
+      }
     }
   }
-
 
   @override
   Widget build(BuildContext context) {

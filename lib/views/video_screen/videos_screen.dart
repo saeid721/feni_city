@@ -39,7 +39,7 @@ class _VideosScreenState extends State<VideosScreen> {
                 physics: const NeverScrollableScrollPhysics(),
                 itemBuilder: (ctx, index) {
                   return VideosWidget(
-                    title: 'test',
+                    title: 'ফেনী জেলার ভিডিও',
                     thumbnailPath: 'https://img.youtube.com/vi/tNgXGowqSHc/maxresdefault.jpg',
                     videoUrl: 'https://www.youtube.com/watch?v=tNgXGowqSHc',
                   );

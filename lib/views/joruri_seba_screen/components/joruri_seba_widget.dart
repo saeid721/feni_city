@@ -123,8 +123,9 @@ class JoruriSebaWidget extends StatelessWidget {
                     child: GlobalImageLoader(
                       imagePath: imagePath,
                       width: 80,
+                      height: 80,
                       imageFor: ImageFor.asset,
-                      fit: BoxFit.fill,
+                      fit: BoxFit.cover,
                     ),
                   ),
                 ),

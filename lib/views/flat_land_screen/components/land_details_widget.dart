@@ -79,7 +79,7 @@ class _LandDetailsWidgetState extends State<LandDetailsWidget> {
                       children: [
                         GlobalContainer(
                           padding: const EdgeInsets.all(6),
-                          color: ColorRes.primaryColor.withOpacity(.20),
+                          color: ColorRes.primaryColor.withAlpha((0.20 * 255).toInt()),
                           borderRadiusCircular: 10,
                           borderColor: ColorRes.primaryColor,
                           child: const Icon(
@@ -116,7 +116,7 @@ class _LandDetailsWidgetState extends State<LandDetailsWidget> {
                       children: [
                         GlobalContainer(
                           padding: const EdgeInsets.all(6),
-                          color: ColorRes.primaryColor.withOpacity(.20),
+                          color: ColorRes.primaryColor.withAlpha((0.20 * 255).toInt()),
                           borderRadiusCircular: 10,
                           borderColor: ColorRes.primaryColor,
                           child: const Icon(
@@ -157,7 +157,7 @@ class _LandDetailsWidgetState extends State<LandDetailsWidget> {
                       children: [
                         GlobalContainer(
                           padding: const EdgeInsets.all(6),
-                          color: ColorRes.primaryColor.withOpacity(.20),
+                          color: ColorRes.primaryColor.withAlpha((0.20 * 255).toInt()),
                           borderRadiusCircular: 10,
                           borderColor: ColorRes.primaryColor,
                           child: const Icon(
@@ -194,7 +194,7 @@ class _LandDetailsWidgetState extends State<LandDetailsWidget> {
                       children: [
                         GlobalContainer(
                           padding: const EdgeInsets.all(6),
-                          color: ColorRes.primaryColor.withOpacity(.20),
+                          color: ColorRes.primaryColor.withAlpha((0.20 * 255).toInt()),
                           borderRadiusCircular: 10,
                           borderColor: ColorRes.primaryColor,
                           child: const Icon(
@@ -236,7 +236,7 @@ class _LandDetailsWidgetState extends State<LandDetailsWidget> {
                 children: [
                   GlobalContainer(
                     padding: const EdgeInsets.all(6),
-                    color: ColorRes.primaryColor.withOpacity(.20),
+                    color: ColorRes.primaryColor.withAlpha((0.20 * 255).toInt()),
                     borderRadiusCircular: 10,
                     borderColor: ColorRes.primaryColor,
                     child: const Icon(

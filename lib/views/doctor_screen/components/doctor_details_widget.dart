@@ -47,16 +47,18 @@ class DoctorDetailsWidget extends StatelessWidget {
     await launchUrl(smsUri);
   }
 
-  Future<void> _openGoogleMap(BuildContext context,String chamber) async {
+  Future<void> _openGoogleMap(BuildContext context, String chamber) async {
     final query = Uri.encodeComponent(" $chamber");
     final geoUri = Uri.parse("https://www.google.com/maps/search/?api=1&query=$query");
 
     if (await canLaunchUrl(geoUri)) {
       await launchUrl(geoUri, mode: LaunchMode.externalApplication);
     } else {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Unable to open Google Maps app.')),
-      );
+      if (context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Unable to open Google Maps app.')),
+        );
+      }
     }
   }
 
@@ -211,8 +213,9 @@ class DoctorDetailsWidget extends StatelessWidget {
                     child: GlobalImageLoader(
                       imagePath: imagePath,
                       width: 80,
+                      height: 80,
                       imageFor: ImageFor.asset,
-                      fit: BoxFit.fill,
+                      fit: BoxFit.cover,
                     ),
                   ),
                 ),
