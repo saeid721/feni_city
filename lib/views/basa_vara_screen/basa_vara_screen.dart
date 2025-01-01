@@ -49,12 +49,12 @@ class _BasaVaraScreenState extends State<BasaVaraScreen> {
                       date: "01/02/2025",
                       amount: "10,000tk",
                       imagePath: 'assets/images/flat_land/flat.jpg',
-                      address: 'রামপুর গার্লস হাই স্কুলের পাশে, মিয়াজি বাড়ি সড়ক, ফেনী',
+                      address: 'রামপুর গার্লস হাই স্কুলের পাশে, মিয়াজি বাড়ি, ফেনী',
                       call: "কল",
                       sms: "এস.এম.এস",
                       map: "ম্যাপ",
                       onTap: () {
-                        Get.to(() => BasaVaraDetailsScreen(id: 1));
+                        Get.to(() => BasaVaraDetailsScreen());
                       },
                     );
                   },
