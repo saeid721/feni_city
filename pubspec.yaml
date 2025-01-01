@@ -43,24 +43,26 @@ flutter:
     - assets/icons/
     - assets/icons/social_ic/
     - assets/images/
-    - assets/images/restaurants/
-    - assets/images/newspaper/
-    - assets/images/teacher/
-    - assets/images/institute/
-    - assets/images/parlour/
-    - assets/images/bidyut/
-    - assets/images/joruri_seba/
     - assets/images/doctors/
-    - assets/images/ThanaPolish/
-    - assets/images/courier_service/
-    - assets/images/fire_service/
     - assets/images/rane_car/ambulance/
     - assets/images/rane_car/car/
     - assets/images/rane_car/bus/
     - assets/images/rane_car/pickup/
     - assets/images/rane_car/track/
-    - assets/images/tourist/
+    - assets/images/joruri_seba/
+    - assets/images/fire_service/
+    - assets/images/courier_service/
+    - assets/images/bidyut/
+    - assets/images/ThanaPolish/
+    - assets/images/shopping/
     - assets/images/flat_land/
+    - assets/images/hotel/
+    - assets/images/restaurants/
+    - assets/images/newspaper/
+    - assets/images/teacher/
+    - assets/images/institute/
+    - assets/images/parlour/
+    - assets/images/tourist/
     - assets/images/garden/
 
   fonts:

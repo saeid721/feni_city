@@ -44,7 +44,7 @@ class _HotelScreenState extends State<HotelScreen> {
                       thana: "মহিপাল",
                       phone: "+88 01715448838",
                       address: "হোটেল নাইট হোল্ড (আবাসিক), মহিপাল, ফেনী।",
-                      imagePath: 'assets/images/bidyut/fenipallibidyut.jpeg',
+                      imagePath: 'assets/images/hotel/hotel.jpg',
                       call: "কল",
                       sms: "এস.এম.এস",
                       map: "ম্যাপ",
