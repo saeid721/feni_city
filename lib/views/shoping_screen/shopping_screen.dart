@@ -25,7 +25,7 @@ class _ShoppingScreenState extends State<ShoppingScreen> {
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(56),
         child: GlobalAppBar(
-          title: 'মার্কেট',
+          title: 'শপিং সেন্টার',
           notiOnTap: () {},
         ),
       ),
