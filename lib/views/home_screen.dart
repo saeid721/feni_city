@@ -36,6 +36,7 @@ import 'thana_polish_screen/thana_polish_screen.dart';
 import 'tourist_places_screen/tourist_places_screen.dart';
 import 'train_screen/train_web_view_screen.dart';
 import 'video_screen/videos_screen.dart';
+import 'website_screen/website_web_view_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -271,7 +272,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Get.to(()=> const NewsScreen());
                                 break;
                               case 23:
-                                Get.to(()=> const DoctorScreen());
+                                Get.to(()=> const WebsiteWebViewScreen());
                                 break;
                               case 24:
                                 Get.to(()=> const TouristPlacesScreen());
