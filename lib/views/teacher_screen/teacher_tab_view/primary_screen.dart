@@ -34,12 +34,13 @@ class _PrimaryScreenState extends State<PrimaryScreen> {
                 physics: NeverScrollableScrollPhysics(),
                 itemBuilder: (ctx, index) {
                   return TeacherDetailsWidget(
+                    name: "রাকিবুল ইসলাম",
                     instituteName: "আজমিরী বেগম রেজিঃ বেঃ প্রাঃ বিদ্যালয়",
                     thana: "ছাগলনাইয়া",
                     phone: "+88 01700 00 00 00",
                     subject: "অংক, ইংলিশ, রসায়ন, পদার্থ বিজ্ঞান",
                     address: "ছাগলনাইয়া, ফেনী",
-                    imagePath: 'assets/images/institute/primarylogo.png',
+                    imagePath: 'assets/images/teacher/teacher.jpg',
                     call: "কল",
                     sms: "এস.এম.এস",
                     map: "ম্যাপ",

@@ -34,12 +34,13 @@ class _MadrashaScreenState extends State<MadrashaScreen> {
                 physics: NeverScrollableScrollPhysics(),
                 itemBuilder: (ctx, index) {
                   return TeacherDetailsWidget(
+                    name: "রাকিবুল ইসলাম",
                     instituteName: "আল জামিয়াতুল ফালাহিয়া কামিল মাদ্রাসা",
                     thana: "সদর",
                     phone: "+88 01700 00 00 00",
                     subject: "অংক, ইংলিশ, রসায়ন, পদার্থ বিজ্ঞান",
                     address: "ফেনী সদর, ফেনী",
-                    imagePath: 'assets/images/institute/AlJameatulFalahiaKamilMadrasah.jpg',
+                    imagePath: 'assets/images/teacher/teacher.jpg',
                     call: "কল",
                     sms: "এস.এম.এস",
                     map: "ম্যাপ",

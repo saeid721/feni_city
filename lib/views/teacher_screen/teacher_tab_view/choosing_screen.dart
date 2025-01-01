@@ -34,12 +34,13 @@ class _ChoosingScreenState extends State<ChoosingScreen> {
                 physics: NeverScrollableScrollPhysics(),
                 itemBuilder: (ctx, index) {
                   return TeacherDetailsWidget(
+                    name: "রাকিবুল ইসলাম",
                     instituteName: "এক্সপার্ট কোচিং সেন্টার",
                     thana: "সদর",
                     phone: "+88 01700 00 00 00",
                     subject: "অংক, ইংলিশ, রসায়ন, পদার্থ বিজ্ঞান",
                     address: "সদর, ফেনী",
-                    imagePath: 'assets/images/institute/Expertcoachingcenterfeni.jpg',
+                    imagePath: 'assets/images/teacher/teacher.jpg',
                     call: "কল",
                     sms: "এস.এম.এস",
                     map: "ম্যাপ",

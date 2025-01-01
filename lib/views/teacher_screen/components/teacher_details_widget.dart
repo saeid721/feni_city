@@ -8,6 +8,7 @@ import '../../../global/widget/global_image_loader.dart';
 import '../../../global/widget/global_sizedbox.dart';
 
 class TeacherDetailsWidget extends StatelessWidget {
+  final String name;
   final String instituteName;
   final String phone;
   final String thana;
@@ -21,6 +22,7 @@ class TeacherDetailsWidget extends StatelessWidget {
   final Function() onTap;
   const TeacherDetailsWidget({
     super.key,
+    required this.name,
     required this.instituteName,
     required this.phone,
     required this.thana,
@@ -81,6 +83,25 @@ class TeacherDetailsWidget extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           const Icon(
+                            Icons.person_pin_outlined,
+                            size: 18,
+                            color: ColorRes.primaryColor,
+                          ),
+                          sizedBoxW(5),
+                          GlobalText(
+                            str: name,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w600,
+                            color: ColorRes.textColor,
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ],
+                      ),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Icon(
                             Icons.location_city,
                             size: 18,
                             color: ColorRes.primaryColor,
@@ -89,7 +110,7 @@ class TeacherDetailsWidget extends StatelessWidget {
                           GlobalText(
                             str: instituteName,
                             fontSize: 14,
-                            fontWeight: FontWeight.w600,
+                            fontWeight: FontWeight.w400,
                             color: ColorRes.textColor,
                             maxLines: 2,
                             overflow: TextOverflow.ellipsis,

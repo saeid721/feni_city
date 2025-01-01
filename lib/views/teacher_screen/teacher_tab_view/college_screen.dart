@@ -34,12 +34,13 @@ class _CollegeScreenState extends State<CollegeScreen> {
                 physics: NeverScrollableScrollPhysics(),
                 itemBuilder: (ctx, index) {
                   return TeacherDetailsWidget(
+                    name: "রাকিবুল ইসলাম",
                     instituteName: "ফেনী সরকারি কলেজ",
                     thana: "সদর",
                     phone: "+88 01700 00 00 00",
                     subject: "অংক, ইংলিশ, রসায়ন, পদার্থ বিজ্ঞান",
                     address: "কলেজ রোড, ফেনী",
-                    imagePath: 'assets/images/institute/feniSodorCollege.jpg',
+                    imagePath: 'assets/images/teacher/teacher.jpg',
                     call: "কল",
                     sms: "এস.এম.এস",
                     map: "ম্যাপ",

@@ -34,12 +34,13 @@ class _HighSchoolScreenState extends State<HighSchoolScreen> {
                 physics: NeverScrollableScrollPhysics(),
                 itemBuilder: (ctx, index) {
                   return TeacherDetailsWidget(
+                    name: "রাকিবুল ইসলাম",
                     instituteName: "ফেনী সরকারি পাইলট উচ্চ বিদ্যালয়",
                     thana: "সদর",
                     phone: "+88 01700 00 00 00",
                     subject: "অংক, ইংলিশ, রসায়ন, পদার্থ বিজ্ঞান",
                     address: "ফেনী সদর, ফেনী",
-                    imagePath: 'assets/images/institute/FeniGovtPilotHighSchool.png',
+                    imagePath: 'assets/images/teacher/teacher.jpg',
                     call: "কল",
                     sms: "এস.এম.এস",
                     map: "ম্যাপ",
