@@ -21,17 +21,17 @@ class _DoctorScreenState extends State<DoctorScreen> {
 
   List<GlobalMenuModel> menuItem = [
     GlobalMenuModel(img: Images.doctorInc, text: 'মনোরোগ বিশেষজ্ঞ'),
-    GlobalMenuModel(img: Images.hospitalInc, text: 'হাসপাতাল'),
-    GlobalMenuModel(img: Images.diagnosticInc, text: 'ডায়াগনস্টিক'),
-    GlobalMenuModel(img: Images.bloodInc, text: 'রক্ত'),
-    GlobalMenuModel(img: Images.busInc, text: 'বাসের সময়সূচী'),
-    GlobalMenuModel(img: Images.trainInc, text: 'ট্রেনের সময়সূচী'),
-    GlobalMenuModel(img: Images.carInc, text: 'গাড়ি ভাড়া'),
-    GlobalMenuModel(img: Images.customerCareInc, text: 'জরুরী সেবা'),
-    GlobalMenuModel(img: Images.fireStationInc, text: 'ফায়ার সার্ভিস'),
-    GlobalMenuModel(img: Images.courierServicesInc, text: 'কুরিয়ার সার্ভিস'),
-    GlobalMenuModel(img: Images.lightInc, text: 'বিদ্যুৎ অফিস'),
-    GlobalMenuModel(img: Images.policeInc, text: 'থানা-পুলিশ'),
+    GlobalMenuModel(img: Images.doctorInc, text: 'মনোরোগ বিশেষজ্ঞ'),
+    GlobalMenuModel(img: Images.doctorInc, text: 'মনোরোগ বিশেষজ্ঞ'),
+    GlobalMenuModel(img: Images.doctorInc, text: 'মনোরোগ বিশেষজ্ঞ'),
+    GlobalMenuModel(img: Images.doctorInc, text: 'মনোরোগ বিশেষজ্ঞ'),
+    GlobalMenuModel(img: Images.doctorInc, text: 'মনোরোগ বিশেষজ্ঞ'),
+    GlobalMenuModel(img: Images.doctorInc, text: 'মনোরোগ বিশেষজ্ঞ'),
+    GlobalMenuModel(img: Images.doctorInc, text: 'মনোরোগ বিশেষজ্ঞ'),
+    GlobalMenuModel(img: Images.doctorInc, text: 'মনোরোগ বিশেষজ্ঞ'),
+    GlobalMenuModel(img: Images.doctorInc, text: 'মনোরোগ বিশেষজ্ঞ'),
+    GlobalMenuModel(img: Images.doctorInc, text: 'মনোরোগ বিশেষজ্ঞ'),
+    GlobalMenuModel(img: Images.doctorInc, text: 'মনোরোগ বিশেষজ্ঞ'),
   ];
 
   int currentIndex = 0;
@@ -131,70 +131,70 @@ class _DoctorScreenState extends State<DoctorScreen> {
                           Get.to(() => const MonorogScreen());
                           break;
                         case 1:
-                          Get.to(() => const DoctorScreen());
+                          Get.to(() => const MonorogScreen());
                           break;
                         case 2:
-                          Get.to(() => const DoctorScreen());
+                          Get.to(() => const MonorogScreen());
                           break;
                         case 3:
-                          Get.to(() => const DoctorScreen());
+                          Get.to(() => const MonorogScreen());
                           break;
                         case 4:
-                          Get.to(() => const DoctorScreen());
+                          Get.to(() => const MonorogScreen());
                           break;
                         case 5:
-                          Get.to(() => const DoctorScreen());
+                          Get.to(() => const MonorogScreen());
                           break;
                         case 6:
-                          Get.to(() => const DoctorScreen());
+                          Get.to(() => const MonorogScreen());
                           break;
                         case 7:
-                          Get.to(() => const DoctorScreen());
+                          Get.to(() => const MonorogScreen());
                           break;
                         case 8:
-                          Get.to(() => const DoctorScreen());
+                          Get.to(() => const MonorogScreen());
                           break;
                         case 9:
-                          Get.to(() => const DoctorScreen());
+                          Get.to(() => const MonorogScreen());
                           break;
                         case 10:
-                          Get.to(() => const DoctorScreen());
+                          Get.to(() => const MonorogScreen());
                           break;
                         case 11:
-                          Get.to(() => const DoctorScreen());
+                          Get.to(() => const MonorogScreen());
                           break;
                         case 12:
-                          Get.to(() => const DoctorScreen());
+                          Get.to(() => const MonorogScreen());
                           break;
                         case 13:
-                          Get.to(() => const DoctorScreen());
+                          Get.to(() => const MonorogScreen());
                           break;
                         case 14:
-                          Get.to(() => const DoctorScreen());
+                          Get.to(() => const MonorogScreen());
                           break;
                         case 15:
-                          Get.to(() => const DoctorScreen());
+                          Get.to(() => const MonorogScreen());
                           break;
                         case 16:
-                          Get.to(() => const DoctorScreen());
+                          Get.to(() => const MonorogScreen());
                           break;
                         case 17:
-                          Get.to(() => const DoctorScreen());
+                          Get.to(() => const MonorogScreen());
                           break;
                         case 18:
-                          Get.to(() => const DoctorScreen());
+                          Get.to(() => const MonorogScreen());
                           break;
                         case 19:
-                          Get.to(() => const DoctorScreen());
+                          Get.to(() => const MonorogScreen());
                           break;
                         case 20:
-                          Get.to(() => const DoctorScreen());
+                          Get.to(() => const MonorogScreen());
                           break;
                         case 21:
-                          Get.to(() => const DoctorScreen());
+                          Get.to(() => const MonorogScreen());
                           break;
                         case 22:
-                          Get.to(() => const DoctorScreen());
+                          Get.to(() => const MonorogScreen());
                           break;
                       }
                     },
