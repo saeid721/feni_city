@@ -76,9 +76,10 @@ class DoctorDetailsWidget extends StatelessWidget {
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Expanded(
-                  flex: 4,
+                  flex: 5,
                   child: Column(
                     children: [
                       Row(
@@ -208,14 +209,17 @@ class DoctorDetailsWidget extends StatelessWidget {
                   ),
                 ),
                 Expanded(
-                  flex: 1,
+                  flex: 2,
                   child: SizedBox(
-                    child: GlobalImageLoader(
-                      imagePath: imagePath,
-                      width: 80,
-                      height: 80,
-                      imageFor: ImageFor.asset,
-                      fit: BoxFit.cover,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(5),
+                      child: GlobalImageLoader(
+                        imagePath: imagePath,
+                        width: 100,
+                        height: 100,
+                        imageFor: ImageFor.asset,
+                        fit: BoxFit.fill,
+                      ),
                     ),
                   ),
                 ),
@@ -223,7 +227,7 @@ class DoctorDetailsWidget extends StatelessWidget {
             ),
 
             Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Icon(
                   Icons.details,
