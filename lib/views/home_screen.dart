@@ -197,7 +197,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         crossAxisSpacing: 8,
                         mainAxisExtent: 85,
                     ),
-                    padding: const EdgeInsets.symmetric(horizontal: 15),
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
                     itemBuilder: (ctx, index){
                       return GestureDetector(
                           onTap: (){
@@ -291,7 +291,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           child: HomeMenuWidget(
                               height: 40,
                               width: 40,
-                              maxLines: 1,
+                              maxLines: 2,
                               imagePath: menuItem[index].img,
                               text: menuItem[index].text
                           )

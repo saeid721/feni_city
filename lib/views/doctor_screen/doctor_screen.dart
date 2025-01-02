@@ -19,21 +19,90 @@ class DoctorScreen extends StatefulWidget {
 class _DoctorScreenState extends State<DoctorScreen> {
   final GlobalKey<ScaffoldState> drawerKey = GlobalKey<ScaffoldState>();
 
+  // List<GlobalMenuModel> menuItem = [
+  //   GlobalMenuModel(img: Images.doctorInc, text: 'মেডিসিন বিশেষজ্ঞ'),
+  //   GlobalMenuModel(img: Images.doctorInc, text: 'হৃদরোগ বিশেষজ্ঞ'),
+  //   GlobalMenuModel(img: Images.doctorInc, text: 'চর্ম ও যৌন রোগ বিশেষজ্ঞ'),
+  //   GlobalMenuModel(img: Images.doctorInc, text: 'নাক, কান, গলা বিশেষজ্ঞ'),
+  //   GlobalMenuModel(img: Images.doctorInc, text: 'ডায়াবেটিস ও হরমোন বিশেষজ্ঞ'),
+  //   GlobalMenuModel(img: Images.doctorInc, text: 'মনোরোগ বিশেষজ্ঞ'),
+  //   GlobalMenuModel(img: Images.doctorInc, text: 'পাইলস বিশেষজ্ঞ'),
+  //   GlobalMenuModel(img: Images.doctorInc, text: 'ডেন্টিস্ট'),
+  //   GlobalMenuModel(img: Images.doctorInc, text: 'চক্ষু বিশেষজ্ঞ'),
+  //   GlobalMenuModel(img: Images.doctorInc, text: 'লিভার বিশেষজ্ঞ'),
+  //   GlobalMenuModel(img: Images.doctorInc, text: 'ইউরোলজি বিশেষজ্ঞ'),
+  //   GlobalMenuModel(img: Images.doctorInc, text: 'সার্জারি বিশেষজ্ঞ'),
+  //   GlobalMenuModel(img: Images.doctorInc, text: 'গাইনি বিশেষজ্ঞ'),
+  //   GlobalMenuModel(img: Images.doctorInc, text: 'রক্তরোগ বিশেষজ্ঞ'),
+  //   GlobalMenuModel(img: Images.doctorInc, text: 'হোমিওপ্যাথি বিশেষজ্ঞ'),
+  //   GlobalMenuModel(img: Images.doctorInc, text: 'লেজার সার্জারি বিশেষজ্ঞ'),
+  //   GlobalMenuModel(img: Images.doctorInc, text: 'মেডিসিন বিশেষজ্ঞ'),
+  //   GlobalMenuModel(img: Images.doctorInc, text: 'কিডনি রোগ বিশেষজ্ঞ'),
+  //   GlobalMenuModel(img: Images.doctorInc, text: 'নিউরো সার্জারি বিশেষজ্ঞ'),
+  //   GlobalMenuModel(img: Images.doctorInc, text: 'স্নায়ু রোগ বিশেষজ্ঞ'),
+  //   GlobalMenuModel(img: Images.doctorInc, text: 'পুষ্টি  বিশেষজ্ঞ'),
+  //   GlobalMenuModel(img: Images.doctorInc, text: 'ক্যান্সার বিশেষজ্ঞ'),
+  //   GlobalMenuModel(img: Images.doctorInc, text: 'অর্থপেডিক বিশেষজ্ঞ'),
+  //   GlobalMenuModel(img: Images.doctorInc, text: 'ব্যাথা বিশেষজ্ঞ'),
+  //   GlobalMenuModel(img: Images.doctorInc, text: 'শিশু রোগ বিশেষজ্ঞ'),
+  //   GlobalMenuModel(img: Images.doctorInc, text: 'ফিজিশিয়ান বিশেষজ্ঞ'),
+  //   GlobalMenuModel(img: Images.doctorInc, text: 'ফিজিওথেরাপিস্ট বিশেষজ্ঞ'),
+  //   GlobalMenuModel(img: Images.doctorInc, text: 'প্লাস্টিক সার্জারি বিশেষজ্ঞ'),
+  //   GlobalMenuModel(img: Images.doctorInc, text: 'অ্যাজমা, যক্ষা ও বক্ষব্যাধি বিশেষজ্ঞ'),
+  //   GlobalMenuModel(img: Images.doctorInc, text: 'মনোরোগ বিশেষজ্ঞ'),
+  //   GlobalMenuModel(img: Images.doctorInc, text: 'মনোরোগ বিশেষজ্ঞ'),
+  // ];
+  //
   List<GlobalMenuModel> menuItem = [
-    GlobalMenuModel(img: Images.doctorInc, text: 'মনোরোগ বিশেষজ্ঞ'),
-    GlobalMenuModel(img: Images.doctorInc, text: 'মনোরোগ বিশেষজ্ঞ'),
-    GlobalMenuModel(img: Images.doctorInc, text: 'মনোরোগ বিশেষজ্ঞ'),
-    GlobalMenuModel(img: Images.doctorInc, text: 'মনোরোগ বিশেষজ্ঞ'),
-    GlobalMenuModel(img: Images.doctorInc, text: 'মনোরোগ বিশেষজ্ঞ'),
-    GlobalMenuModel(img: Images.doctorInc, text: 'মনোরোগ বিশেষজ্ঞ'),
-    GlobalMenuModel(img: Images.doctorInc, text: 'মনোরোগ বিশেষজ্ঞ'),
-    GlobalMenuModel(img: Images.doctorInc, text: 'মনোরোগ বিশেষজ্ঞ'),
-    GlobalMenuModel(img: Images.doctorInc, text: 'মনোরোগ বিশেষজ্ঞ'),
-    GlobalMenuModel(img: Images.doctorInc, text: 'মনোরোগ বিশেষজ্ঞ'),
-    GlobalMenuModel(img: Images.doctorInc, text: 'মনোরোগ বিশেষজ্ঞ'),
-    GlobalMenuModel(img: Images.doctorInc, text: 'মনোরোগ বিশেষজ্ঞ'),
+    GlobalMenuModel(img: Images.doctorInc, text: 'মেডিসিন'),
+    GlobalMenuModel(img: Images.nephrologist, text: 'নেফ্রোলজিস্ট'),
+    GlobalMenuModel(img: Images.gastroenterologist, text: 'গ্যাস্ট্রোএন্টারোলজিস্ট'),
+    GlobalMenuModel(img: Images.pulmonologist, text: 'পালমোনোলজিস্ট'),
+    GlobalMenuModel(img: Images.endocrinologist, text: 'এন্ডোক্রাইনোলজিস্ট'),
+    GlobalMenuModel(img: Images.neurologist, text: 'নিউরোলজিস্ট'),
+    GlobalMenuModel(img: Images.hematologist, text: 'হেমাটোলজিস্ট'),
+    GlobalMenuModel(img: Images.obstetrician, text: 'রিউমাটোলজিস্ট'),
+    GlobalMenuModel(img: Images.cardiologist, text: 'পেডিয়াট্রিশিয়ান'),
+    GlobalMenuModel(img: Images.cardiothoracic, text: 'গাইনোকোলজিস্ট'),
+    GlobalMenuModel(img: Images.orthopedics, text: 'অবস্টেট্রিশিয়ান'),
+    GlobalMenuModel(img: Images.plasticSurgeon, text: 'কার্ডিওলজিস্ট'),
+    GlobalMenuModel(img: Images.cosmeticSurgeon, text: 'কার্ডিওথোরাসিক সার্জন'),
+    GlobalMenuModel(img: Images.transplantSurgeon, text: 'অর্থোপেডিক সার্জন'),
+    GlobalMenuModel(img: Images.neurosurgeon, text: 'প্লাস্টিক সার্জন'),
+    GlobalMenuModel(img: Images.generalSurgeon, text: 'কসমেটিক সার্জন'),
+    GlobalMenuModel(img: Images.doctorInc, text: 'ট্রান্সপ্লান্ট সার্জন'),
+    GlobalMenuModel(img: Images.doctorInc, text: 'নিউরো সার্জন'),
+    GlobalMenuModel(img: Images.ophthalmologist, text: 'জেনারেল সার্জন'),
+    GlobalMenuModel(img: Images.doctorInc, text: 'অপথালমোলজিস্ট'),
+    GlobalMenuModel(img: Images.doctorInc, text: 'ইএনটি স্পেশালিস্ট'),
+    GlobalMenuModel(img: Images.doctorInc, text: 'ডার্মাটোলজিস্ট'),
+    GlobalMenuModel(img: Images.doctorInc, text: 'এলার্জোলজিস্ট'),
+    GlobalMenuModel(img: Images.doctorInc, text: 'সাইকিয়াট্রিস্ট'),
+    GlobalMenuModel(img: Images.doctorInc, text: 'সাইকোলজিস্ট'),
+    GlobalMenuModel(img: Images.doctorInc, text: 'অনকোলজিস্ট'),
+    GlobalMenuModel(img: Images.doctorInc, text: 'ইউরোলজিস্ট'),
+    GlobalMenuModel(img: Images.doctorInc, text: 'রেডিওলজিস্ট'),
+    GlobalMenuModel(img: Images.doctorInc, text: 'প্যাথলজিস্ট'),
+    GlobalMenuModel(img: Images.doctorInc, text: 'ডেন্টিস্ট'),
+    GlobalMenuModel(img: Images.doctorInc, text: 'ক্রিটিকাল কেয়ার স্পেশালিস্ট'),
+    GlobalMenuModel(img: Images.doctorInc, text: 'ইমার্জেন্সি মেডিসিন স্পেশালিস্ট'),
+    GlobalMenuModel(img: Images.doctorInc, text: 'প্রিভেন্টিভ মেডিসিন স্পেশালিস্ট'),
+    GlobalMenuModel(img: Images.doctorInc, text: 'পাবলিক হেলথ স্পেশালিস্ট'),
+    GlobalMenuModel(img: Images.doctorInc, text: 'ইনফেকশিয়াস ডিজিজ স্পেশালিস্ট'),
+    GlobalMenuModel(img: Images.doctorInc, text: 'স্পোর্টস মেডিসিন স্পেশালিস্ট'),
+    GlobalMenuModel(img: Images.doctorInc, text: 'পেইন ম্যানেজমেন্ট স্পেশালিস্ট'),
+    GlobalMenuModel(img: Images.doctorInc, text: 'প্যালিয়েটিভ কেয়ার স্পেশালিস্ট'),
+    GlobalMenuModel(img: Images.doctorInc, text: 'অকুপেশনাল মেডিসিন স্পেশালিস্ট'),
+    GlobalMenuModel(img: Images.doctorInc, text: 'ক্লিনিক্যাল জেনেটিসিস্ট'),
+    GlobalMenuModel(img: Images.doctorInc, text: 'ডায়েটেশিয়ান বা নিউট্রিশনিস্ট'),
+    GlobalMenuModel(img: Images.doctorInc, text: 'চাইল্ড ডেভেলপমেন্ট স্পেশালিস্ট'),
+    GlobalMenuModel(img: Images.doctorInc, text: 'ফিজিয়োথেরাপিস্ট'),
+    GlobalMenuModel(img: Images.fertilitySpecialist, text: 'ফার্টিলিটি স্পেশালিস্ট'),
+    GlobalMenuModel(img: Images.sexologist, text: 'সেক্সোলজিস্ট'),
+    GlobalMenuModel(img: Images.toxicologist, text: 'টক্সিকোলজিস্ট'),
+    GlobalMenuModel(img: Images.geriatrician, text: 'জেরিয়াট্রিশিয়ান'),
+    GlobalMenuModel(img: Images.doctorInc, text: 'হোমিওপ্যাথি'),
   ];
-
   int currentIndex = 0;
   final CarouselController buttonCarouselController = CarouselController();
 
@@ -47,7 +116,7 @@ class _DoctorScreenState extends State<DoctorScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: ColorRes.white,
       resizeToAvoidBottomInset: false,
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(56),
@@ -111,96 +180,98 @@ class _DoctorScreenState extends State<DoctorScreen> {
           ),
           const SizedBox(height: 5),
 
-          SingleChildScrollView(
-            child: GridView.builder(
-                itemCount: menuItem.length,
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 4,
-                  mainAxisSpacing: 8,
-                  crossAxisSpacing: 8,
-                  mainAxisExtent: 100,
-                ),
-                padding: const EdgeInsets.symmetric(horizontal: 15),
-                itemBuilder: (ctx, index) {
-                  return GestureDetector(
-                    onTap: () {
-                      switch (index) {
-                        case 0:
-                          Get.to(() => const MonorogScreen());
-                          break;
-                        case 1:
-                          Get.to(() => const MonorogScreen());
-                          break;
-                        case 2:
-                          Get.to(() => const MonorogScreen());
-                          break;
-                        case 3:
-                          Get.to(() => const MonorogScreen());
-                          break;
-                        case 4:
-                          Get.to(() => const MonorogScreen());
-                          break;
-                        case 5:
-                          Get.to(() => const MonorogScreen());
-                          break;
-                        case 6:
-                          Get.to(() => const MonorogScreen());
-                          break;
-                        case 7:
-                          Get.to(() => const MonorogScreen());
-                          break;
-                        case 8:
-                          Get.to(() => const MonorogScreen());
-                          break;
-                        case 9:
-                          Get.to(() => const MonorogScreen());
-                          break;
-                        case 10:
-                          Get.to(() => const MonorogScreen());
-                          break;
-                        case 11:
-                          Get.to(() => const MonorogScreen());
-                          break;
-                        case 12:
-                          Get.to(() => const MonorogScreen());
-                          break;
-                        case 13:
-                          Get.to(() => const MonorogScreen());
-                          break;
-                        case 14:
-                          Get.to(() => const MonorogScreen());
-                          break;
-                        case 15:
-                          Get.to(() => const MonorogScreen());
-                          break;
-                        case 16:
-                          Get.to(() => const MonorogScreen());
-                          break;
-                        case 17:
-                          Get.to(() => const MonorogScreen());
-                          break;
-                        case 18:
-                          Get.to(() => const MonorogScreen());
-                          break;
-                        case 19:
-                          Get.to(() => const MonorogScreen());
-                          break;
-                        case 20:
-                          Get.to(() => const MonorogScreen());
-                          break;
-                        case 21:
-                          Get.to(() => const MonorogScreen());
-                          break;
-                        case 22:
-                          Get.to(() => const MonorogScreen());
-                          break;
-                      }
-                    },
-                    child: HomeMenuWidget(height: 40, width: 40, maxLines: 2, imagePath: menuItem[index].img, text: menuItem[index].text),
-                  );
-                }),
+          Expanded(
+            child: SingleChildScrollView(
+              child: GridView.builder(
+                  itemCount: menuItem.length,
+                  shrinkWrap: true,
+                  physics: const NeverScrollableScrollPhysics(),
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 4,
+                    mainAxisSpacing: 5,
+                    crossAxisSpacing: 5,
+                    mainAxisExtent: 100,
+                  ),
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  itemBuilder: (ctx, index) {
+                    return GestureDetector(
+                      onTap: () {
+                        switch (index) {
+                          case 0:
+                            Get.to(() => const MonorogScreen());
+                            break;
+                          case 1:
+                            Get.to(() => const MonorogScreen());
+                            break;
+                          case 2:
+                            Get.to(() => const MonorogScreen());
+                            break;
+                          case 3:
+                            Get.to(() => const MonorogScreen());
+                            break;
+                          case 4:
+                            Get.to(() => const MonorogScreen());
+                            break;
+                          case 5:
+                            Get.to(() => const MonorogScreen());
+                            break;
+                          case 6:
+                            Get.to(() => const MonorogScreen());
+                            break;
+                          case 7:
+                            Get.to(() => const MonorogScreen());
+                            break;
+                          case 8:
+                            Get.to(() => const MonorogScreen());
+                            break;
+                          case 9:
+                            Get.to(() => const MonorogScreen());
+                            break;
+                          case 10:
+                            Get.to(() => const MonorogScreen());
+                            break;
+                          case 11:
+                            Get.to(() => const MonorogScreen());
+                            break;
+                          case 12:
+                            Get.to(() => const MonorogScreen());
+                            break;
+                          case 13:
+                            Get.to(() => const MonorogScreen());
+                            break;
+                          case 14:
+                            Get.to(() => const MonorogScreen());
+                            break;
+                          case 15:
+                            Get.to(() => const MonorogScreen());
+                            break;
+                          case 16:
+                            Get.to(() => const MonorogScreen());
+                            break;
+                          case 17:
+                            Get.to(() => const MonorogScreen());
+                            break;
+                          case 18:
+                            Get.to(() => const MonorogScreen());
+                            break;
+                          case 19:
+                            Get.to(() => const MonorogScreen());
+                            break;
+                          case 20:
+                            Get.to(() => const MonorogScreen());
+                            break;
+                          case 21:
+                            Get.to(() => const MonorogScreen());
+                            break;
+                          case 22:
+                            Get.to(() => const MonorogScreen());
+                            break;
+                        }
+                      },
+                      child: HomeMenuWidget(height: 40, width: 40, maxLines: 3, imagePath: menuItem[index].img, text: menuItem[index].text),
+                    );
+                  }),
+            ),
           ),
         ],
       ),
