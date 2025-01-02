@@ -67,9 +67,11 @@ class Images {
   static const String endocrinologist = 'assets/icons/doctors/endocrinologist.png';
   static const String neurologist = 'assets/icons/doctors/neurologist.png';
   static const String hematologist = 'assets/icons/doctors/hematologist.png';
+  static const String rheumatologists = 'assets/icons/doctors/rheumatologists.png';
+  static const String pediatrician = 'assets/icons/doctors/pediatrician.png';
+  static const String gynecologist = 'assets/icons/doctors/gynecologist.png';
   static const String obstetrician = 'assets/icons/doctors/obstetrician.png';
   static const String cardiologist = 'assets/icons/doctors/cardiologist.png';
-  static const String gynecologist = 'assets/icons/doctors/gynecologist.png';
   static const String cardiothoracic = 'assets/icons/doctors/cardiothoracic.png';
   static const String orthopedics = 'assets/icons/doctors/orthopedics.png';
   static const String plasticSurgeon = 'assets/icons/doctors/plasticSurgeon.png';
@@ -82,11 +84,17 @@ class Images {
   static const String dermatologist = 'assets/icons/doctors/dermatologist.png';
   static const String allergist = 'assets/icons/doctors/allergist.png';
   static const String psychiatrist = 'assets/icons/doctors/psychiatrist.png';
+
   static const String oncologist = 'assets/icons/doctors/oncologist.png';
   static const String urologist = 'assets/icons/doctors/urologist.png';
   static const String radiologist = 'assets/icons/doctors/radiologist.png';
   static const String pathologist = 'assets/icons/doctors/pathologist.png';
 
+  static const String occupationalMedicineSpecialist = 'assets/icons/doctors/occupationalMedicineSpecialist.png';
+  static const String clinicalGeneticist = 'assets/icons/doctors/clinicalGeneticist.png';
+  static const String nutritionist = 'assets/icons/doctors/nutritionist.png';
+  static const String childDevelopmentSpecialist = 'assets/icons/doctors/childDevelopmentSpecialist.png';
+  static const String physician = 'assets/icons/doctors/physician.png';
   static const String fertilitySpecialist = 'assets/icons/doctors/fertilitySpecialist.png';
   static const String sexologist = 'assets/icons/doctors/sexologist.png';
   static const String toxicologist = 'assets/icons/doctors/toxicologist.png';
@@ -94,22 +102,14 @@ class Images {
 
   static const String aesthetician = 'assets/icons/doctors/aesthetician.png';
   static const String cardioVascular = 'assets/icons/doctors/cardioVascular.png';
-  static const String childDevelopmentSpecialist = 'assets/icons/doctors/childDevelopmentSpecialist.png';
-  static const String clinicalGeneticist = 'assets/icons/doctors/clinicalGeneticist.png';
   static const String criticalCareSpecialist = 'assets/icons/doctors/criticalCareSpecialist.png';
   static const String dentist = 'assets/icons/doctors/dentist.png';
   static const String emergencyMedicineSpecialist = 'assets/icons/doctors/emergencyMedicineSpecialist.png';
   static const String infectiousDiseaseSpecialist = 'assets/icons/doctors/infectiousDiseaseSpecialist.png';
   static const String medicineSpecialist = 'assets/icons/doctors/medicineSpecialist.png';
-  static const String nutritionist = 'assets/icons/doctors/nutritionist.png';
-  static const String occupationalMedicineSpecialist = 'assets/icons/doctors/occupationalMedicineSpecialist.png';
   static const String painManagementSpecialist = 'assets/icons/doctors/painManagementSpecialist.png';
-  static const String palliativeCareSpecialist = 'assets/icons/doctors/palliativeCareSpecialist.png';
-  static const String pediatrician = 'assets/icons/doctors/pediatrician.png';
-  static const String physician = 'assets/icons/doctors/physician.png';
   static const String physiotherapist = 'assets/icons/doctors/physiotherapist.png';
   static const String publicHealthSpecialist = 'assets/icons/doctors/publicHealthSpecialist.png';
-  static const String rheumatologists = 'assets/icons/doctors/rheumatologists.png';
   static const String sportsMedicineSpecialist = 'assets/icons/doctors/sportsMedicineSpecialist.png';
 
 }

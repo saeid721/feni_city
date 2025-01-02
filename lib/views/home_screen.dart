@@ -84,6 +84,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   final List<String> sliderImage = [
     'assets/images/01.jpg',
+    'assets/images/05.jpg',
     'assets/images/02.jpg',
     'assets/images/03.jpg',
     'assets/images/04.jpg',
