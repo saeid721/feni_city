@@ -11,6 +11,7 @@ import 'contact_screen/contact_screen.dart';
 import 'home_screen.dart';
 import 'notification_screen/notification_screen.dart';
 import 'privacy_policy_screen/privacy_policy_screen.dart';
+import 'profile_screen/profile_screen.dart';
 
 class CustomDrawerScreen extends StatefulWidget {
   const CustomDrawerScreen({super.key});
@@ -85,16 +86,16 @@ class _CustomDrawerScreenState extends State<CustomDrawerScreen> {
                                 Get.to(()=> const ContactScreen());
                                 break;
                               case 2:
-                                Get.to(()=> const HomeScreen());
+                                Get.to(()=> const ProfileScreen());
                                 break;
                               case 3:
                                 Get.to(()=> const NotificationScreen());
                                 break;
                               case 4:
-                                Get.to(()=> const HomeScreen());
+                               // Get.to(()=> const HomeScreen());
                                 break;
                               case 5:
-                                Get.to(()=> const HomeScreen());
+                                //Get.to(()=> const HomeScreen());
                                 break;
                               case 6:
                                 Get.to(()=> const PrivacyPolicyScreen());
