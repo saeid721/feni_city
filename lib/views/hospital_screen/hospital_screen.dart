@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import '../../../../../global/constants/colors_resources.dart';
 import '../../../../../global/widget/global_container.dart';
 import '../../global/widget/custom_app_bar.dart';
+import '../notification_screen/notification_screen.dart';
 import 'hospital_tab_view/clinic_screen.dart';
 import 'hospital_tab_view/gov_hospital_screen.dart';
 
@@ -37,6 +39,14 @@ class _HospitalScreenState extends State<HospitalScreen> with SingleTickerProvid
         child: GlobalAppBar(
           title: 'শিক্ষা প্রতিষ্ঠান',
           notiOnTap: () {},
+          actions: [
+            IconButton(
+              onPressed: () {
+                Get.to(() => NotificationScreen());
+              },
+              icon: const Icon(Icons.notifications_on_rounded, color: ColorRes.white,),
+            ),
+          ],
         ),
       ),
             body: Column(

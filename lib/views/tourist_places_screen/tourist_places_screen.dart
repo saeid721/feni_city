@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../global/constants/colors_resources.dart';
 import '../../global/widget/custom_app_bar.dart';
 import '../../global/widget/global_sizedbox.dart';
+import '../notification_screen/notification_screen.dart';
 import 'components/tourist_places_widget.dart';
 import 'tourist_places_details_screen.dart';
 
@@ -30,6 +32,14 @@ class _TouristPlacesScreenState extends State<TouristPlacesScreen> {
         child: GlobalAppBar(
           title: 'দর্শনীয় স্থান',
           notiOnTap: () {},
+          actions: [
+            IconButton(
+              onPressed: () {
+                Get.to(() => NotificationScreen());
+              },
+              icon: const Icon(Icons.notifications_on_rounded, color: ColorRes.white,),
+            ),
+          ],
         ),
       ),
       body: SingleChildScrollView(

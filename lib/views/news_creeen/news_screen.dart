@@ -7,6 +7,7 @@ import '../../global/model.dart';
 import '../../global/widget/custom_app_bar.dart';
 import '../../global/widget/global_container.dart';
 import '../../global/widget/home_menu_widget.dart';
+import '../notification_screen/notification_screen.dart';
 import 'ajeyo_bangla_web_view_screen.dart';
 import 'daily_provatalo_web_view_screen.dart';
 import 'doinik_amar_feni_web_view_screen.dart';
@@ -62,6 +63,14 @@ class _NewsScreenState extends State<NewsScreen> {
         child: GlobalAppBar(
           title: 'ফেনীর খবর',
           notiOnTap: () {},
+          actions: [
+            IconButton(
+              onPressed: () {
+                Get.to(() => NotificationScreen());
+              },
+              icon: const Icon(Icons.notifications_on_rounded, color: ColorRes.white,),
+            ),
+          ],
         ),
       ),
       body: Column(

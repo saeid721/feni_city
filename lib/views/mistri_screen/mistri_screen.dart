@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import '../../global/constants/colors_resources.dart';
 import '../../global/widget/custom_app_bar.dart';
+import '../notification_screen/notification_screen.dart';
 import 'components/mistri_details_widget.dart';
 
 class MistriScreen extends StatefulWidget {
@@ -27,6 +30,14 @@ class _MistriScreenState extends State<MistriScreen> with SingleTickerProviderSt
         child: GlobalAppBar(
           title: 'মিস্ত্রি',
           notiOnTap: () {},
+          actions: [
+            IconButton(
+              onPressed: () {
+                Get.to(() => NotificationScreen());
+              },
+              icon: const Icon(Icons.notifications_on_rounded, color: ColorRes.white,),
+            ),
+          ],
         ),
       ),
       body: SingleChildScrollView(

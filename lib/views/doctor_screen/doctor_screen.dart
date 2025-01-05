@@ -7,6 +7,7 @@ import '../../global/model.dart';
 import '../../global/widget/custom_app_bar.dart';
 import '../../global/widget/global_container.dart';
 import '../../global/widget/home_menu_widget.dart';
+import '../notification_screen/notification_screen.dart';
 import 'monorog_screen.dart';
 
 class DoctorScreen extends StatefulWidget {
@@ -125,6 +126,14 @@ class _DoctorScreenState extends State<DoctorScreen> {
         child: GlobalAppBar(
           title: 'ডাক্তার',
           notiOnTap: () {},
+          actions: [
+            IconButton(
+              onPressed: () {
+                Get.to(() => NotificationScreen());
+              },
+              icon: const Icon(Icons.notifications_on_rounded, color: ColorRes.white,),
+            ),
+          ],
         ),
       ),
       body: Column(

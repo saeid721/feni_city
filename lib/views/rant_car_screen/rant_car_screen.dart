@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import '../../../../../global/constants/colors_resources.dart';
 import '../../../../../global/widget/global_container.dart';
 import '../../global/widget/custom_app_bar.dart';
+import '../notification_screen/notification_screen.dart';
 import 'rant_car_tab_view/ambulance_screen.dart';
 import 'rant_car_tab_view/bus_screen.dart';
 import 'rant_car_tab_view/car_screen.dart';
@@ -40,6 +42,14 @@ class _RantCarScreenState extends State<RantCarScreen> with SingleTickerProvider
         child: GlobalAppBar(
           title: 'গাড়ি ভাড়া',
           notiOnTap: () {},
+          actions: [
+            IconButton(
+              onPressed: () {
+                Get.to(() => NotificationScreen());
+              },
+              icon: const Icon(Icons.notifications_on_rounded, color: ColorRes.white,),
+            ),
+          ],
         ),
       ),
             body: Column(

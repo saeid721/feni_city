@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import '../../global/constants/colors_resources.dart';
 import '../../global/widget/custom_app_bar.dart';
+import '../notification_screen/notification_screen.dart';
 import 'components/flat_land_widget.dart';
 import 'basa_vara_details_screen.dart';
 
@@ -29,6 +31,14 @@ class _BasaVaraScreenState extends State<BasaVaraScreen> {
           child: GlobalAppBar(
             title: 'বাসা ভাড়া',
             notiOnTap: () {},
+            actions: [
+              IconButton(
+                onPressed: () {
+                  Get.to(() => NotificationScreen());
+                },
+                icon: const Icon(Icons.notifications_on_rounded, color: ColorRes.white,),
+              ),
+            ],
           ),
         ),
         body: SingleChildScrollView(

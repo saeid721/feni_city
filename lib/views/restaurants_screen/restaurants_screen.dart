@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import '../../global/constants/colors_resources.dart';
 import '../../global/widget/custom_app_bar.dart';
+import '../notification_screen/notification_screen.dart';
 import 'components/restaurants_widget.dart';
 
 class RestaurantsScreen extends StatefulWidget {
@@ -27,6 +30,14 @@ class _RestaurantsScreenState extends State<RestaurantsScreen> {
         child: GlobalAppBar(
           title: 'রেস্টুরেন্ট',
           notiOnTap: () {},
+          actions: [
+            IconButton(
+              onPressed: () {
+                Get.to(() => NotificationScreen());
+              },
+              icon: const Icon(Icons.notifications_on_rounded, color: ColorRes.white,),
+            ),
+          ],
         ),
       ),
       body: SingleChildScrollView(

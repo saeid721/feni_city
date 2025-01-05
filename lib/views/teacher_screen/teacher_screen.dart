@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import '../../../../../global/constants/colors_resources.dart';
 import '../../../../../global/widget/global_container.dart';
 import '../../global/widget/custom_app_bar.dart';
+import '../notification_screen/notification_screen.dart';
 import 'teacher_tab_view/choosing_screen.dart';
 import 'teacher_tab_view/college_screen.dart';
 import 'teacher_tab_view/high_school_screen.dart';
@@ -40,6 +42,14 @@ class _TeacherScreenState extends State<TeacherScreen> with SingleTickerProvider
         child: GlobalAppBar(
           title: 'শিক্ষক',
           notiOnTap: () {},
+          actions: [
+            IconButton(
+              onPressed: () {
+                Get.to(() => NotificationScreen());
+              },
+              icon: const Icon(Icons.notifications_on_rounded, color: ColorRes.white,),
+            ),
+          ],
         ),
       ),
             body: Column(
