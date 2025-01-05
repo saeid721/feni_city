@@ -35,7 +35,7 @@ class _CustomDrawerScreenState extends State<CustomDrawerScreen> {
         child: GlobalContainer(
           height: Get.height,
           width: Get.width,
-          color: ColorRes.primaryColor,
+          color: ColorRes.white,
           child: Column(
             children: [
               Container(
@@ -43,7 +43,7 @@ class _CustomDrawerScreenState extends State<CustomDrawerScreen> {
                 color: ColorRes.primaryColor,
                 padding: const EdgeInsets.only(left: 20, right: 10, top: 60, bottom: 20),
                 child: ClipRRect(
-                  borderRadius: BorderRadius.circular(100),
+                  borderRadius: BorderRadius.circular(20),
                   child:
                   // GlobalImageLoader(
                   //     imagePath: Images.appLogo,
@@ -53,7 +53,7 @@ class _CustomDrawerScreenState extends State<CustomDrawerScreen> {
                   // ),
                   GlobalText(
                     str: "Feni City",
-                    color: ColorRes.grey,
+                    color: ColorRes.white,
                     fontSize: 44,
                     fontWeight: FontWeight.w700,
                     textAlign: TextAlign.center,
@@ -106,7 +106,7 @@ class _CustomDrawerScreenState extends State<CustomDrawerScreen> {
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8),
                               // color: isClick == index ? ColorRes.shoesPrimaryColor : Colors.transparent,
-                              color: isClick == index ? ColorRes.primaryColor : Colors.transparent
+                              color: isClick == index ? ColorRes.primaryColor : Colors.white
                             ),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.start,
@@ -116,6 +116,7 @@ class _CustomDrawerScreenState extends State<CustomDrawerScreen> {
                                   height: 20,
                                   width: 20,
                                   fit: BoxFit.fill,
+                                    color: isClick == index ? Colors.white : ColorRes.primaryColor
                                 ),
                                 const SizedBox(width: 10),
                                 GlobalText(
