@@ -9,6 +9,7 @@ import '../global/widget/custom_app_bar.dart';
 import '../global/widget/global_container.dart';
 import '../global/widget/home_menu_widget.dart';
 import 'app_exit_dialog.dart';
+import 'auth/signin_screen.dart';
 import 'basa_vara_screen/basa_vara_screen.dart';
 import 'biddut_office_screen/bidyut_office_screen.dart';
 import 'blood_screen/blood_web_view_screen.dart';
@@ -116,16 +117,25 @@ class _HomeScreenState extends State<HomeScreen> {
           preferredSize: const Size.fromHeight(56),
           child: GlobalAppBar(
             title: 'Feni City',
-            notiOnTap: (){},
+            notiOnTap: () {},
             leading: GestureDetector(
-              onTap: (){
-                drawerKey.currentState!.isDrawerOpen
-                    ? drawerKey.currentState!.closeDrawer()
-                    : drawerKey.currentState!.openDrawer();
+              onTap: () {
+                if (drawerKey.currentState!.isDrawerOpen) {
+                  drawerKey.currentState!.closeDrawer();
+                } else {
+                  drawerKey.currentState!.openDrawer();
+                }
               },
-                child: Icon(Icons.menu, color: ColorRes.white,),
+              child: const Icon(Icons.menu, color: ColorRes.white),
             ),
-
+            actions: [
+              IconButton(
+                onPressed: () {
+                  Get.to(() => SignInScreen());
+                },
+                icon: const Icon(Icons.login, color: ColorRes.white,),
+              ),
+            ],
           ),
         ),
         key: drawerKey,
