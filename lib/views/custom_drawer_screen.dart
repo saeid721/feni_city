@@ -109,7 +109,6 @@ class _CustomDrawerScreenState extends State<CustomDrawerScreen> {
                             padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 10),
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8),
-                              // color: isClick == index ? ColorRes.shoesPrimaryColor : Colors.transparent,
                               color: isClick == index ? ColorRes.primaryColor : Colors.white
                             ),
                             child: Row(
