@@ -25,6 +25,7 @@ import 'garden_screen/garden_screen.dart';
 import 'hospital_screen/hospital_screen.dart';
 import 'hotel_screen/hotel_screen.dart';
 import 'institute_screen/institute_screen.dart';
+import 'job_screen/job_screen.dart';
 import 'joruri_seba_screen/joruri_seba_screen.dart';
 import 'mistri_screen/mistri_screen.dart';
 import 'news_creeen/news_screen.dart';
@@ -277,7 +278,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 Get.to(()=> const ParlourScreen());
                                 break;
                               case 21:
-                                Get.to(()=> const DoctorScreen());
+                                Get.to(()=> const JobScreen());
                                 break;
                               case 22:
                                 Get.to(()=> const NewsScreen());
