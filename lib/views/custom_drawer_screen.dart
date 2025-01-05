@@ -7,7 +7,10 @@ import '../../../../../global/widget/global_container.dart';
 import '../../../../../global/widget/global_image_loader.dart';
 import '../../../../../global/widget/global_text.dart';
 import '../global/constants/colors_resources.dart';
+import 'contact_screen/contact_screen.dart';
 import 'home_screen.dart';
+import 'notification_screen/notification_screen.dart';
+import 'privacy_policy_screen/privacy_policy_screen.dart';
 
 class CustomDrawerScreen extends StatefulWidget {
   const CustomDrawerScreen({super.key});
@@ -22,11 +25,11 @@ class _CustomDrawerScreenState extends State<CustomDrawerScreen> {
   List<GlobalMenuModel> menuItem = [
     GlobalMenuModel(img: Images.homeInc, text: 'হোম'),
     GlobalMenuModel(img: Images.contactInc, text: 'যোগাযোগ'),
-    GlobalMenuModel(img: Images.homeInc, text: 'প্রোফাইল'),
+    GlobalMenuModel(img: Images.userInc, text: 'প্রোফাইল'),
     GlobalMenuModel(img: Images.notificationInc, text: 'নোটিফিকেশন'),
-    GlobalMenuModel(img: Images.homeInc, text: 'শেয়ার করুন'),
-    GlobalMenuModel(img: Images.homeInc, text: 'রেটিং দিন'),
-    GlobalMenuModel(img: Images.homeInc, text: 'গোপনীয়তা নীতি'),
+    GlobalMenuModel(img: Images.share, text: 'শেয়ার করুন'),
+    GlobalMenuModel(img: Images.rating, text: 'রেটিং দিন'),
+    GlobalMenuModel(img: Images.privacyPolicy, text: 'গোপনীয়তা নীতি'),
   ];
 
   @override
@@ -79,13 +82,13 @@ class _CustomDrawerScreenState extends State<CustomDrawerScreen> {
                                 Get.to(()=> const HomeScreen());
                                 break;
                               case 1:
-                                Get.to(()=> const HomeScreen());
+                                Get.to(()=> const ContactScreen());
                                 break;
                               case 2:
                                 Get.to(()=> const HomeScreen());
                                 break;
                               case 3:
-                                Get.to(()=> const HomeScreen());
+                                Get.to(()=> const NotificationScreen());
                                 break;
                               case 4:
                                 Get.to(()=> const HomeScreen());
@@ -94,7 +97,7 @@ class _CustomDrawerScreenState extends State<CustomDrawerScreen> {
                                 Get.to(()=> const HomeScreen());
                                 break;
                               case 6:
-                                Get.to(()=> const HomeScreen());
+                                Get.to(()=> const PrivacyPolicyScreen());
                                 break;
                             }
 

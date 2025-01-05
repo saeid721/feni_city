@@ -10,6 +10,18 @@ class Images {
   static const String backImg = 'assets/icons/back_img.png';
   static const String warningIc = 'assets/icons/warning.png';
 
+  static const String homeInc = 'assets/icons/home.png';
+  static const String contactInc = 'assets/icons/contact.png';
+  static const String notificationInc = 'assets/icons/notification.png';
+  static const String userInc = 'assets/icons/user.png';
+  static const String share = 'assets/icons/share.png';
+  static const String rating = 'assets/icons/star.png';
+  static const String privacyPolicy = 'assets/icons/privacy_policy.png';
+
+  static const String emailInc = 'assets/icons/email.png';
+  static const String facebookInc = 'assets/icons/facebook.png';
+  static const String phoneInc = 'assets/icons/phone.png';
+
   //::::::::::::::::::::::::: Splash Img
 
   static const String appLogo = 'assets/images/FeniCitylogo.png';
@@ -50,15 +62,6 @@ class Images {
   static const String ajeyobangla = 'assets/images/newspaper/ajeyobangla.png';
   static const String dailyprovatalo = 'assets/images/newspaper/dailyprovatalo.png';
   static const String nayapaigam = 'assets/images/newspaper/nayapaigam.png';
-
-  static const String homeInc = 'assets/icons/home.png';
-  static const String contactInc = 'assets/icons/contact.png';
-  static const String notificationInc = 'assets/icons/notification.png';
-  static const String userInc = 'assets/icons/user.png';
-
-  static const String emailInc = 'assets/icons/email.png';
-  static const String facebookInc = 'assets/icons/facebook.png';
-  static const String phoneInc = 'assets/icons/phone.png';
 
 
   static const String medicineSpecialist = 'assets/icons/doctors/medicineSpecialist.png';

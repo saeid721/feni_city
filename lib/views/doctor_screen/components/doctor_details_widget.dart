@@ -215,7 +215,6 @@ class DoctorDetailsWidget extends StatelessWidget {
                       borderRadius: BorderRadius.circular(5),
                       child: GlobalImageLoader(
                         imagePath: imagePath,
-                        width: 100,
                         height: 100,
                         imageFor: ImageFor.asset,
                         fit: BoxFit.fill,
