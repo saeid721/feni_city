@@ -89,40 +89,40 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
           Column(
             children: [
               Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Icon(
+                    Icons.badge_outlined,
+                    size: 18,
+                    color: ColorRes.primaryColor,
+                  ),
+                  sizedBoxW(5),
+                  GlobalText(
+                    str: widget.jobTitle,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w400,
+                    color: ColorRes.textColor,
+                  ),
+                ],
+              ),
+              Row(
                 children: [
                   Expanded(
                     flex: 1,
                     child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        GlobalContainer(
-                          padding: const EdgeInsets.all(6),
-                          color: ColorRes.primaryColor.withAlpha((0.20 * 255).toInt()),
-                          borderRadiusCircular: 10,
-                          borderColor: ColorRes.primaryColor,
-                          child: const Icon(
-                            Icons.location_city,
-                            size: 24,
-                            color: ColorRes.primaryColor,
-                          ),
+                        const Icon(
+                          Icons.badge_outlined,
+                          size: 18,
+                          color: ColorRes.primaryColor,
                         ),
                         sizedBoxW(5),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            GlobalText(
-                              str: "ব্যাক্তি/প্রতিস্ষ্ঠানের নাম",
-                              fontSize: 14,
-                              fontWeight: FontWeight.w600,
-                              color: ColorRes.textColor,
-                            ),
-                            GlobalText(
-                              str: widget.jobTitle,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w400,
-                              color: ColorRes.textColor,
-                            ),
-                          ],
+                        GlobalText(
+                          str: widget.jobTitle,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                          color: ColorRes.textColor,
                         ),
                       ],
                     ),
@@ -130,36 +130,18 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
                   Expanded(
                     flex: 1,
                     child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        GlobalContainer(
-                          padding: const EdgeInsets.all(6),
-                          color: ColorRes.primaryColor.withAlpha((0.20 * 255).toInt()),
-                          borderRadiusCircular: 10,
-                          borderColor: ColorRes.primaryColor,
-                          child: const Icon(
-                            Icons.attach_money_outlined,
-                            size: 24,
-                            color: ColorRes.primaryColor,
-                          ),
+                        GlobalText(
+                          str: "Salary",
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
+                          color: ColorRes.textColor,
                         ),
-                        sizedBoxW(5),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            GlobalText(
-                              str: "সম্ভাব্য মূল্য",
-                              fontSize: 14,
-                              fontWeight: FontWeight.w600,
-                              color: ColorRes.textColor,
-                            ),
-                            GlobalText(
-                              str: widget.salary,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w400,
-                              color: ColorRes.textColor,
-                            ),
-                          ],
+                        GlobalText(
+                          str: widget.salary,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                          color: ColorRes.textColor,
                         ),
                       ],
                     ),
@@ -226,7 +208,7 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             GlobalText(
-                              str: "সাইজ",
+                              str: "Education",
                               fontSize: 14,
                               fontWeight: FontWeight.w600,
                               color: ColorRes.textColor,
@@ -268,7 +250,7 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             GlobalText(
-                              str: "বেডরুম",
+                              str: "Company Name",
                               fontSize: 14,
                               fontWeight: FontWeight.w600,
                               color: ColorRes.textColor,
@@ -305,7 +287,7 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             GlobalText(
-                              str: "বাথরুম",
+                              str: "Email",
                               fontSize: 14,
                               fontWeight: FontWeight.w600,
                               color: ColorRes.textColor,
@@ -346,7 +328,7 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             GlobalText(
-                              str: "বেলকুনি",
+                              str: "Additional Requirements",
                               fontSize: 14,
                               fontWeight: FontWeight.w600,
                               color: ColorRes.textColor,
@@ -383,7 +365,7 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             GlobalText(
-                              str: "কিচেন রুম",
+                              str: "Vacancy",
                               fontSize: 14,
                               fontWeight: FontWeight.w600,
                               color: ColorRes.textColor,
@@ -424,7 +406,7 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             GlobalText(
-                              str: "কম্প্লেশন স্টেটাস",
+                              str: "Deadline",
                               fontSize: 14,
                               fontWeight: FontWeight.w600,
                               color: ColorRes.textColor,
@@ -464,7 +446,7 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             GlobalText(
-                              str: "ল্যান্ড শেয়ার",
+                              str: "Responsibilities",
                               fontSize: 14,
                               fontWeight: FontWeight.w600,
                               color: ColorRes.textColor,
@@ -505,7 +487,7 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             GlobalText(
-                              str: "ফ্লোর",
+                              str: "Job Type",
                               fontSize: 14,
                               fontWeight: FontWeight.w600,
                               color: ColorRes.textColor,
@@ -542,7 +524,7 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             GlobalText(
-                              str: "অবস্থান",
+                              str: "Experience Year",
                               fontSize: 14,
                               fontWeight: FontWeight.w600,
                               color: ColorRes.textColor,
@@ -565,7 +547,7 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
                 children: [
                   GlobalContainer(
                     padding: const EdgeInsets.all(6),
-                    color: ColorRes.red.withAlpha((0.10 * 255).toInt()),
+                    color: ColorRes.red.withAlpha((0.5 * 255).toInt()),
                     borderRadiusCircular: 10,
                     borderColor: ColorRes.primaryColor,
                     child:
@@ -578,11 +560,13 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
                           fontWeight: FontWeight.w600,
                           color: ColorRes.textColor,
                         ),
-                        GlobalText(
-                          str: "এই চাকরির জন্য বিজ্ঞাপন দাতা প্রতিষ্ঠান আপনার কাছ থেকে কোন অর্থ চাইলে অথবা কোন ধরনের ভুল বা বিভ্রান্তিকর তথ্য দিলে অতি সত্ত্বর আমাদেরকে জানান অথবা জবটি রিপোর্ট করুন। চাকরি পাওয়ার জন্য কোন ব্যাক্তি / প্রতিষ্ঠানকে অর্থ প্রদান করবেন না। কোন প্রকার অর্থ লেনদেনের দায়িত্ব বিডিজবস বহন করবে না।",
-                          fontSize: 14,
-                          fontWeight: FontWeight.w400,
-                          color: ColorRes.textColor,
+                        Expanded(
+                          child: GlobalText(
+                            str: "এই চাকরির জন্য বিজ্ঞাপন দাতা প্রতিষ্ঠান আপনার কাছ থেকে কোন অর্থ চাইলে অথবা কোন ধরনের ভুল বা বিভ্রান্তিকর তথ্য দিলে অতি সত্ত্বর আমাদেরকে জানান অথবা জবটি রিপোর্ট করুন। চাকরি পাওয়ার জন্য কোন ব্যাক্তি / প্রতিষ্ঠানকে অর্থ প্রদান করবেন না। কোন প্রকার অর্থ লেনদেনের দায়িত্ব বিডিজবস বহন করবে না।",
+                            fontSize: 12,
+                            fontWeight: FontWeight.w400,
+                            color: ColorRes.textColor,
+                          ),
                         ),
 
                         Column(
