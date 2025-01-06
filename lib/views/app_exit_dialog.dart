@@ -38,22 +38,22 @@ class AppExitDialog extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                const SizedBox(height: 20),
-                GlobalImageLoader(
-                  imagePath: Images.warningIc,
-                  height: 50,
-                  width: 50,
-                  imageFor: ImageFor.asset,
-                ),
-                const SizedBox(height: 10),
-                // Title
-                GlobalText(
-                  str: title,
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  textAlign: TextAlign.center,
-                  color: ColorRes.black,
-                ),
+                // const SizedBox(height: 20),
+                // GlobalImageLoader(
+                //   imagePath: Images.warningIc,
+                //   height: 50,
+                //   width: 50,
+                //   imageFor: ImageFor.asset,
+                // ),
+                // const SizedBox(height: 10),
+                // // Title
+                // GlobalText(
+                //   str: title,
+                //   fontSize: 18,
+                //   fontWeight: FontWeight.bold,
+                //   textAlign: TextAlign.center,
+                //   color: ColorRes.black,
+                // ),
 
                 const SizedBox(height: 10),
                 // Message
@@ -72,7 +72,7 @@ class AppExitDialog extends StatelessWidget {
                     const SizedBox(width: 10),
                     Expanded(
                       child: GlobalButtonWidget(
-                        str: 'No',
+                        str: 'না',
                         height: 40,
                         radius: 8,
                         textSize: 14,
@@ -88,7 +88,7 @@ class AppExitDialog extends StatelessWidget {
                     const SizedBox(width: 10),
                     Expanded(
                       child: GlobalButtonWidget(
-                        str: 'Yes',
+                        str: 'হ্যাঁ',
                         height: 40,
                         radius: 8,
                         textSize: 14,

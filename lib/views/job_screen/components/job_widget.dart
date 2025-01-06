@@ -38,11 +38,6 @@ class JobWidget extends StatelessWidget {
     await launchUrl(launchUri);
   }
 
-  Future<void> _sendSMS(String phone) async {
-    final Uri smsUri = Uri(scheme: 'sms', path: phone);
-    await launchUrl(smsUri);
-  }
-
   Future<void> _openGoogleMap(BuildContext context, String instituteName, String address) async {
     final query = Uri.encodeComponent(" $instituteName, $address");
     final geoUri = Uri.parse("https://www.google.com/maps/search/?api=1&query=$query");
@@ -195,113 +190,89 @@ class JobWidget extends StatelessWidget {
             ),
             const Divider(),
             Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                GestureDetector(
-                  onTap: () => _makePhoneCall(phone),
-                  child: Container(
-                    padding: const EdgeInsets.only(
-                        left: 10, right: 10, top: 2, bottom: 2),
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                        color: ColorRes.primaryColor,
-                        width: 1.0,
+                Expanded(
+                  child: Row(
+                    children: [
+                      GestureDetector(
+                        onTap: () => _makePhoneCall(phone),
+                        child: Container(
+                          padding: const EdgeInsets.only(
+                              left: 10, right: 10, top: 2, bottom: 2),
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                              color: ColorRes.primaryColor,
+                              width: 1.0,
+                            ),
+                            borderRadius: BorderRadius.circular(30),
+                            color: Colors.white,
+                          ),
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              const Icon(
+                                Icons.person_pin_outlined,
+                                size: 18,
+                                color: ColorRes.red,
+                              ),
+                              sizedBoxW(5),
+                              GlobalText(
+                                str: call,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w400,
+                                color: ColorRes.primaryColor,
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
-                      borderRadius: BorderRadius.circular(30),
-                      color: Colors.white,
-                    ),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        const Icon(
-                          Icons.person_pin_outlined,
-                          size: 18,
-                          color: ColorRes.red,
+                      sizedBoxW(10),
+                      GestureDetector(
+                        onTap: () => _openGoogleMap(context, instituteName, address),
+                        child: Container(
+                          padding: const EdgeInsets.only(
+                              left: 10, right: 10, top: 2, bottom: 2),
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                              color: ColorRes.primaryColor,
+                              width: 1.0,
+                            ),
+                            borderRadius: BorderRadius.circular(30),
+                            color: Colors.white,
+                          ),
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const Icon(
+                                Icons.map,
+                                size: 18,
+                                color: ColorRes.red,
+                              ),
+                              sizedBoxW(5),
+                              GlobalText(
+                                str: map,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w400,
+                                color: ColorRes.primaryColor,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            ],
+                          ),
                         ),
-                        sizedBoxW(5),
-                        GlobalText(
-                          str: call,
-                          fontSize: 14,
-                          fontWeight: FontWeight.w400,
-                          color: ColorRes.primaryColor,
-                        ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
                 sizedBoxW(10),
-                GestureDetector(
-                  onTap: () => _sendSMS(phone),
-                  child: Container(
-                    padding: const EdgeInsets.only(
-                        left: 10, right: 10, top: 2, bottom: 2),
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                        color: ColorRes.primaryColor,
-                        width: 1.0,
-                      ),
-                      borderRadius: BorderRadius.circular(30),
-                      color: Colors.white,
-                    ),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Icon(
-                          Icons.home_repair_service,
-                          size: 18,
-                          color: ColorRes.red,
-                        ),
-                        sizedBoxW(5),
-                        GlobalText(
-                          str: sms,
-                          fontSize: 14,
-                          fontWeight: FontWeight.w400,
-                          maxLines: 2,
-                          color: ColorRes.primaryColor,
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                      ],
-                    ),
-                  ),
+                const Icon(
+                  Icons.arrow_forward,
+                  size: 22,
+                  color: ColorRes.grey,
                 ),
-                sizedBoxW(10),
-                GestureDetector(
-                  onTap: () => _openGoogleMap(context, instituteName, address ),
-                  child: Container(
-                    padding: const EdgeInsets.only(
-                        left: 10, right: 10, top: 2, bottom: 2),
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                        color: ColorRes.primaryColor,
-                        width: 1.0,
-                      ),
-                      borderRadius: BorderRadius.circular(30),
-                      color: Colors.white,
-                    ),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Icon(
-                          Icons.map,
-                          size: 18,
-                          color: ColorRes.red,
-                        ),
-                        sizedBoxW(5),
-                        GlobalText(
-                          str: map,
-                          fontSize: 14,
-                          fontWeight: FontWeight.w400,
-                          color: ColorRes.primaryColor,
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-                sizedBoxW(10),
               ],
-            ),
+            )
+
           ],
         ),
       ),

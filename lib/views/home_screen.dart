@@ -101,8 +101,8 @@ class _HomeScreenState extends State<HomeScreen> {
           barrierDismissible: false,
           builder: (context) {
             return AppExitDialog(
-              title: "Exit App",
-              message: "Are you sure you want to exit the app? All unsaved progress will be lost. Please confirm your action.",
+              title: "",
+              message: "আপনি কি অ্যাপ থেকে বেড় হতে চান?",
               onTap: () {
                 SystemNavigator.pop();
               },
