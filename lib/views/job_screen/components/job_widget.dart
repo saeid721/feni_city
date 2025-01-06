@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../../../../../global/constants/colors_resources.dart';
 import '../../../../../../global/widget/global_text.dart';
-import '../../../global/constants/enum.dart';
 import '../../../global/widget/global_container.dart';
-import '../../../global/widget/global_image_loader.dart';
 import '../../../global/widget/global_sizedbox.dart';
 
 class JobWidget extends StatelessWidget {
@@ -14,6 +12,7 @@ class JobWidget extends StatelessWidget {
   final String applicationDeadline;
   final String jobType;
   final String salary;
+  final String address;
   final String call;
   final String map;
 
@@ -26,6 +25,7 @@ class JobWidget extends StatelessWidget {
     required this.jobType,
     required this.applicationDeadline,
     required this.salary,
+    required this.address,
     required this.call,
     required this.map,
     required this.onTap,
@@ -36,8 +36,8 @@ class JobWidget extends StatelessWidget {
     await launchUrl(launchUri);
   }
 
-  Future<void> _openGoogleMap(BuildContext context, String instituteName, String address) async {
-    final query = Uri.encodeComponent(" $instituteName, $address");
+  Future<void> _openGoogleMap(BuildContext context, String companyName, String address) async {
+    final query = Uri.encodeComponent(" $companyName, $address");
     final geoUri = Uri.parse("https://www.google.com/maps/search/?api=1&query=$query");
 
     if (await canLaunchUrl(geoUri)) {
@@ -67,7 +67,7 @@ class JobWidget extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Icon(
-                  Icons.badge_outlined,
+                  Icons.home_repair_service,
                   size: 18,
                   color: ColorRes.primaryColor,
                 ),
@@ -105,39 +105,107 @@ class JobWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Icon(
-                      Icons.phone,
-                      size: 18,
-                      color: ColorRes.primaryColor,
+                    Expanded(
+                      flex: 1,
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Icon(
+                            Icons.safety_check_outlined,
+                            size: 18,
+                            color: ColorRes.primaryColor,
+                          ),
+                          sizedBoxW(5),
+                          Flexible(
+                            child: GlobalText(
+                              str: jobType,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                              color: ColorRes.textColor,
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
-                    sizedBoxW(5),
-                    GlobalText(
-                      str: phone,
-                      fontSize: 14,
-                      fontWeight: FontWeight.w400,
-                      color: ColorRes.textColor,
-                      overflow: TextOverflow.ellipsis,
+                    Expanded(
+                      flex: 1,
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Icon(
+                            Icons.phone,
+                            size: 18,
+                            color: ColorRes.primaryColor,
+                          ),
+                          sizedBoxW(5),
+                          GlobalText(
+                            str: phone,
+                            fontSize: 14,
+                            fontWeight: FontWeight.w400,
+                            color: ColorRes.textColor,
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ],
+                      ),
                     ),
                   ],
-                ),Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                ),
+              ],
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
                   children: [
-                    const Icon(
-                      Icons.calendar_month_outlined,
-                      size: 18,
-                      color: ColorRes.primaryColor,
+                    Expanded(
+                      flex: 1,
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Icon(
+                            Icons.attach_money_outlined,
+                            size: 18,
+                            color: ColorRes.primaryColor,
+                          ),
+                          sizedBoxW(5),
+                          Flexible(
+                            child: GlobalText(
+                              str: salary,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                              color: ColorRes.textColor,
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
-                    sizedBoxW(5),
-                    Flexible(
-                      child: GlobalText(
-                        str: applicationDeadline,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w400,
-                        color: ColorRes.textColor,
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
+                    Expanded(
+                      flex: 1,
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Icon(
+                            Icons.calendar_month_outlined,
+                            size: 18,
+                            color: ColorRes.primaryColor,
+                          ),
+                          sizedBoxW(5),
+                          Flexible(
+                            child: GlobalText(
+                              str: applicationDeadline,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w400,
+                              color: ColorRes.textColor,
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ],
@@ -145,50 +213,22 @@ class JobWidget extends StatelessWidget {
               ],
             ),
 
-            Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Icon(
-                      Icons.safety_check_outlined,
-                      size: 18,
-                      color: ColorRes.primaryColor,
-                    ),
-                    sizedBoxW(5),
-                    Flexible(
-                      child: GlobalText(
-                        str: jobType,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w400,
-                        color: ColorRes.textColor,
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                    ),
-                  ],
+                const Icon(
+                  Icons.location_on_outlined,
+                  size: 18,
+                  color: ColorRes.primaryColor,
                 ),
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Icon(
-                      Icons.attach_money_outlined,
-                      size: 18,
-                      color: ColorRes.primaryColor,
-                    ),
-                    sizedBoxW(5),
-                    Flexible(
-                      child: GlobalText(
-                        str: salary,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w400,
-                        color: ColorRes.textColor,
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                    ),
-                  ],
+                sizedBoxW(5),
+                GlobalText(
+                  str: address,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                  color: ColorRes.textColor,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
                 ),
               ],
             ),
@@ -233,7 +273,7 @@ class JobWidget extends StatelessWidget {
                       ),
                       sizedBoxW(10),
                       GestureDetector(
-                        onTap: () => _openGoogleMap(context, companyName, jobType),
+                        onTap: () => _openGoogleMap(context, companyName, address),
                         child: Container(
                           padding: const EdgeInsets.only(
                               left: 10, right: 10, top: 2, bottom: 2),

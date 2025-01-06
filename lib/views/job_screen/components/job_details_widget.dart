@@ -14,16 +14,16 @@ class JobDetailsWidget extends StatefulWidget {
   final String companyName;
   final String phone;
   final String email;
+  final String vacancy;
+  final String jobType;
+  final String experienceYear;
+  final String applicationDeadline;
+  final String salary;
   final String educationalQualification;
   final String additionalRequired;
   final String responsibilities;
-  final String experienceYear;
-  final String jobType;
-  final String salary;
-  final String jobLocation;
   final String details;
-  final String vacancy;
-  final String applicationDeadline;
+  final String jobLocation;
   final String warning;
   const JobDetailsWidget({
     super.key,
@@ -68,667 +68,406 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
   @override
   Widget build(BuildContext context) {
     return GlobalContainer(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          SizedBox(
-            width: Get.width,
-            height: 190,
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(10),
-              child: GlobalImageLoader(
-                imagePath: widget.imagePath,
-                fit: BoxFit.cover,
-                imageFor: ImageFor.asset,
+      child: SingleChildScrollView( // Added SingleChildScrollView to handle overflow
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            SizedBox(
+              width: Get.width,
+              height: 190,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                child: GlobalImageLoader(
+                  imagePath: widget.imagePath,
+                  fit: BoxFit.cover,
+                  imageFor: ImageFor.asset,
+                ),
               ),
             ),
-          ),
-
-          sizedBoxH(5),
-          Column(
-            children: [
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Icon(
-                    Icons.badge_outlined,
-                    size: 18,
-                    color: ColorRes.primaryColor,
-                  ),
-                  sizedBoxW(5),
-                  GlobalText(
-                    str: widget.jobTitle,
-                    fontSize: 14,
-                    fontWeight: FontWeight.w400,
-                    color: ColorRes.textColor,
-                  ),
-                ],
-              ),
-              Row(
-                children: [
-                  Expanded(
-                    flex: 1,
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Icon(
-                          Icons.badge_outlined,
-                          size: 18,
-                          color: ColorRes.primaryColor,
-                        ),
-                        sizedBoxW(5),
-                        GlobalText(
-                          str: widget.jobTitle,
-                          fontSize: 14,
-                          fontWeight: FontWeight.w400,
-                          color: ColorRes.textColor,
-                        ),
-                      ],
-                    ),
-                  ),
-                  Expanded(
-                    flex: 1,
-                    child: Row(
-                      children: [
-                        GlobalText(
-                          str: "Salary",
-                          fontSize: 14,
-                          fontWeight: FontWeight.w600,
-                          color: ColorRes.textColor,
-                        ),
-                        GlobalText(
-                          str: widget.salary,
-                          fontSize: 14,
-                          fontWeight: FontWeight.w400,
-                          color: ColorRes.textColor,
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-              Row(
-                children: [
-                  Expanded(
-                    flex: 1,
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        GlobalContainer(
-                          padding: const EdgeInsets.all(6),
-                          color: ColorRes.primaryColor.withAlpha((0.20 * 255).toInt()),
-                          borderRadiusCircular: 10,
-                          borderColor: ColorRes.primaryColor,
-                          child: const Icon(
-                            Icons.phone,
-                            size: 24,
-                            color: ColorRes.primaryColor,
-                          ),
-                        ),
-                        sizedBoxW(5),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            GlobalText(
-                              str: "মোবাইল",
-                              fontSize: 14,
-                              fontWeight: FontWeight.w600,
-                              color: ColorRes.textColor,
-                            ),
-                            GlobalText(
-                              str: widget.phone,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w400,
-                              color: ColorRes.textColor,
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                  Expanded(
-                    flex: 1,
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        GlobalContainer(
-                          padding: const EdgeInsets.all(6),
-                          color: ColorRes.primaryColor.withAlpha((0.20 * 255).toInt()),
-                          borderRadiusCircular: 10,
-                          borderColor: ColorRes.primaryColor,
-                          child: const Icon(
-                            Icons.crop_landscape,
-                            size: 24,
-                            color: ColorRes.primaryColor,
-                          ),
-                        ),
-                        sizedBoxW(5),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            GlobalText(
-                              str: "Education",
-                              fontSize: 14,
-                              fontWeight: FontWeight.w600,
-                              color: ColorRes.textColor,
-                            ),
-                            GlobalText(
-                              str: widget.educationalQualification,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w400,
-                              color: ColorRes.textColor,
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-
-              Row(
-                children: [
-                  Expanded(
-                    flex: 1,
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        GlobalContainer(
-                          padding: const EdgeInsets.all(6),
-                          color: ColorRes.primaryColor.withAlpha((0.20 * 255).toInt()),
-                          borderRadiusCircular: 10,
-                          borderColor: ColorRes.primaryColor,
-                          child: const Icon(
-                            Icons.bedroom_child_outlined,
-                            size: 24,
-                            color: ColorRes.primaryColor,
-                          ),
-                        ),
-                        sizedBoxW(5),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            GlobalText(
-                              str: "Company Name",
-                              fontSize: 14,
-                              fontWeight: FontWeight.w600,
-                              color: ColorRes.textColor,
-                            ),
-                            GlobalText(
-                              str: widget.companyName,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w400,
-                              color: ColorRes.textColor,
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                  Expanded(
-                    flex: 1,
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        GlobalContainer(
-                          padding: const EdgeInsets.all(6),
-                          color: ColorRes.primaryColor.withAlpha((0.20 * 255).toInt()),
-                          borderRadiusCircular: 10,
-                          borderColor: ColorRes.primaryColor,
-                          child: const Icon(
-                            Icons.bathroom_outlined,
-                            size: 24,
-                            color: ColorRes.primaryColor,
-                          ),
-                        ),
-                        sizedBoxW(5),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            GlobalText(
-                              str: "Email",
-                              fontSize: 14,
-                              fontWeight: FontWeight.w600,
-                              color: ColorRes.textColor,
-                            ),
-                            GlobalText(
-                              str: widget.email,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w400,
-                              color: ColorRes.textColor,
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-              Row(
-                children: [
-                  Expanded(
-                    flex: 1,
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        GlobalContainer(
-                          padding: const EdgeInsets.all(6),
-                          color: ColorRes.primaryColor.withAlpha((0.20 * 255).toInt()),
-                          borderRadiusCircular: 10,
-                          borderColor: ColorRes.primaryColor,
-                          child: const Icon(
-                            Icons.checkroom_outlined,
-                            size: 24,
-                            color: ColorRes.primaryColor,
-                          ),
-                        ),
-                        sizedBoxW(5),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            GlobalText(
-                              str: "Additional Requirements",
-                              fontSize: 14,
-                              fontWeight: FontWeight.w600,
-                              color: ColorRes.textColor,
-                            ),
-                            GlobalText(
-                              str: widget.additionalRequired,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w400,
-                              color: ColorRes.textColor,
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                  Expanded(
-                    flex: 1,
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        GlobalContainer(
-                          padding: const EdgeInsets.all(6),
-                          color: ColorRes.primaryColor.withAlpha((0.20 * 255).toInt()),
-                          borderRadiusCircular: 10,
-                          borderColor: ColorRes.primaryColor,
-                          child: const Icon(
-                            Icons.kitchen,
-                            size: 24,
-                            color: ColorRes.primaryColor,
-                          ),
-                        ),
-                        sizedBoxW(5),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            GlobalText(
-                              str: "Vacancy",
-                              fontSize: 14,
-                              fontWeight: FontWeight.w600,
-                              color: ColorRes.textColor,
-                            ),
-                            GlobalText(
-                              str: widget.vacancy,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w400,
-                              color: ColorRes.textColor,
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-              Row(
-                children: [
-                  Expanded(
-                    flex: 1,
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        GlobalContainer(
-                          padding: const EdgeInsets.all(6),
-                          color: ColorRes.primaryColor.withAlpha((0.20 * 255).toInt()),
-                          borderRadiusCircular: 10,
-                          borderColor: ColorRes.primaryColor,
-                          child: const Icon(
-                            Icons.apartment,
-                            size: 24,
-                            color: ColorRes.primaryColor,
-                          ),
-                        ),
-                        sizedBoxW(5),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            GlobalText(
-                              str: "Deadline",
-                              fontSize: 14,
-                              fontWeight: FontWeight.w600,
-                              color: ColorRes.textColor,
-                            ),
-                            GlobalText(
-                              str: widget.applicationDeadline,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w400,
-                              color: ColorRes.textColor,
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-              Row(
-                children: [
-                  Expanded(
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        GlobalContainer(
-                          padding: const EdgeInsets.all(6),
-                          color: ColorRes.primaryColor.withAlpha((0.20 * 255).toInt()),
-                          borderRadiusCircular: 10,
-                          borderColor: ColorRes.primaryColor,
-                          child: const Icon(
-                            Icons.landscape_outlined,
-                            size: 24,
-                            color: ColorRes.primaryColor,
-                          ),
-                        ),
-                        sizedBoxW(5),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            GlobalText(
-                              str: "Responsibilities",
-                              fontSize: 14,
-                              fontWeight: FontWeight.w600,
-                              color: ColorRes.textColor,
-                            ),
-                            GlobalText(
-                              str: widget.responsibilities,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w400,
-                              color: ColorRes.textColor,
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-              Row(
-                children: [
-                  Expanded(
-                    flex: 1,
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        GlobalContainer(
-                          padding: const EdgeInsets.all(6),
-                          color: ColorRes.primaryColor.withAlpha((0.20 * 255).toInt()),
-                          borderRadiusCircular: 10,
-                          borderColor: ColorRes.primaryColor,
-                          child: const Icon(
-                            Icons.apartment,
-                            size: 24,
-                            color: ColorRes.primaryColor,
-                          ),
-                        ),
-                        sizedBoxW(5),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            GlobalText(
-                              str: "Job Type",
-                              fontSize: 14,
-                              fontWeight: FontWeight.w600,
-                              color: ColorRes.textColor,
-                            ),
-                            GlobalText(
-                              str: widget.jobType,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w400,
-                              color: ColorRes.textColor,
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                  Expanded(
-                    flex: 1,
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: [
-                        GlobalContainer(
-                          padding: const EdgeInsets.all(6),
-                          color: ColorRes.primaryColor.withAlpha((0.20 * 255).toInt()),
-                          borderRadiusCircular: 10,
-                          borderColor: ColorRes.primaryColor,
-                          child: const Icon(
-                            Icons.landscape_outlined,
-                            size: 24,
-                            color: ColorRes.primaryColor,
-                          ),
-                        ),
-                        sizedBoxW(5),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            GlobalText(
-                              str: "Experience Year",
-                              fontSize: 14,
-                              fontWeight: FontWeight.w600,
-                              color: ColorRes.textColor,
-                            ),
-                            GlobalText(
-                              str: widget.experienceYear,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w400,
-                              color: ColorRes.textColor,
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  GlobalContainer(
-                    padding: const EdgeInsets.all(6),
-                    color: ColorRes.red.withAlpha((0.5 * 255).toInt()),
-                    borderRadiusCircular: 10,
-                    borderColor: ColorRes.primaryColor,
-                    child:
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        GlobalText(
-                          str: "রিপোর্ট / কোম্পানি",
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600,
-                          color: ColorRes.textColor,
-                        ),
-                        Expanded(
-                          child: GlobalText(
-                            str: "এই চাকরির জন্য বিজ্ঞাপন দাতা প্রতিষ্ঠান আপনার কাছ থেকে কোন অর্থ চাইলে অথবা কোন ধরনের ভুল বা বিভ্রান্তিকর তথ্য দিলে অতি সত্ত্বর আমাদেরকে জানান অথবা জবটি রিপোর্ট করুন। চাকরি পাওয়ার জন্য কোন ব্যাক্তি / প্রতিষ্ঠানকে অর্থ প্রদান করবেন না। কোন প্রকার অর্থ লেনদেনের দায়িত্ব বিডিজবস বহন করবে না।",
-                            fontSize: 12,
-                            fontWeight: FontWeight.w400,
-                            color: ColorRes.textColor,
-                          ),
-                        ),
-
-                        Column(
-                          children: [
-                            Row(
-                              children: [
-                                const Icon(
-                                  Icons.phone,
-                                  size: 18,
-                                  color: ColorRes.primaryColor,
-                                ),
-                                GlobalText(
-                                  str: "01757-769498",
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w600,
-                                  color: ColorRes.textColor,
-                                ),
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                const Icon(
-                                  Icons.mail_outline,
-                                  size: 18,
-                                  color: ColorRes.primaryColor,
-                                ),
-                                GlobalText(
-                                  str: "info@stitbd.com",
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w600,
-                                  color: ColorRes.textColor,
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                        // GlobalText(
-                        //   str: widget.warning,
-                        //   fontSize: 14,
-                        //   fontWeight: FontWeight.w400,
-                        //   color: ColorRes.textColor,
-                        // ),
-                      ],
-                    ),
-                  ),
-                  sizedBoxW(5),
-                ],
-              ),
-            ],
-          ),
-          sizedBoxH(1),
-          Column(
-            children: [
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start ,
-                children: [
-                  GlobalContainer(
-                    padding: const EdgeInsets.all(6),
-                    color: ColorRes.primaryColor.withAlpha((0.20 * 255).toInt()),
-                    borderRadiusCircular: 10,
-                    borderColor: ColorRes.primaryColor,
-                    child: const Icon(
-                      Icons.description_outlined,
-                      size: 24,
-                      color: ColorRes.primaryColor,
-                    ),
-                  ),
-                  sizedBoxW(5),
-                  Expanded(
-                    child: SizedBox(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          GlobalText(
-                            str: "বিস্তারিতঃ",
-                            fontSize: 14,
-                            fontWeight: FontWeight.w600,
-                            color: ColorRes.textColor,
-                          ),
-                          GlobalText(
-                            str: widget.details,
-                            fontSize: 14,
-                            fontWeight: FontWeight.w400,
-                            color: ColorRes.textColor,
-                            textAlign: TextAlign.justify,
-                          ),
-
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
-          sizedBoxH(10),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              InkWell(
-                onTap: () {
-                  Get.back();
-                },
-                child: const GlobalContainer(
-                  padding: EdgeInsets.all(5),
+            sizedBoxH(5),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Icon(
+                  Icons.home_repair_service,
+                  size: 18,
+                  color: ColorRes.primaryColor,
+                ),
+                sizedBoxW(5),
+                GlobalText(
+                  str: widget.jobTitle,
+                  fontSize: 15,
+                  fontWeight: FontWeight.w600,
+                  color: ColorRes.textColor,
+                ),
+              ],
+            ),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Icon(
+                  Icons.location_city,
+                  size: 18,
+                  color: ColorRes.primaryColor,
+                ),
+                sizedBoxW(5),
+                GlobalText(
+                  str: widget.companyName,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w500,
+                  color: ColorRes.textColor,
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Expanded(
+                  flex: 1,
                   child: Row(
                     children: [
-                      Icon(
-                        Icons.arrow_back,
-                        size: 22,
-                        color: ColorRes.grey,
+                      const Icon(
+                        Icons.phone,
+                        size: 18,
+                        color: ColorRes.primaryColor,
                       ),
-                      Text(
-                        'Go Back',
-                        style: TextStyle(color: ColorRes.grey),
+                      sizedBoxW(5),
+                      GlobalText(
+                        str: widget.phone,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                        color: ColorRes.textColor,
                       ),
                     ],
                   ),
                 ),
-              ),
-              InkWell(
-                onTap: () {
-                  setState(() {
-                    _showShareOptions = !_showShareOptions;
-                  });
-                },
-                child: const GlobalContainer(
-                  color: ColorRes.primaryColor,
-                  borderRadiusCircular: 50,
-                  padding: EdgeInsets.all(10),
-                  elevation: 2,
-                  height: 50,
-                  width: 50,
-                  child: Icon(
-                    Icons.share,
-                    size: 30,
-                    color: ColorRes.white,
+                Expanded(
+                  flex: 1,
+                  child: Row(
+                    children: [
+                      const Icon(
+                        Icons.mail_outline,
+                        size: 18,
+                        color: ColorRes.primaryColor,
+                      ),
+                      sizedBoxW(5),
+                      GlobalText(
+                        str: widget.email,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                        color: ColorRes.textColor,
+                      ),
+                    ],
                   ),
                 ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Expanded(
+                  flex: 1,
+                  child: Row(
+                    children: [
+                      const Icon(
+                        Icons.mail_outline,
+                        size: 18,
+                        color: ColorRes.primaryColor,
+                      ),
+                      sizedBoxW(5),
+                      GlobalText(
+                        str: widget.jobType,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                        color: ColorRes.textColor,
+                      ),
+                    ],
+                  ),
+                ),
+                Expanded(
+                  flex: 1,
+                  child: Row(
+                    children: [
+                      const Icon(
+                        Icons.mail_outline,
+                        size: 18,
+                        color: ColorRes.primaryColor,
+                      ),
+                      sizedBoxW(5),
+                      GlobalText(
+                        str: widget.vacancy,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                        color: ColorRes.textColor,
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Expanded(
+                  flex: 1,
+                  child: Row(
+                    children: [
+                      const Icon(
+                        Icons.mail_outline,
+                        size: 18,
+                        color: ColorRes.primaryColor,
+                      ),
+                      sizedBoxW(5),
+                      GlobalText(
+                        str: widget.experienceYear,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                        color: ColorRes.textColor,
+                      ),
+                    ],
+                  ),
+                ),
+                Expanded(
+                  flex: 1,
+                  child: Row(
+                    children: [
+                      const Icon(
+                        Icons.mail_outline,
+                        size: 18,
+                        color: ColorRes.primaryColor,
+                      ),
+                      sizedBoxW(5),
+                      GlobalText(
+                        str: widget.applicationDeadline,
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                        color: ColorRes.textColor,
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                GlobalText(
+                  str: "Salary: ",
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600,
+                  color: ColorRes.textColor,
+                ),
+                GlobalText(
+                  str: widget.salary,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                  color: ColorRes.textColor,
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                GlobalText(
+                  str: "Educational Qualification: ",
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600,
+                  color: ColorRes.textColor,
+                ),
+                GlobalText(
+                  str: widget.educationalQualification,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                  color: ColorRes.textColor,
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                GlobalText(
+                  str: "Additional Required: ",
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600,
+                  color: ColorRes.textColor,
+                ),
+                GlobalText(
+                  str: widget.additionalRequired,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                  color: ColorRes.textColor,
+                ),
+              ],
+            ),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                GlobalText(
+                  str: "Responsibilities",
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600,
+                  color: ColorRes.textColor,
+                ),
+                Flexible(
+                  child: GlobalText(
+                    str: widget.responsibilities,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w400,
+                    color: ColorRes.textColor,
+                    textAlign: TextAlign.justify,
+                  ),
+                ),
+              ],
+            ),
+
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                GlobalText(
+                  str: "Details",
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600,
+                  color: ColorRes.textColor,
+                ),
+                Flexible(
+                  child: Expanded(
+                    child: GlobalText(
+                      str: widget.details,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w400,
+                      color: ColorRes.textColor,
+                      textAlign: TextAlign.justify,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+
+            Row(
+              children: [
+                GlobalText(
+                  str: "Job Location: ",
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600,
+                  color: ColorRes.textColor,
+                ),
+                GlobalText(
+                  str: widget.jobLocation,
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                  color: ColorRes.textColor,
+                ),
+              ],
+            ),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                GlobalText(
+                  str: "বিস্তারিতঃ",
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600,
+                  color: ColorRes.textColor,
+                ),
+                Flexible(
+                  child: Expanded(
+                    child: GlobalText(
+                      str: widget.details,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w400,
+                      color: ColorRes.textColor,
+                      textAlign: TextAlign.justify,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                GlobalText(
+                  str: "Report this Job / Company (রিপোর্ট)",
+                  fontSize: 14,
+                  fontWeight: FontWeight.w600,
+                  color: ColorRes.textColor,
+                ),
+                Flexible(
+                  child: Expanded(
+                    child: GlobalText(
+                      str: widget.warning,
+                      fontSize: 14,
+                      fontWeight: FontWeight.w400,
+                      color: ColorRes.textColor,
+                      textAlign: TextAlign.justify,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            sizedBoxH(10),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                InkWell(
+                  onTap: () {
+                    Get.back();
+                  },
+                  child: const GlobalContainer(
+                    padding: EdgeInsets.all(5),
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.arrow_back,
+                          size: 22,
+                          color: ColorRes.grey,
+                        ),
+                        Text(
+                          'Go Back',
+                          style: TextStyle(color: ColorRes.grey),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                InkWell(
+                  onTap: () {
+                    setState(() {
+                      _showShareOptions = !_showShareOptions;
+                    });
+                  },
+                  child: const GlobalContainer(
+                    color: ColorRes.primaryColor,
+                    borderRadiusCircular: 50,
+                    padding: EdgeInsets.all(10),
+                    elevation: 2,
+                    height: 50,
+                    width: 50,
+                    child: Icon(
+                      Icons.share,
+                      size: 30,
+                      color: ColorRes.white,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            if (_showShareOptions) ...[
+              Wrap(
+                spacing: 5,
+                children: _socialMedia.map((social) {
+                  return GestureDetector(
+                    onTap: () {
+                      _shareToSocialMedia(social['platform']!);
+                    },
+                    child: Image.asset(
+                      social['icon']!,
+                      width: 35,
+                      height: 35,
+                    ),
+                  );
+                }).toList(),
               ),
             ],
-          ),
-          if (_showShareOptions) ...[
-            Wrap(
-              spacing: 5,
-              children: _socialMedia.map((social) {
-                return GestureDetector(
-                  onTap: () {
-                    _shareToSocialMedia(social['platform']!);
-                  },
-                  child: Image.asset(
-                    social['icon']!,
-                    width: 35,
-                    height: 35,
-                    //color: ColorRes.primaryColor,
-                  ),
-                );
-              }).toList(),
-            ),
+            sizedBoxH(35),
           ],
-          sizedBoxH(35),
-        ],
+        ),
       ),
     );
   }

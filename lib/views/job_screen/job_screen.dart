@@ -58,6 +58,7 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
                     applicationDeadline: "১০ জানুয়ারী ২০২৫",
                     jobType: "ফুল টাইম",
                     salary: "১০,০০০ - ১৫,০০০ টাকা",
+                    address: "সদর, ফেনী",
                     call: "কল",
                     map: "ম্যাপ",
                     onTap: () {
