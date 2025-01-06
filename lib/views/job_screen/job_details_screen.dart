@@ -36,7 +36,7 @@ class _JobDetailsScreenState extends State<JobDetailsScreen> {
             children: [
               JobDetailsWidget(
                 jobTitle: 'সেলসম্যান',
-                phone: "01757-769498",
+                phone: "+88 01700 00 00 00",
                 educationalQualification: "SSC",
                 companyName: "একটি স্বনাধন্য সুপার শপ",
                 email: "info@company.com",

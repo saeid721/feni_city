@@ -52,14 +52,13 @@ class _JobScreenState extends State<JobScreen> with SingleTickerProviderStateMix
                 physics: NeverScrollableScrollPhysics(),
                 itemBuilder: (ctx, index) {
                   return JobWidget(
-                    name: "রাকিবুল ইসলাম",
-                    instituteName: "মা-মনি এন্টারপ্রাইজ",
+                    jobTitle: "সেলসম্যান",
+                    companyName: "একটি স্বনাধন্য সুপার শপ",
                     phone: "+88 01700 00 00 00",
-                    subject: "ভিসা প্রসেসিং ও বিদেশে জনবল প্রেরণ করা হয়",
-                    address: "সদর, ফেনী",
-                    imagePath: 'assets/images/entrepreneur/entrepreneur.jpg',
+                    applicationDeadline: "১০ জানুয়ারী ২০২৫",
+                    jobType: "ফুল টাইম",
+                    salary: "১০,০০০ - ১৫,০০০ টাকা",
                     call: "কল",
-                    sms: "এস.এম.এস",
                     map: "ম্যাপ",
                     onTap: () {
                       Get.to(() => JobDetailsScreen());
