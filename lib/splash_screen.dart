@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'global/constants/colors_resources.dart';
 import 'global/constants/enum.dart';
 import 'global/widget/global_image_loader.dart';
+import 'global/widget/global_text.dart';
 import 'views/home_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -35,6 +36,7 @@ class _SplashScreenState extends State<SplashScreen> {
         ),
         child: Center(
           child: Column(
+            spacing: 10,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               GlobalImageLoader(
@@ -50,14 +52,13 @@ class _SplashScreenState extends State<SplashScreen> {
               //   textAlign: TextAlign.center,
               //   fontFamily: 'Potta',
               // ),
-              // GlobalText(
-              //   str: 'ফেনী সিটি',
-              //   color: ColorRes.primaryColor,
-              //   fontSize: 50,
-              //   fontWeight: FontWeight.w700,
-              //   textAlign: TextAlign.center,
-              //   fontFamily: 'Potta',
-              // ),
+              GlobalText(
+                str: 'Developed by STITBD',
+                color: ColorRes.primaryColor,
+                fontSize: 16,
+                fontWeight: FontWeight.w700,
+                textAlign: TextAlign.center,
+              ),
             ],
           ),
         ),

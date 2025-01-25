@@ -68,8 +68,9 @@ class FlatLandWidget extends StatelessWidget {
         padding: const EdgeInsets.only(bottom: 10),
         margin: const EdgeInsets.only(bottom: 15),
         borderRadiusCircular: 10,
-        borderColor: ColorRes.borderColor,
-        elevation: 2,
+        borderColor: ColorRes.primaryColor,
+        borderWidth: .3,
+        elevation: 3,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [

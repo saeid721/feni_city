@@ -40,8 +40,9 @@ class VideosWidget extends StatelessWidget {
       child: GlobalContainer(
         margin: const EdgeInsets.only(bottom: 15),
         borderRadiusCircular: 10,
-        borderColor: ColorRes.borderColor,
-        elevation: 2,
+        borderColor: ColorRes.primaryColor,
+        borderWidth: .3,
+        elevation: 3,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(

@@ -51,8 +51,9 @@ class MistriDetailsWidget extends StatelessWidget {
         padding: const EdgeInsets.only(left: 15, right: 5, top: 15, bottom: 15),
         margin: const EdgeInsets.only(bottom: 15, top: 5, right: 5),
         borderRadiusCircular: 10,
-        borderColor: ColorRes.borderColor,
-        elevation: 2,
+        borderColor: ColorRes.primaryColor,
+        borderWidth: .3,
+        elevation: 3,
         child: Column(
           children: [
             Row(

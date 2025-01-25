@@ -113,7 +113,6 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
                 sizedBoxW(5),
                 GlobalText(
                   str: widget.companyName,
-                  fontSize: 14,
                   fontWeight: FontWeight.w500,
                   color: ColorRes.textColor,
                 ),
@@ -134,8 +133,6 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
                       sizedBoxW(5),
                       GlobalText(
                         str: widget.phone,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w400,
                         color: ColorRes.textColor,
                       ),
                     ],
@@ -153,8 +150,6 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
                       sizedBoxW(5),
                       GlobalText(
                         str: widget.email,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w400,
                         color: ColorRes.textColor,
                       ),
                     ],
@@ -177,8 +172,6 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
                       sizedBoxW(5),
                       GlobalText(
                         str: widget.jobType,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w400,
                         color: ColorRes.textColor,
                       ),
                     ],
@@ -196,8 +189,6 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
                       sizedBoxW(5),
                       GlobalText(
                         str: widget.vacancy,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w400,
                         color: ColorRes.textColor,
                       ),
                     ],
@@ -220,8 +211,6 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
                       sizedBoxW(5),
                       GlobalText(
                         str: widget.experienceYear,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w400,
                         color: ColorRes.textColor,
                       ),
                     ],
@@ -239,8 +228,6 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
                       sizedBoxW(5),
                       GlobalText(
                         str: widget.applicationDeadline,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w400,
                         color: ColorRes.textColor,
                       ),
                     ],
@@ -252,7 +239,6 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
               children: [
                 GlobalText(
                   str: "Salary: ",
-                  fontSize: 14,
                   fontWeight: FontWeight.w600,
                   color: ColorRes.textColor,
                 ),
@@ -268,14 +254,11 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
               children: [
                 GlobalText(
                   str: "Educational Qualification: ",
-                  fontSize: 14,
                   fontWeight: FontWeight.w600,
                   color: ColorRes.textColor,
                 ),
                 GlobalText(
                   str: widget.educationalQualification,
-                  fontSize: 14,
-                  fontWeight: FontWeight.w400,
                   color: ColorRes.textColor,
                 ),
               ],
@@ -284,14 +267,11 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
               children: [
                 GlobalText(
                   str: "Additional Required: ",
-                  fontSize: 14,
                   fontWeight: FontWeight.w600,
                   color: ColorRes.textColor,
                 ),
                 GlobalText(
                   str: widget.additionalRequired,
-                  fontSize: 14,
-                  fontWeight: FontWeight.w400,
                   color: ColorRes.textColor,
                 ),
               ],
@@ -301,15 +281,12 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
               children: [
                 GlobalText(
                   str: "Responsibilities",
-                  fontSize: 14,
                   fontWeight: FontWeight.w600,
                   color: ColorRes.textColor,
                 ),
                 Flexible(
                   child: GlobalText(
                     str: widget.responsibilities,
-                    fontSize: 14,
-                    fontWeight: FontWeight.w400,
                     color: ColorRes.textColor,
                     textAlign: TextAlign.justify,
                   ),
@@ -322,7 +299,6 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
               children: [
                 GlobalText(
                   str: "Details",
-                  fontSize: 14,
                   fontWeight: FontWeight.w600,
                   color: ColorRes.textColor,
                 ),
@@ -330,8 +306,6 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
                   child: Expanded(
                     child: GlobalText(
                       str: widget.details,
-                      fontSize: 14,
-                      fontWeight: FontWeight.w400,
                       color: ColorRes.textColor,
                       textAlign: TextAlign.justify,
                     ),
@@ -344,14 +318,11 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
               children: [
                 GlobalText(
                   str: "Job Location: ",
-                  fontSize: 14,
                   fontWeight: FontWeight.w600,
                   color: ColorRes.textColor,
                 ),
                 GlobalText(
                   str: widget.jobLocation,
-                  fontSize: 14,
-                  fontWeight: FontWeight.w400,
                   color: ColorRes.textColor,
                 ),
               ],
@@ -361,7 +332,6 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
               children: [
                 GlobalText(
                   str: "বিস্তারিতঃ",
-                  fontSize: 14,
                   fontWeight: FontWeight.w600,
                   color: ColorRes.textColor,
                 ),
@@ -369,8 +339,6 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
                   child: Expanded(
                     child: GlobalText(
                       str: widget.details,
-                      fontSize: 14,
-                      fontWeight: FontWeight.w400,
                       color: ColorRes.textColor,
                       textAlign: TextAlign.justify,
                     ),
@@ -379,28 +347,42 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
               ],
             ),
 
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                GlobalText(
-                  str: "Report this Job / Company (রিপোর্ট)",
-                  fontSize: 14,
-                  fontWeight: FontWeight.w600,
-                  color: ColorRes.textColor,
-                ),
-                Flexible(
-                  child: Expanded(
-                    child: GlobalText(
-                      str: widget.warning,
-                      fontSize: 14,
-                      fontWeight: FontWeight.w400,
-                      color: ColorRes.textColor,
-                      textAlign: TextAlign.justify,
-                    ),
+            sizedBoxH(10),
+            GlobalContainer(
+              margin: EdgeInsets.only(left: 5, right: 5),
+              padding: const EdgeInsets.all(10),
+              borderRadiusCircular: 10,
+              borderColor: ColorRes.red,
+              borderWidth: .5,
+              color: ColorRes.pink100.withOpacity(0.03),
+              child: RichText(
+                textAlign: TextAlign.justify,  // Align the text to the left
+                text: TextSpan(
+                  style: TextStyle(
+                    fontSize: 14,
+                    color: Colors.black,
                   ),
+                  children: [
+                    WidgetSpan(
+                      child: Icon(
+                        Icons.warning_amber,
+                        size: 16,
+                        color: Colors.red,
+                      ),
+                    ),
+                    WidgetSpan(
+                      child: SizedBox(width: 5), // Space between the icon and the text
+                    ),
+                    TextSpan(
+                      text: widget.warning,
+                      style: TextStyle(fontSize: 10,
+                        color: ColorRes.black,),
+                    ),
+                  ],
                 ),
-              ],
+              ),
             ),
+
             sizedBoxH(10),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
