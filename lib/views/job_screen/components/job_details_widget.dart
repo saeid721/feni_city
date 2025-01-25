@@ -372,28 +372,6 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
                     ],
                   ),
                 ),
-                RichText(
-                  textAlign: TextAlign.justify, // Align the text to the left
-                  text: TextSpan(
-                    style: TextStyle(
-                      fontSize: 14,
-                      color: Colors.black,
-                    ),
-                    children: [
-                      TextSpan(
-                        text: "বিস্তারিতঃ ",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w600,
-                          color: ColorRes.textColor,
-                        ),
-                      ),
-                      TextSpan(
-                        text: widget.details,
-                        style: TextStyle(color: ColorRes.textColor),
-                      ),
-                    ],
-                  ),
-                ),
               ],
             ),
             sizedBoxH(10),
