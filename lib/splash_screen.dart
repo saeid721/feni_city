@@ -41,7 +41,7 @@ class _SplashScreenState extends State<SplashScreen> {
             children: [
               GlobalImageLoader(
                 imagePath: 'assets/images/feniCity.png',
-                width: 200,
+                width: 180,
                 imageFor: ImageFor.asset,
               ),
               // GlobalText(
@@ -55,8 +55,8 @@ class _SplashScreenState extends State<SplashScreen> {
               GlobalText(
                 str: 'Developed by STITBD',
                 color: ColorRes.primaryColor,
-                fontSize: 16,
-                fontWeight: FontWeight.w700,
+                fontSize: 18,
+                fontWeight: FontWeight.w400,
                 textAlign: TextAlign.center,
               ),
             ],

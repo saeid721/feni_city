@@ -28,7 +28,7 @@ class _JoruriSebaScreenState extends State<JoruriSebaScreen> {
         appBar: PreferredSize(
           preferredSize: const Size.fromHeight(56),
           child: GlobalAppBar(
-            title: 'জরুরী সেবার হটলাইন নাম্বার',
+            title: 'জরুরী সেবার হটলাইন',
             notiOnTap: () {},
             actions: [
               IconButton(
