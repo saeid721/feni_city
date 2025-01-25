@@ -68,7 +68,8 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
   @override
   Widget build(BuildContext context) {
     return GlobalContainer(
-      child: SingleChildScrollView( // Added SingleChildScrollView to handle overflow
+      child: SingleChildScrollView(
+        // Added SingleChildScrollView to handle overflow
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -165,7 +166,7 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
                   child: Row(
                     children: [
                       const Icon(
-                        Icons.mail_outline,
+                        Icons.security,
                         size: 18,
                         color: ColorRes.primaryColor,
                       ),
@@ -182,7 +183,7 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
                   child: Row(
                     children: [
                       const Icon(
-                        Icons.mail_outline,
+                        Icons.safety_check,
                         size: 18,
                         color: ColorRes.primaryColor,
                       ),
@@ -204,7 +205,7 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
                   child: Row(
                     children: [
                       const Icon(
-                        Icons.mail_outline,
+                        Icons.home_repair_service,
                         size: 18,
                         color: ColorRes.primaryColor,
                       ),
@@ -221,7 +222,7 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
                   child: Row(
                     children: [
                       const Icon(
-                        Icons.mail_outline,
+                        Icons.date_range,
                         size: 18,
                         color: ColorRes.primaryColor,
                       ),
@@ -235,118 +236,166 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
                 ),
               ],
             ),
-            Row(
-              children: [
-                GlobalText(
-                  str: "Salary: ",
-                  fontWeight: FontWeight.w600,
-                  color: ColorRes.textColor,
-                ),
-                GlobalText(
-                  str: widget.salary,
-                  fontSize: 14,
-                  fontWeight: FontWeight.w400,
-                  color: ColorRes.textColor,
-                ),
-              ],
-            ),
-            Row(
-              children: [
-                GlobalText(
-                  str: "Educational Qualification: ",
-                  fontWeight: FontWeight.w600,
-                  color: ColorRes.textColor,
-                ),
-                GlobalText(
-                  str: widget.educationalQualification,
-                  color: ColorRes.textColor,
-                ),
-              ],
-            ),
-            Row(
-              children: [
-                GlobalText(
-                  str: "Additional Required: ",
-                  fontWeight: FontWeight.w600,
-                  color: ColorRes.textColor,
-                ),
-                GlobalText(
-                  str: widget.additionalRequired,
-                  color: ColorRes.textColor,
-                ),
-              ],
-            ),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                GlobalText(
-                  str: "Responsibilities",
-                  fontWeight: FontWeight.w600,
-                  color: ColorRes.textColor,
-                ),
-                Flexible(
-                  child: GlobalText(
-                    str: widget.responsibilities,
-                    color: ColorRes.textColor,
-                    textAlign: TextAlign.justify,
-                  ),
-                ),
-              ],
-            ),
 
-            Row(
+            Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                GlobalText(
-                  str: "Details",
-                  fontWeight: FontWeight.w600,
-                  color: ColorRes.textColor,
-                ),
-                Flexible(
-                  child: Expanded(
-                    child: GlobalText(
-                      str: widget.details,
-                      color: ColorRes.textColor,
-                      textAlign: TextAlign.justify,
+                RichText(
+                  textAlign: TextAlign.justify, // Align the text to the left
+                  text: TextSpan(
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Colors.black,
                     ),
+                    children: [
+                      TextSpan(
+                        text: "Salary: ",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          color: ColorRes.textColor,
+                        ),
+                      ),
+                      TextSpan(
+                        text: widget.salary,
+                        style: TextStyle(color: ColorRes.textColor),
+                      ),
+                    ],
                   ),
                 ),
-              ],
-            ),
-
-            Row(
-              children: [
-                GlobalText(
-                  str: "Job Location: ",
-                  fontWeight: FontWeight.w600,
-                  color: ColorRes.textColor,
-                ),
-                GlobalText(
-                  str: widget.jobLocation,
-                  color: ColorRes.textColor,
-                ),
-              ],
-            ),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                GlobalText(
-                  str: "বিস্তারিতঃ",
-                  fontWeight: FontWeight.w600,
-                  color: ColorRes.textColor,
-                ),
-                Flexible(
-                  child: Expanded(
-                    child: GlobalText(
-                      str: widget.details,
-                      color: ColorRes.textColor,
-                      textAlign: TextAlign.justify,
+                RichText(
+                  textAlign: TextAlign.justify, // Align the text to the left
+                  text: TextSpan(
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Colors.black,
                     ),
+                    children: [
+                      TextSpan(
+                        text: "Educational Qualification: ",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          color: ColorRes.textColor,
+                        ),
+                      ),
+                      TextSpan(
+                        text: widget.educationalQualification,
+                        style: TextStyle(color: ColorRes.textColor),
+                      ),
+                    ],
+                  ),
+                ),
+                RichText(
+                  textAlign: TextAlign.justify, // Align the text to the left
+                  text: TextSpan(
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Colors.black,
+                    ),
+                    children: [
+                      TextSpan(
+                        text: "Additional Required: ",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          color: ColorRes.textColor,
+                        ),
+                      ),
+                      TextSpan(
+                        text: widget.additionalRequired,
+                        style: TextStyle(color: ColorRes.textColor),
+                      ),
+                    ],
+                  ),
+                ),
+                RichText(
+                  textAlign: TextAlign.justify, // Align the text to the left
+                  text: TextSpan(
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Colors.black,
+                    ),
+                    children: [
+                      TextSpan(
+                        text: "Responsibilities: ",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          color: ColorRes.textColor,
+                        ),
+                      ),
+                      TextSpan(
+                        text: widget.responsibilities,
+                        style: TextStyle(color: ColorRes.textColor),
+                      ),
+                    ],
+                  ),
+                ),
+                RichText(
+                  textAlign: TextAlign.justify, // Align the text to the left
+                  text: TextSpan(
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Colors.black,
+                    ),
+                    children: [
+                      TextSpan(
+                        text: "Details: ",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          color: ColorRes.textColor,
+                        ),
+                      ),
+                      TextSpan(
+                        text: widget.details,
+                        style: TextStyle(color: ColorRes.textColor),
+                      ),
+                    ],
+                  ),
+                ),
+                RichText(
+                  textAlign: TextAlign.justify, // Align the text to the left
+                  text: TextSpan(
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Colors.black,
+                    ),
+                    children: [
+                      TextSpan(
+                        text: "Job Location: ",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          color: ColorRes.textColor,
+                        ),
+                      ),
+                      TextSpan(
+                        text: widget.jobLocation,
+                        style: TextStyle(color: ColorRes.textColor),
+                      ),
+                    ],
+                  ),
+                ),
+                RichText(
+                  textAlign: TextAlign.justify, // Align the text to the left
+                  text: TextSpan(
+                    style: TextStyle(
+                      fontSize: 14,
+                      color: Colors.black,
+                    ),
+                    children: [
+                      TextSpan(
+                        text: "বিস্তারিতঃ ",
+                        style: TextStyle(
+                          fontWeight: FontWeight.w600,
+                          color: ColorRes.textColor,
+                        ),
+                      ),
+                      TextSpan(
+                        text: widget.details,
+                        style: TextStyle(color: ColorRes.textColor),
+                      ),
+                    ],
                   ),
                 ),
               ],
             ),
-
             sizedBoxH(10),
             GlobalContainer(
               margin: EdgeInsets.only(left: 5, right: 5),
@@ -356,7 +405,7 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
               borderWidth: .5,
               color: ColorRes.pink100.withOpacity(0.03),
               child: RichText(
-                textAlign: TextAlign.justify,  // Align the text to the left
+                textAlign: TextAlign.justify, // Align the text to the left
                 text: TextSpan(
                   style: TextStyle(
                     fontSize: 14,
@@ -371,18 +420,20 @@ class _JobDetailsWidgetState extends State<JobDetailsWidget> {
                       ),
                     ),
                     WidgetSpan(
-                      child: SizedBox(width: 5), // Space between the icon and the text
+                      child: SizedBox(
+                          width: 5), // Space between the icon and the text
                     ),
                     TextSpan(
                       text: widget.warning,
-                      style: TextStyle(fontSize: 10,
-                        color: ColorRes.black,),
+                      style: TextStyle(
+                        fontSize: 10,
+                        color: ColorRes.black,
+                      ),
                     ),
                   ],
                 ),
               ),
             ),
-
             sizedBoxH(10),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
